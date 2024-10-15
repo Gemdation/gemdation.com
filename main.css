@@ -1,8 +1,13 @@
-h1 {text-align: center;}
-h2 {text-align: center;}
-li {text-align: center;}
-p {text-align: center;}
-div {text-align: center;}
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-image: url("img/clouds.jfif");
+  background-size:auto;
+  color:white;
+}
+
+h1, h2, li, p, div {text-align: center;}
+
+a {text-decoration: none;}
 
 ul {
 list-style-type: none;
@@ -10,18 +15,17 @@ margin: 0;
 padding: 0;
 }
 
-body {
-color:white; background: #555555
-}
-
-div.q {
+div {
     position: sticky;
     border-style: solid;
     border-width: 5px;
-    padding: 0px;
+    border-spacing: 2px;
+    padding: 4px;
     max-height: 200px;
     max-width: 70%;
-    background-color:#5272a1;
     margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
     overflow: hidden;
   }
+
