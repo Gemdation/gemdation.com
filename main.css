@@ -1,13 +1,13 @@
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-image: url("img/clouds.jfif");
+  background-color: #232a34;
   background-size:auto;
   color:white;
 }
 
 h1, h2, li, p, div {text-align: center;}
 
-a {text-decoration: none;}
+a {text-decoration: none; color:white}
 
 ul {
 list-style-type: none;
@@ -22,7 +22,7 @@ div {
     border-spacing: 2px;
     padding: 4px;
     max-height: 200px;
-    max-width: 70%;
+    max-width: 50%;
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
