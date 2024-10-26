@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Club U</title>
+    <meta charset="UTF-8">
+    <meta name="name" content="Club U">
+    <meta name="description" content="Club U, a Discord server with ">
+    <meta content="https://gemdation.com/u" property="og:url" />
+    <link rel="icon" type="image/x-icon" href="img/Club U logo tiny.png">
+    <meta content="#2c78c7" data-react-helmet="true" name="theme-color" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+          background-color: #011630;
+          color:white;
+        }
+        
+        h1, h2, p, div {text-align: center;}
+        a {text-decoration: none; color:#34beed}
+        
+        div {
+            border-style: solid;
+            border-width: 5px;
+            border-color: #2d6db9;
+            padding: 10px;
+            border-radius: 25px;
+            max-width: 50%;
+            margin: auto;
+            margin-block: 10px;
+          }
+
+    </style>
+    <script>
+        function hideAllDivs() {
+        const divs = document.getElementsByTagName("div");
+    
+        for (let i = 0; i < divs.length; i++) {
+          divs[i].style.display = "none";
+        }
+    
+        const message = document.getElementById("message");
+        message.style.display = "block";
+        message.innerText = "it went boom";
+        }
+    </script>
+</head>
+<body>
+<div style="max-height: 700px;">
+<img src="img/Club U logo.png"  width="200">
+<h1>Club U</h1>
+<p>My personal Discord server for<br>
+    anything and everything!</p>
+
+<p>Join and play DSiWare games <i>pls</i></p>
+<button style="text-align: center;" onclick="hideAllDivs()">make it go boom</button>
+</div><p id="message" style="display:none;"></p>
+
+
+<div style="border-style: none;">
+<iframe src="https://discord.com/widget?id=1202114830937636895&theme=dark" width="350" height="800" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe></div>
+</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
