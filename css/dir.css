@@ -1,0 +1,23 @@
+body {
+    background-color:black;
+    background-image: url('../img/sun.jpg');
+    background-size: 80%;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    height: 100vh;
+    color:white;
+    font-family:verdana;
+    }
+h1 {
+    text-shadow: 0 0 10px rgb(255, 255, 255);
+}
+table, th, td {
+    border:1px solid rgb(255, 255, 255);
+    border-collapse: collapse;
+    }
+th, td {
+    padding: 2px;
+    }
+a {text-decoration: none;
+      color:#ffffff;
+    }

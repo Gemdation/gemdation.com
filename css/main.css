@@ -1,12 +1,14 @@
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
   background-color: #232a34;
   background-size:auto;
   color:white;
+  background-image: url('../img/stars.gif');
+  background-repeat: repeat;
 }
 
 h1, h2, li, p, div {text-align: center;}
-
+h1 {text-shadow: 0 0 10px rgb(255, 255, 255);}
 a {text-decoration: none; color:white}
 
 ul {
@@ -20,12 +22,11 @@ div {
     border-style: solid;
     border-width: 5px;
     border-spacing: 2px;
+    backdrop-filter: blur(1px);
     padding: 4px;
     max-height: 200px;
-    max-width: 50%;
     margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
     overflow: hidden;
   }
-
