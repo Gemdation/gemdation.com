@@ -7,9 +7,14 @@ body {
   background-repeat: repeat;
 }
 
-h1, h2, li, p, div {text-align: center;}
-h1 {text-shadow: 0 0 10px rgb(255, 255, 255);}
+h1, h2, h3, li, p, div {text-align: center;}
+h1, a {text-shadow: 0 0 10px rgb(255, 255, 255);}
 a {text-decoration: none; color:white}
+
+button {background-color: none;}
+a:hover {
+  color: yellow
+}
 
 ul {
 list-style-type: none;
