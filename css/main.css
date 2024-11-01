@@ -1,19 +1,42 @@
-body {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
-  background-color: #232a34;
+@font-face {
+  font-family: 'Verdana';
+  src: url('verdana.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Verdana';
+  src: url('verdana-bold.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Verdana';
+  src: url('verdana-bold-italic.ttf') format('truetype');
+  font-weight: bold;
+  font-style: italic;
+}
+
+  body {
+  font-family: Verdana;
   background-size:auto;
   color:white;
-  background-image: url('../img/stars.gif');
+  background-image: url('../media/stars.gif');
   background-repeat: repeat;
 }
 
-h1, h2, h3, li, p, div {text-align: center;}
+h1, h2, h3, h4, h5, h6, li, p, div {text-align: center;}
 h1, a {text-shadow: 0 0 10px rgb(255, 255, 255);}
 a {text-decoration: none; color:white}
 
 button {background-color: none;}
 a:hover {
   color: yellow
+}
+.a:hover {
+  color: red
 }
 
 ul {
