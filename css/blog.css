@@ -19,20 +19,29 @@
     font-style: italic;
   }
   
+
+
   body {
     font-family: verdana, sans-serif;
     text-shadow:  2px 2px 5px black;
     color: white;
     background-image: url(../media/moon.png);
     background-color: black;
-    background-size: 60%;
+    background-size: 30%;
     background-position: bottom;
     background-attachment: fixed;
     background-repeat: no-repeat;
     text-align: center;
   }
 
+
  a {text-decoration: none; color:white}
  a:hover {color: yellow}
 
  .back {text-align: left; font-weight: bold;}
+ .b {font-weight: bold}
+ h2.highlight {color: yellow;}
+
+   /*this is used for auto resizing*/
+   div {width: 50%; margin: 0 auto;}
+   @media (max-width: 768px) {div {width: 100%;}}

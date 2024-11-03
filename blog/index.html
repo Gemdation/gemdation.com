@@ -4,18 +4,29 @@
    <title>Gemdation Blog</title>
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="../css/blog.css">
-   <link rel="icon" type="image/x-icon" href="../media/gems.png">
+   <link rel="icon" type="image/x-icon" href="../media/favicon.ico">
+   <script>
+        function highlightElement() {
+            var hash = window.location.hash.substring(1);
+            var element = document.getElementById(hash);
+            if (element && element.tagName === 'H2') {
+                element.classList.add('highlight');
+            }
+        }
+      window.onload = highlightElement;
+  </script>
 </head>
 <body>
-   <p class="back"><a href="../blog">Back</a></p>
+   <p class="back"><a href="../">Back</a></p>
  
 <h1>Blogs</h1>
 <p>This is the root page for blogs on the website.</p>
 <p><a href="0000" style="color:rgba(255, 255, 255, 0)">0000</a></p>
 
-<h2><a href="2024">2024</a></h2>
-<li style="color:grey">[uhhh...soon]</li>
-
+<div>
+<h2 id="2024">2024</h2>
+<li class="b"><a href="2024/getting-the-website-ready">Getting the website ready</a></li>
+</div>
 
 
 </body>

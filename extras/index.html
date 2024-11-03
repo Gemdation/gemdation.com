@@ -3,25 +3,61 @@
 <head>
     <title>The Extras</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/x-icon" href="../media/gems.png">
-    <style>
-     body {background-image: url('../media/rainbowstar.gif'); color:white; font-family:verdana;}
-     h1 {text-shadow: 0 0 10px rgb(255, 255, 255);}
-     table, th, td {border:1px solid rgb(255, 255, 255); border-collapse: collapse; background-color: rgba(0, 0, 0, 0.5);}
-     th, td {padding: 2px;}
-     a {text-decoration: none; color:#ffffff;}
-    </style>
+    <link rel="icon" type="image/x-icon" href="../media/favicon.ico">
+        <style>
+        body {background-image: url('../media/rainbowstar.gif'); color:white; font-family:verdana;}
+        h1 {text-shadow: 0 0 10px rgb(255, 255, 255);}
+        table, th, td {border:1px solid rgb(255, 255, 255); border-collapse: collapse; background-color: rgba(0, 0, 0, 0.5);}
+        th, td {padding: 2px;}
+        a {text-decoration: none; color:#ffffff;}
+
+        #div1 {display: block;}
+        #div2 {display: none;}
+        </style>
+        <!--for pretending the directory changes-->
+        <script>
+            function toggleDivs() {
+            var div1 = document.getElementById('div1');
+            var div2 = document.getElementById('div2');
+            div1.style.display = 'none';
+            div2.style.display = 'block';
+            }
+
+            function goBac() {
+            var div1 = document.getElementById('div1');
+            var div2 = document.getElementById('div2');
+            div1.style.display = 'block';
+            div2.style.display = 'none';
+            }
+        </script>
 </head>
 <body>
 
+<div id="div1">
 <h1>Index of /extras</h1>
 <table>
-    <tr><td><a href="..">..</a></td></tr>
+    <tr><td><a href="#" onclick="toggleDivs()">..</a></td></tr>
+    <tr><td><a href="0000">0000.html</a></td></tr>
     <tr><td><a href="gallery">gallery.html</a></td></tr>
     <tr><td><a href="template">template.html</a></td></tr>
     <tr><td><a href="test-zone">test-zone.html</a></td></tr>
 </table>
+</div>
 
+<div id="div2">
+<h1>Index of /</h1>
+<table>
+    <tr><td><a href="../blog">blog</a></td></tr>
+    <tr><td><a href="../css">css/</a></td></tr>
+    <tr><td><a href="#" onclick="goBac()">extras/</a></td></tr>
+    <tr><td><a href="../media">media/</a></td></tr>
+    <tr><td>CNAME</td></tr>
+    <tr><td><a href="../">index.html</a></td></tr>
+    <tr><td><a href="../networks">networks.html</a></td></tr>
+    <tr><td><a href="../readme.txt">readme.txt</a></td></tr>
+    <tr><td><a href="../u">u.html</a></td></tr>
+</table>
+</div>
 
 </body>
 </html>
