@@ -1,0 +1,38 @@
+@font-face {
+    font-family: 'Verdana';
+    src: url('verdana.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Verdana';
+    src: url('verdana-bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+  }
+  
+  @font-face {
+    font-family: 'Verdana';
+    src: url('verdana-bold-italic.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+  }
+  
+  body {
+    font-family: verdana, sans-serif;
+    text-shadow:  2px 2px 5px black;
+    color: white;
+    background-image: url(../media/moon.png);
+    background-color: black;
+    background-size: 60%;
+    background-position: bottom;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    text-align: center;
+  }
+
+ a {text-decoration: none; color:white}
+ a:hover {color: yellow}
+
+ .back {text-align: left; font-weight: bold;}
