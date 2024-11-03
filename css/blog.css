@@ -23,7 +23,7 @@
 
   body {
     font-family: verdana, sans-serif;
-    text-shadow:  2px 2px 5px black;
+    text-shadow: black 3px 0 10px;
     color: white;
     background-image: url(../media/moon.png);
     background-color: black;
