@@ -46,6 +46,6 @@
  .b {font-weight: bold}
  h2.highlight {color: yellow;}
 
-   /*this is used for auto resizing*/
-   div {width: 50%; margin: 0 auto;}
-   @media (max-width: 768px) {div {width: 100%;}}
+/*this is used for auto resizing*/
+div {width: 50%; margin: 0 auto;}
+@media (max-width: 45%) {div {width: 100%;}}

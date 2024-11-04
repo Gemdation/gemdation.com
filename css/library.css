@@ -27,11 +27,13 @@
   font-family: Verdana;
   }
 
-h1, h2, h3, h4, h5, h6, li, p, div {text-align: center;}
+h1, h2, h3, h4, h5, h6 {text-align: center;}
 h1, a {text-shadow: 0 0 10px rgb(255, 255, 255);}
 a {text-decoration: none; color:white}
 
-button {background-color: none;}
+div {width: 50%; margin: 0 auto;}
+@media (max-width: 768px) {div {width: 100%;}}
+
 a:hover {
   color: yellow
 }
@@ -46,15 +48,7 @@ a:hover {
   margin-left: 20px;
 }
 
-/*this is used for auto resizing*/
-div {width: 50%; margin: 0 auto;}
-@media (max-width: 768px) {div {width: 100%;}}
-
-ul {
-list-style-type: none;
-margin: 0;
-padding: 0;
-}
+.grey {color: #b3b3b3}
 
 div {
     box-sizing: border-box;
