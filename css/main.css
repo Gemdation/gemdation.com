@@ -46,6 +46,7 @@ a:hover {
   margin-left: 20px;
 }
 
+
 /*this is used for auto resizing*/
 div {width: 50%; margin: 0 auto;}
 @media (max-width: 768px) {div {width: 100%;}}
