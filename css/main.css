@@ -22,6 +22,7 @@
   body {
   color:white;
   background-image: url('../media/stars.gif');
+  background-color: black; /*this is a fallback for devices that have disabled images*/
   background-size:auto;  
   background-repeat: repeat;
   font-family: Verdana;
