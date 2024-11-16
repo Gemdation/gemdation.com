@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0">
+<channel>
+  <title>Gemdation.com</title>
+  <link>https://gemdation.com</link>
+  <description>Colorful and shiny personal website</description>
+
+  <item>
+    <title>Hello RSS!</title>
+    <link>https://gemdation.com/extras/wn-log</link>
+    <pubDate>Sat, 16 Nov 2024 15:30:00 CST</pubDate>
+    <guid isPermaLink="false">general-1</guid>
+    <description>I am now trying out RSS on this website, as such, the 'What's New' log has been moved to Extras.</description>
+    <category>General</category>
+  </item>
+
+  <item>
+    <title>Blog: Discord Shenanigans</title>
+    <link>https://gemdation.com/blog/2024/discord-shenanigans</link>
+    <pubDate>Fri, 15 Nov 2024 23:25:00 CST</pubDate>
+    <guid isPermaLink="false">blog-1</guid>
+    <description>In this blog I talk about my first time on Discord, a group I joined, and an attempt to find them again.</description>
+    <category>Blog</category>
+  </item>
+
+</channel>
+</rss>
