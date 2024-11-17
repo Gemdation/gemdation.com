@@ -6,6 +6,15 @@
   <description>Colorful and shiny personal website</description>
 
   <item>
+    <title>New 404 page</title>
+    <link>https://gemdation.com/404</link>
+    <pubDate>Sun, 17 Nov 2024 09:15:00 CST</pubDate>
+    <guid isPermaLink="false">general-2</guid>
+    <description>Finally got around to this, the website now has a custom 404 page and not the GitHub one.</description>
+    <category>General</category>
+  </item>
+
+  <item>
     <title>Hello RSS!</title>
     <link>https://gemdation.com/extras/wn-log</link>
     <pubDate>Sat, 16 Nov 2024 15:30:00 CST</pubDate>
