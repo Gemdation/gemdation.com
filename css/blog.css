@@ -39,14 +39,12 @@
   }
 
 
-  div {width: 40%; margin: 0 auto;}
-  @media (max-width: 768px) {div {width: 100%;}}
+div {width: 40%; margin: 0 auto;}
+@media (max-width: 768px) {div {width: 100%;}}
 
  a {text-decoration: none; color:white}
  a:hover {color: yellow}
-
  .back {text-align: left; font-weight: bold;}
  .b {font-weight: bold}
  h2.highlight {color: yellow;}
-
-/*this is used for auto resizing*/
+ i.grey {color:grey; font-weight: normal;}

@@ -6,6 +6,24 @@
   <description>Colorful and shiny personal website</description>
 
   <item>
+    <title>Blog: Dogeminer: Need More Coins!</title>
+    <link>https://gemdation.com/blog/2024/dogeminer</link>
+    <pubDate>Wed, 20 Nov 2024 20:00:00 CST</pubDate>
+    <guid isPermaLink="false">blog-2</guid>
+    <description>I play a childhood mobile game Dogeminer.</description>
+    <category>Blog</category>
+  </item>
+
+  <item>
+    <title>New Wii ROMs guide</title>
+    <link>https://gemdation.com/extras/guides/wii-roms</link>
+    <pubDate>Wed, 20 Nov 2024 20:00:00 CST</pubDate>
+    <guid isPermaLink="false">guide-1</guid>
+    <description>I have now ported my old Wii ROMs guides that was on Google Docs.</description>
+    <category>Guides</category>
+  </item>
+
+  <item>
     <title>New 404 page</title>
     <link>https://gemdation.com/404</link>
     <pubDate>Sun, 17 Nov 2024 09:15:00 CST</pubDate>
