@@ -40,15 +40,9 @@ a:hover {
 table {border: 1px solid white; border-collapse: collapse;}
 th, td {border: 1px solid}
 
-.left {
-  float: left;
-  margin-right: 20px;
-}
-
-.right {
-  float: right;
-  margin-left: 20px;
-}
+.left {float: left; margin-right: 20px;}
+.right {float: right; margin-left: 20px;}
+.hide {color:grey}
 
 
 /*this is used for auto resizing*/
