@@ -53,7 +53,7 @@ button:active {box-shadow: none;}
 
 mark {color:black; text-shadow: none;}
 img {width: 100%;}
-div.comments {background-color: black;}
+div.div {width: 100%;}
 div {width: 40%; margin: 0 auto;}
 @media (max-width: 768px) {div {width: 100%;}}
 
