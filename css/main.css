@@ -32,7 +32,20 @@ h1, h2, h3, h4, h5, h6, li, p, div {text-align: center;}
 h1, a {text-shadow: 0 0 10px rgb(255, 255, 255);}
 a {text-decoration: none; color:white; font-weight: bold;}
 
-button {background-color: none;}
+
+
+button {
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  border-width: 2px;
+  border-color: white;
+  border-radius: .25rem;
+  border-style: solid;
+  background-color: black;
+  color:white
+}
+button:hover {box-shadow: 0 0 10px yellow;border-color:yellow;color:yellow;cursor:pointer}
+button:active {box-shadow: none;}
+
 a:hover {
   color: yellow
 }
@@ -56,13 +69,14 @@ padding: 0;
 }
 
 div {
-    box-sizing: border-box;
-    border-style: solid;
-    border-width: 5px;
-    border-spacing: 2px;
-    backdrop-filter: blur(1px);
-    padding: 5px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    overflow: auto;
+  box-sizing: border-box;
+  border-style: solid;
+  border-width: 5px;
+  border-radius: .25rem;
+  border-spacing: 2px;
+  backdrop-filter: blur(1px);
+  padding: 5px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  overflow: auto;
   }

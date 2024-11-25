@@ -21,30 +21,45 @@
   
 
 
-  body {
-    font-family: verdana, sans-serif;
-    text-shadow: 
-    -1px -1px 0 #000,  
-     1px -1px 0 #000,
-    -1px  1px 0 #000,
-     1px  1px 0 #000;
-     color: white;
-    background-image: url(../media/moon.png);
-    background-color: black;
-    background-size: 20%;
-    background-position: right;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    text-align: center;
+body {
+  font-family: verdana, sans-serif;
+  text-shadow: 
+  -1px -1px 0 #000,  
+   1px -1px 0 #000,
+  -1px  1px 0 #000,
+   1px  1px 0 #000;
+   color: white;
+  background-image: url(../media/moon.png);
+  background-color: black;
+  background-size: 20%;
+  background-position: right;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-align: center;
   }
 
+button {
+  box-shadow: 0 0 10px rgb(255, 255, 255);
+  border-width: 2px;
+  border-color: white;
+  border-radius: .25rem;
+  border-style: solid;
+  background-color: black;
+  color:white
+}
 
+button:hover {cursor:pointer}
+button:active {box-shadow: none;}
+
+mark {color:black; text-shadow: none;}
+img {width: 100%;}
+div.comments {background-color: black;}
 div {width: 40%; margin: 0 auto;}
 @media (max-width: 768px) {div {width: 100%;}}
 
- a {text-decoration: none; color:white}
- a:hover {color: yellow}
- .back {text-align: left; font-weight: bold;}
- .b {font-weight: bold}
- h2.highlight {color: yellow;}
- i.grey {color:grey; font-weight: normal;}
+a {text-decoration: none; color:white}
+a:hover {color: yellow}
+.back {text-align: left; font-weight: bold;}
+.b {font-weight: bold}
+h2.highlight {color: yellow;}
+i.grey {color:grey; font-weight: normal;}
