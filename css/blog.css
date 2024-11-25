@@ -48,8 +48,13 @@ button {
   color:white
 }
 
+
 button:hover {cursor:pointer}
 button:active {box-shadow: none;}
+
+table {border: 1px solid white; border-collapse: collapse; margin: auto;}
+th, td {border: 1px solid}
+td.date {font-family: monospace;}
 
 mark {color:black; text-shadow: none;}
 img {width: 100%;}

@@ -6,14 +6,14 @@
    <link rel="stylesheet" href="../css/blog.css">
    <link rel="icon" type="image/x-icon" href="../media/favicon.ico">
    <script>
-        function highlightElement() {
-            var hash = window.location.hash.substring(1);
-            var element = document.getElementById(hash);
-            if (element && element.tagName === 'H2') {
-                element.classList.add('highlight');
-            }
+     function highlightElement() {
+         var hash = window.location.hash.substring(1);
+         var element = document.getElementById(hash);
+         if (element && element.tagName === 'H2') {
+         element.classList.add('highlight');
+          }
         }
-      window.onload = highlightElement;
+     window.onload = highlightElement;
   </script>
 </head>
 <body>
@@ -21,15 +21,27 @@
  
 <h1>Blogs</h1>
 <p>This is the root page for blogs on the website.</p>
-<p><a href="0000" style="color:rgba(255, 255, 255, 0)">0000</a></p><!--;D-->
 
-<div>
+
 <h2 id="2024">2024</h2>
-<li class="b">[11/2] <a href="2024/getting-the-website-ready">Getting the website ready</a></li>
-<li class="b">[11/3] <a href="2024/matsu-memories">MatsuMemories</a></li>
-<li class="b">[11/15] <a href="2024/discord-shenanigans">Discord Shenanigans</a></li>
-<li class="b">[11/20] <a href="2024/dogeminer">Dogeminer: <i style="color:lightblue">Need More Coins!</i></a></li>
-</div>
+<table>
+    <tr>
+        <td class="date">[11/02]</td>
+        <td><a href="2024/getting-the-website-ready">Getting the website ready</a></td>
+    </tr>
+    <tr>
+        <td class="date">[11/03]</td>
+        <td><a href="2024/matsu-memories">MatsuMemories</a></td>
+    </tr>
+    <tr>
+        <td class="date">[11/15]</td>
+        <td><a href="2024/discord-shenanigans">Discord Shenanigans</a></td>
+    </tr>
+    <tr>
+        <td class="date">[11/20]</td>
+        <td><a href="2024/dogeminer">Dogeminer: <i style="color:lightblue">Need More Coins!</i></a>
+    </tr>
+</table>
 
 
 </body>
