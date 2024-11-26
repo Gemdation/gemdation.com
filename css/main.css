@@ -23,14 +23,12 @@ body {
 color:white;
 background-image: url('../media/stars.gif');
 background-color: black; /*this is a fallback for devices that have disabled images*/
-background-size:auto;  
+background-size:auto;
 background-repeat: repeat;
 font-family: Verdana;
 }
 
 h1, h2, h3, h4, h5, h6, li, p, div {text-align: center;}
-h1, a {text-shadow: 0 0 10px rgb(255, 255, 255);}
-a {text-decoration: none; color:white; font-weight: bold;}
 
 
 
@@ -43,12 +41,31 @@ button {
   background-color: black;
   color:white
 }
-button:hover {box-shadow: 0 0 10px yellow;border-color:yellow;color:yellow;cursor:pointer}
+
+button:hover {
+  text-shadow: 0 0 10px yellow;
+  box-shadow: 0 0 10px yellow;
+  border-color:yellow;
+  color:yellow;
+  cursor:pointer
+}
+
 button:active {box-shadow: none;}
 
+a {
+  text-shadow: 0 0 10px white;
+  font-weight: bold;
+  color:white;
+  text-decoration: none;
+}
 a:hover {
+  text-shadow: 0 0 10px yellow;
   color: yellow
 }
+a:active {
+  text-shadow: none;
+}
+
 
 table {border: 1px solid white; border-collapse: collapse;}
 th, td {border: 1px solid}
