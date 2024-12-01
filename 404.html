@@ -5,13 +5,18 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="/css/dir.css">
    <link rel="icon" type="image/x-icon" href="/media/favicon.ico">
-   <style>*{text-align: center;}</style>
+   <style>
+      *{text-align: center;} 
+      button {box-shadow: 0 0 10px rgb(255, 255, 255);border-color: white;border-radius: .25rem;border-style: solid;background-color: black;color:white}
+      button:hover {text-shadow: 0 0 10px yellow;box-shadow: 0 0 10px yellow;border-color:yellow;color:yellow;cursor:pointer}
+      button:active {box-shadow: none;}
+   </style>
 </head>
 <body>
 
 <p>Here is your page! Oh wait, nothing is here?</p>
 <h1 style="font-size: 100px;">404</h1>
-<p>Oh well...you can go <a href="/"><button style="background-color:rgba(0,0,0,0);color:white;border-color:white;">Back</button></a> to the home page.</p>
+<p>Oh well...you can go <a href="/"><button>Back</button></a> to the home page.</p>
 
 </body>
 </html>
