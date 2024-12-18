@@ -64,7 +64,7 @@ div.div {width: 100%;}
 div {width: 40%; margin: 0 auto;}
 @media (max-width: 768px) {div {width: 100%;}}
 
-a {text-decoration: none; color:white}
+a {text-decoration: none; color:white;font-weight: bold;}
 a:hover {color: yellow}
 a:active {box-shadow: none;}
 
@@ -72,3 +72,4 @@ a:active {box-shadow: none;}
 .b {font-weight: bold}
 h2.highlight {color: yellow;}
 i.grey {color:grey; font-weight: normal;}
+.hidden {color:grey}

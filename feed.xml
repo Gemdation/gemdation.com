@@ -6,7 +6,16 @@
   <description>Colorful and shiny personal website</description>
 
   <item>
-    <title>Mastodon </title>
+    <title>Blog: PlushTuber Apocalypse: AnimeBroMii</title>
+    <link>https://gemdation.com/extras/guides/other-roms</link>
+    <pubDate>Tue, 17 Dec 2024 19:00:00 CST</pubDate>
+    <guid isPermaLink="false">blog-3</guid>
+    <description>In this blog I ramble about a YouTuber who made 'gaming plushie' content.</description>
+    <category>Blog</category>
+  </item>
+
+  <item>
+    <title>Mastodon</title>
     <link>https://gemdation.com/extras/guides/other-roms</link>
     <pubDate>Mon, 16 Dec 2024 23:40:00 CST</pubDate>
     <guid isPermaLink="false">general-6</guid>

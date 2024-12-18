@@ -73,7 +73,7 @@ th, td {border: 1px solid}
 .left {float: left; margin-right: 20px;}
 .right {float: right; margin-left: 20px;}
 .hide {color:grey}
-
+.date {font-family: monospace;}
 
 /*this is used for auto resizing*/
 div {width: 50%; margin: 0 auto;}
