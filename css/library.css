@@ -30,6 +30,8 @@
 h1, h2, h3, h4, h5, h6 {text-align: center;}
 h1, a {text-shadow: 0 0 10px rgb(255, 255, 255);}
 a {text-decoration: none; color:white}
+ul {text-align: left;}
+dd {color:grey}
 
 button {
   box-shadow: 0 0 10px rgb(255, 255, 255);
@@ -75,13 +77,13 @@ div {
     overflow: auto;
   }
 
-  .grid-container {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    padding: 10px;
-  }
-  .grid-item {
-    padding: 20px;
-    font-size: 30px;
-    text-align: center;
-  }
+.grid-container {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  padding: 10px;
+}
+.grid-item {
+  padding: 20px;
+  font-size: 30px;
+  text-align: center;
+}
