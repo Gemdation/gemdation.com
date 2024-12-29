@@ -6,8 +6,17 @@
   <description>Colorful and shiny personal website</description>
 
   <item>
+    <title>Blog: Minecraft Trolling Days</title>
+    <link>https://gemdation.com/blog/2024/minecraft-trolling-days</link>
+    <pubDate>Sat, 28 Dec 2024 23:15:00 CST</pubDate>
+    <guid isPermaLink="false">blog-4</guid>
+    <description>In this blog I'll summarize the trolling days of me on Minecraft Bedrock.</description>
+    <category>Blog</category>
+  </item>
+
+  <item>
     <title>Blog: PC Simulator 'magic carpet' trick</title>
-    <link>https://gemdation.com/extras/guides/other-roms</link>
+    <link>https://gemdation.com/blog/2024/pc-simulator-magic-carpet-trick</link>
     <pubDate>Mon, 23 Dec 2024 14:30:00 CST</pubDate>
     <guid isPermaLink="false">blog-4</guid>
     <description>In this blog I ramble about a YouTuber who made 'gaming plushie' content.</description>
@@ -16,7 +25,7 @@
 
   <item>
     <title>Blog: PlushTuber Apocalypse: AnimeBroMii</title>
-    <link>https://gemdation.com/extras/guides/other-roms</link>
+    <link>https://gemdation.com/blog/2024/plustuber-apocalypse-animebromii</link>
     <pubDate>Tue, 17 Dec 2024 19:00:00 CST</pubDate>
     <guid isPermaLink="false">blog-3</guid>
     <description>In this blog I ramble about a YouTuber who made 'gaming plushie' content.</description>
@@ -25,7 +34,7 @@
 
   <item>
     <title>Mastodon</title>
-    <link>https://gemdation.com/extras/guides/other-roms</link>
+    <link>https://gemdation.com/blog</link>
     <pubDate>Mon, 16 Dec 2024 23:40:00 CST</pubDate>
     <guid isPermaLink="false">general-6</guid>
     <description>The website will now be verified on my Mastodon profile, and I added a neat attribution tag to my blogs in case of the rare moment anyone links it.</description>
