@@ -1,89 +1,19 @@
-@font-face {
-  font-family: 'Verdana';
-  src: url('verdana.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Verdana';
-  src: url('verdana-bold.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'Verdana';
-  src: url('verdana-bold-italic.ttf') format('truetype');
-  font-weight: bold;
-  font-style: italic;
-}
-
-  body {
-  color:white;
-  background-image: url('../media/stars.gif');
-  background-size:auto;  
-  background-repeat: repeat;
-  font-family: Verdana;
-  }
-
+body {color:white; background-image: url('../media/stars.gif'); background-size:auto; background-repeat: repeat; font-family: Verdana;}
+div {box-sizing: border-box; border-style: solid; border-width: 5px; border-radius: .25rem; border-spacing: 2px; backdrop-filter: blur(1px); padding: 5px; margin-top: 5px; text-align: center; margin-bottom: 5px; overflow: auto;}
 h1, h2, h3, h4, h5, h6 {text-align: center;}
 h1, a {text-shadow: 0 0 10px rgb(255, 255, 255);}
 a {text-decoration: none; color:white}
 ul {text-align: left;}
 dd {color:grey}
 
-button {
-  box-shadow: 0 0 10px rgb(255, 255, 255);
-  border-width: 2px;
-  border-color: white;
-  border-radius: .25rem;
-  border-style: solid;
-  background-color: black;
-  color:white
-}
+button {box-shadow: 0 0 10px rgb(255, 255, 255); border-width: 2px; border-color: white; border-radius: .25rem; border-style: solid; background-color: black; color:white}
 button:hover {cursor:pointer}
 button:active {box-shadow: none;}
 
 div {width: 50%; margin: 0 auto;}
 @media (max-width: 768px) {div {width: 100%;}}
 
-a:hover {
-  color: yellow
-}
-
-.left {
-  float: left;
-  margin-right: 20px;
-}
-
-.right {
-  float: right;
-  margin-left: 20px;
-}
-
-.grey {color: #b3b3b3}
-
-div {
-    box-sizing: border-box;
-    border-style: solid;
-    border-width: 5px;
-    border-spacing: 2px;
-    backdrop-filter: blur(1px);
-    padding: 5px;
-    margin-top: 5px;
-    text-align: center;
-    margin-bottom: 5px;
-    overflow: auto;
-  }
-
-.grid-container {
-  display: grid;
-  grid-template-columns: auto auto auto;
-  padding: 10px;
-}
-.grid-item {
-  padding: 20px;
-  font-size: 30px;
-  text-align: center;
-}
+a:hover {color: yellow}
+.left {float: left; margin-right: 20px;}
+.right {float: right; margin-left: 20px;}
+.hidden {color: grey}

@@ -11,43 +11,17 @@
     <meta content="#2c78c7" data-react-helmet="true" name="theme-color" />
     <link rel="icon" type="image/x-icon" href="media/Club U logo tiny.png">
     <style>
-        body {
-          font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-          background-color: #011630;
-          color:white;
-        }
-        
-        h1, h2, p, div {text-align: center;}
-        a {text-decoration: none; color:#34beed}
-        
-        div {
-            border-style: solid;
-            border-width: 5px;
-            border-color: #2d6db9;
-            padding: 10px;
-            border-radius: 25px;
-            max-width: 50%;
-            margin: auto;
-            margin-bottom: 5px;
-            box-sizing: border-box;
-          }
+      body {font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: #011630; color:white;}
+      div {border-style: solid; border-width: 5px; border-color: #2d6db9; padding: 10px; border-radius: 25px; max-width: 50%; margin: auto; margin-bottom: 5px; box-sizing: border-box;}
+      h1, h2, p, div {text-align: center;}
+      a {text-decoration: none; color:#34beed}
     </style>
-    <script>
-        function hideAllDivs() {
-        const divs = document.getElementsByTagName("div");
-    
-        for (let i = 0; i < divs.length; i++) {
-          divs[i].style.display = "none";
-        }
-    
-        const message = document.getElementById("message");
-        message.style.display = "block";
-        message.innerText = "it went boom";
-        }
-    </script>
+    <script>function hideAllDivs() {const divs = document.getElementsByTagName("div"); for (let i = 0; i < divs.length; i++) {divs[i].style.display = "none";} const message = document.getElementById("message"); message.style.display = "block"; message.innerText = "it went boom";}</script>
 </head>
 <body>
+
 <h3 style="font-family: Verdana;"><a href="../extras">Back</a></h3>
+
 <div style="max-height: 700px;">
 <img src="../media/Club U logo.png"  width="200">
 <h1>Club U</h1>
