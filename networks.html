@@ -8,13 +8,15 @@
    <meta content="#4c5162" data-react-helmet="true" name="theme-color" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <link rel="stylesheet" href="css/main.css">
+   <link rel="stylesheet" href="css/verdana.css">
    <link rel="icon" type="image/x-icon" href="media/favicon.ico">
+   <style>.hidden {display: none;}</style>
 </head>
 <body>
 <h1>Networks</h1>
 <p class="back"><a href=".."><button>Back</button></a></p>
     
-<span style="font-size: medium; font-weight: bold;;">
+<span style="font-size: medium; font-weight: bold;">
     <ul>
     <!--social media-->
     <li><a href="https://discord.com/users/1097399420129116180">Discord</a></li>
@@ -27,6 +29,8 @@
     <li><a href="https://en.wikipedia.org/wiki/User:Gemdation">Wikipedia</a></li>
     </ul>
 </span>
+
+
 
 <br>
 <div style="border-width: 1px; color:darkgrey;">
@@ -45,12 +49,15 @@
             <li><a style="color:darkgrey" href="https://dsibrew.org/wiki/User:Gemdation">DSiBrew</a></li>
             <li><a style="color:darkgrey" href="https://wiibrew.org/wiki/User:Gemdation">WiiBrew</a></li>
             <li><a style="color:darkgrey" href="https://support.wiki.gg/wiki/User:Gemdatiion">Wiki.gg</a></li>
-            <li><a style="color:darkgrey" href="https://www.tiktok.com/@gemdation">TikTok</a></li>
-            </ul>
+            <li><a style="color:darkgrey; text-shadow: 0 0 10px rgb(255, 255, 255);" href="#" id="tiktok"><s>TikTok</s></a></li>
+                <li id="message" class="hidden" style="font-size: small;color:grey">I'll know this won't be permanent and the ban will be lifted/bypassed but a lot of people might move on from it entirely because of this.<br>Goodbye, I'll never forget what you showed me! ♥<br><br><a href="https://web.archive.org/web/20241223162509/https://www.tiktok.com/@gemdation"><button>View Archived Profile</button></a></li>
+        </ul>
     </span><br>
 </div>
 
-<h4>Emai: <a href="mailto:gemdation@outlook.com">gemdation@outlook.com</a></h4>
+<script>document.getElementById('tiktok').addEventListener('click', function(event) {const buttonElement = document.getElementById('message'); if (buttonElement.classList.contains('hidden')) {buttonElement.classList.remove('hidden');} else {buttonElement.classList.add('hidden');}});</script>
+
+<h4>Email: <a href="mailto:gemdation@outlook.com">gemdation@outlook.com</a></h4>
 
 
 </body>
