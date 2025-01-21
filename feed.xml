@@ -6,6 +6,15 @@
   <description>Colorful and shiny personal website</description>
 
   <item>
+    <title>New guide page</title>
+    <link>https://gemdation.com/extras/guides/piracy</link>
+    <pubDate>Tue, 21 Jan 2025 16:15:00 CST</pubDate>
+    <guid isPermaLink="false">guide-3</guid>
+    <description>I've made a new guide page on how I go about piracy! I forgot to mention to this feed that you should check the /extras directory for anything...suspicious.</description>
+    <category>General</category>
+  </item>
+
+  <item>
     <title>Blog: My Teachers</title>
     <link>https://gemdation.com/blog/2025/my-teachers</link>
     <pubDate>Sat, 11 Jan 2025 11:15:00 CST</pubDate>
