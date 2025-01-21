@@ -14,10 +14,13 @@
         #div1 {display: block;}
         #div2 {display: none;}
         </style>
-        <!--for pretending the directory changes-->
+        
         <script>
+         // for pretending the directory changes
          function toggleDivs() {var div1 = document.getElementById('div1'); var div2 = document.getElementById('div2'); div1.style.display = 'none'; div2.style.display = 'block';}
          function goBac() {var div1 = document.getElementById('div1'); var div2 = document.getElementById('div2'); div1.style.display = 'block'; div2.style.display = 'none';}
+         // cheater, no peeking at easter egg code!
+         function hideRow(rowId) { var row = document.getElementById(rowId); if (row) {row.style.display = 'none';}}
         </script>
 </head>
 <body>
@@ -47,6 +50,7 @@
     <tr><td><a href="../library">library/</a></td></tr>
     <tr><td><a href="../games">games/</a></td></tr>
     <tr><td><a href="../media">media/</a></td></tr>
+    <tr id="t"><td><a href="#" onclick="hideRow('t')">tools/</td></tr>
     <tr><td><a href="../404">404.html</a></td></tr>
     <tr><td>CNAME</td></tr>
     <tr><td><a href="../feed.xml">feed.xml</a></td></tr>
