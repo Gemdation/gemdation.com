@@ -11,11 +11,15 @@ a:active {text-shadow: none;}
 
 table {border: 1px solid white; border-collapse: collapse;}
 th, td {border: 1px solid}
-ul {list-style-type: none;margin: 0;padding: 0;}
+ul {list-style-type: circle; margin: 0; padding: 0;}
+ul {text-align: left;}
+dd {color:grey}
 
 .left {float: left; margin-right: 20px;}
 .right {float: right; margin-left: 20px;}
 .hidden {color:grey}
 .date {font-family: monospace;}
+.buttons {border-width: 0px;}
+.buttons img {border: solid 1px}
 
 @media (max-width: 768px) {div {width: 100%;}}
