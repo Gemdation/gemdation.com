@@ -6,6 +6,33 @@
   <description>Colorful and shiny personal website</description>
 
   <item>
+    <title>Blog Archives</title>
+    <link>https://gemdation.com/blog</link>
+    <pubDate>Sun, 26 Jan 2025 02:35:00 CST</pubDate>
+    <guid isPermaLink="false">general-9</guid>
+    <description>I forgot to add the original Google Sites blogs to this sites, so I went ahead and did that in this big commit.</description>
+    <category>General</category>
+  </item>
+
+  <item>
+    <title>New Library pages</title>
+    <link>https://gemdation.com/library/consoles</link>
+    <pubDate>Sun, 26 Jan 2025 02:35:00 CST</pubDate>
+    <guid isPermaLink="false">general-8</guid>
+    <description>Here is another new Library page with a list of game consoles I have or had owned.</description>
+    <category>General</category>
+  </item>
+
+  <item>
+    <title>New Library pages</title>
+    <link>https://gemdation.com/library/influences</link>
+    <pubDate>Sun, 26 Jan 2025 02:35:00 CST</pubDate>
+    <guid isPermaLink="false">general-7</guid>
+    <description>Here is a brand new Library page with YouTubers I like, don't like anymore, and stopped watching.</description>
+    <category>General</category>
+  </item>
+
+  <item>
     <title>Blog: Cheapo Phones</title>
     <link>https://gemdation.com/blog/2025/cheapo-phones</link>
     <pubDate>Fri, 24 Jan 2025 14:17:00 CST</pubDate>
