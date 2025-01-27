@@ -2,11 +2,11 @@ body {color:white; background-image: url('../media/stars.gif'); background-size:
 div {box-sizing: border-box; border-style: solid; border-width: 5px; border-radius: .25rem; border-spacing: 2px; backdrop-filter: blur(1px); padding: 5px; margin-top: 5px; text-align: center; overflow: auto;}
 h1, h2, h3, h4, h5, h6 {text-align: center;}
 hr {border-width: 3px; border-radius: .25rem; border-style: solid;}
-a {text-shadow: 0 0 10px rgb(255, 255, 255); text-decoration: none; color:white}
+a {text-shadow: 0 0 10px white; text-decoration: none; color:white}
 ul {text-align: left;}
 dd {color:grey}
 
-button {box-shadow: 0 0 10px rgb(255, 255, 255); border-width: 2px; border-color: white; border-radius: .25rem; border-style: solid; background-color: black; color:white}
+button {box-shadow: 0 0 10px white; border-width: 2px; border-color: white; border-radius: .25rem; border-style: solid; background-color: black; color:white}
 button:hover {cursor:pointer}
 button:active {box-shadow: none;}
 
