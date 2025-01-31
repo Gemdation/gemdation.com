@@ -5,7 +5,7 @@ button:active {box-shadow: none;}
 
 table {border: 1px solid white; border-collapse: collapse; margin: auto;}
 th, td {border: 1px solid}
-td.date {font-family: monospace;}
+.date {font-family: monospace;}
 li {text-align: left;}
 dd {text-align: left;color:grey}
 
