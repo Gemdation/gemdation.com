@@ -5,6 +5,7 @@ hr {border-width: 3px; border-radius: .25rem; border-style: solid;}
 a {text-shadow: 0 0 10px white; text-decoration: none; color:white}
 ul {text-align: left;}
 dd {color:grey}
+img {border: solid 1px}
 
 button {box-shadow: 0 0 10px white; border-width: 2px; border-color: white; border-radius: .25rem; border-style: solid; background-color: black; color:white}
 button:hover {cursor:pointer}
