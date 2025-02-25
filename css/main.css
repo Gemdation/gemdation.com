@@ -1,4 +1,4 @@
-body {color:white; background-image: url('../media/stars.gif'); background-color: black; /*fallback*/ background-size:auto; background-repeat: repeat; font-family: Verdana;}
+body {color:white; background-image: url('../media/stars.png'); background-color: black; /*fallback*/ background-size:auto; background-repeat: repeat; font-family: Verdana;}
 h1, h2, h3, h4, h5, h6, li, p, div {text-align: center;}
 button {box-shadow: 0 0 10px rgb(255, 255, 255); border-width: 2px; border-color: white; border-radius: .25rem; border-style: solid; background-color: black; color:white}
 div {width: 50%; margin: 0 auto; box-sizing: border-box; border-style: solid; border-width: 5px; border-radius: .25rem; border-spacing: 2px; backdrop-filter: blur(1px); padding: 5px; margin-top: 5px; margin-bottom: 5px; overflow: auto;}
