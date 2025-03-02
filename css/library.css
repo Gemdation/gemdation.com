@@ -1,4 +1,4 @@
-body {color:white; background-image: url('../media/stars.gif'); background-size:auto; background-repeat: repeat; font-family: Verdana;}
+body {color:white; background-image: url('../media/stars.png'); background-size:auto; background-repeat: repeat; font-family: Verdana;}
 div {box-sizing: border-box; border-style: solid; border-width: 5px; border-radius: .25rem; border-spacing: 2px; backdrop-filter: blur(1px); padding: 5px; margin-top: 5px; text-align: center; overflow: auto;}
 h1, h2, h3, h4, h5, h6 {text-align: center;}
 hr {border-width: 3px; border-radius: .25rem; border-style: solid;}
