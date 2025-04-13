@@ -2,6 +2,7 @@ body {font-family: verdana, sans-serif; text-shadow: -1px -1px 0 #000, 1px -1px 
 button {font-family: 'Verdana',sans-serif; box-shadow: 0 0 10px rgb(255, 255, 255); border-width: 2px; border-color: white; border-radius: .25rem; border-style: solid; background-color: black; color:white}
 button:hover {cursor:pointer}
 button:active {box-shadow: none;}
+button:disabled {text-shadow: 0 0 10px grey; box-shadow: 0 0 10px grey; border-color:grey; color:grey; cursor:not-allowed}
 
 table {border: 1px solid white; border-collapse: collapse; margin: auto;}
 th, td {border: 1px solid}
