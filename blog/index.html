@@ -6,51 +6,213 @@
    <meta content="These are my blogs." property="og:description" />
    <meta content="https://gemdation.com/blog" property="og:url" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="../css/blog.css" />
+   <link rel="stylesheet" href="../css/main.css" />
    <link rel="stylesheet" href="../css/verdana.css" />
    <link rel="icon" type="image/x-icon" href="../media/favicon.ico" />
-   <style>td.clear {border-color: #00000000;} a {text-shadow: 0 0 10px white; font-weight: bold; color:white; text-decoration: none;} a:active {text-shadow: none;}</style>
+   <style>
+        div {box-shadow: 0 0 10px white}
+        div:hover {box-shadow: 0 0 10px yellow;border-color:yellow;cursor: pointer}
+        div:active {box-shadow: none}
+        div.locked {box-shadow:none;border-color:#ffffff81;color:#ffffff81}
+        div.locked:hover {cursor:help}
+        img.thumb {height: 160px;float: left;border-radius: .25rem;margin-right: 4px;}
+        span.title {float: left;font-weight: bold;margin-top: 10px;font-size: larger;position: absolute;top: 0;left: 170px}
+        p.desc {text-align: left;margin-top: 40px;font-style:italic}
+        span.date {position: absolute;bottom: 4px;right: 4px}
+        a {text-shadow:none;font-weight:normal}
+        a:hover {text-shadow:none;color:white}
+        b {text-shadow: 0 0 10px white;}
+        b:hover {text-shadow: 0 0 10px yellow;color:yellow}
+        b:active {text-shadow:none}        
+    </style>    
    <script>function highlightElement() {var hash = window.location.hash.substring(1); var element = document.getElementById(hash); if (element && element.tagName === 'H2') {element.classList.add('highlight');}} window.onload = highlightElement;</script>
 </head>
 <body>
 
-<h1><a href="/">gemdation.com</a></h1>
+<h1><a href="/"><b>gemdation.com</b></a></h1>
 
 <h3><a href="../about"><button>About</button></a> <button disabled>Blog</button> <a href="../buttons"><button>Buttons</button></a> <a href="../gallery"><button>Gallery</button></a> <a href="../library"><button>Library</button></a> <a href="../feed.xml"><button>Feed</button></a></h3>
 
-<p>This is the main page for blogs on the website. Some blog posts (<span class="date">[09/28]</span> and older) are stored on Google Sites.</p>
+<h2 id="2025">2025</h2>
 
-<table>
-    <!--2020-->
-    <tr><td colspan="2"><h2 id="2020">2020</h2></td></tr>
-    <tr><td class="date">[10/06]</td><td><a href="https://sites.google.com/view/gemdation-archive/postps-archive/posts/GPMshutdown">Google Play Music Store shutdown</a></td></tr>
-    <tr><td class="date">[10/16]</td><td><a href="https://sites.google.com/view/gemdation-archive/postps-archive/posts/streisand-enderman">Streisand Enderman</a></td></tr>
-    <tr><td class="date">[11/07]</td><td><a href="https://sites.google.com/view/gemdation-archive/postps-archive/posts/big-mcthankies">Big McThankies</a></td></tr>
-    <!--2024-->
-    <tr><td colspan="2"><h2 id="2024">2024</h2></td></tr>
-    <tr><td class="date">[08/01]</td><td><a href="https://sites.google.com/view/gemdation/blogs/2024/so-blogger">So...Blogger?</a></td></tr>
-    <tr><td class="date">[08/02]</td><td><a href="https://sites.google.com/view/gemdation/blogs/2024/consoles">Consoles</a></td></tr>
-    <tr><td class="date">[08/08]</td><td><!--https://sites.google.com/view/gemdation/blogs/2024/the-wii-shop-experience--></td></tr>
-    <tr><td class="date">[08/09]</td><td><a href="https://sites.google.com/view/gemdation/blogs/2024/the-memecord-moment">The Memecord Moment</a></td></tr>
-    <tr><td class="date">[09/21]</td><td><a href="https://sites.google.com/view/gemdation/blogs/2024/tux-nightmares">Tux Nightmares</a></td></tr>
-    <tr><td class="date">[09/28]</td><td><a href="https://sites.google.com/view/gemdation/blogs/2024/old-times">Old Times</a></td></tr>
-    <tr><td class="date">[11/02]</td><td><a href="2024/getting-the-website-ready">Getting the website ready</a></td></tr>
-    <tr><td class="date">[11/03]</td><td><a href="2024/matsu-memories">MatsuMemories</a></td></tr>
-    <tr><td class="date">[11/15]</td><td><a href="2024/discord-shenanigans">Discord Shenanigans</a></td></tr>
-    <tr><td class="date">[11/20]</td><td><a href="2024/dogeminer">Dogeminer: <i style="color:lightblue">Need More Coins!</i></a></tr>
-    <tr><td class="date">[12/17]</td><td><a href="2024/plushtuber-apocalypse-animebromii">PlushTuber Apocalypse: <span style="color:red">AnimeBroMii</span></a></tr>
-    <tr><td class="date">[12/23]</td><td><a href="2024/pc-simulator-magic-carpet-trick">PC Simulator 'magic carpet' trick</a></tr>
-    <tr><td class="date">[12/28]</td><td><a href="2024/minecraft-trolling-days">Minecraft Trolling Days</a></tr>
-    <tr><td class="date">[12/31]</td><td><a href="2024/memey">Memey</a></tr>
-    <!--2025-->
-    <tr><td colspan="2"><h2 id="2025">2025</h2></td></tr>
-    <tr><td class="date">[01/11]</td><td><a href="2025/my-teachers">My Teachers</a></td></tr>
-    <tr><td class="date">[01/21]</td><td><!--gemdation.com/blog/2025/these-are-my-people--></a></td></tr>
-    <tr><td class="date">[01/24]</td><td><a href="2025/cheapo-phones">Cheapo Phones</a></td></tr>
-    <tr><td class="date">[01/27]</td><td><a href="2025/early-days">Early Days</a></td></tr>
-    <tr><td class="date">[02/06]</td><td><a href="2025/planktons-robotic-revenge-review">Plankton's Robotic Revenge Review: <span style="color:#444444">No</span></a></td></tr>
-    <tr><td class="date">[03/25]</td><td><a href="2025/gift-card-incidents">Gift Card Incidents</a></td></tr>
-</table>
+<a href="2025/gift-card-incidents"><div>
+    <img src="../media/blog/thumb-gift-card-incidents.png" class="thumb">
+    <span class="title">Gift Card Incidents</span><br>
+    <p class="desc">"Loophole time again! Ironically Vanilla can't pay for things on Amazon
+       but it can beadded to the Amazon Wallet which was useful for Dead Zebra."</p>
+    <span class="date">March 25</span>
+</div></a>
+
+<a href="2025/planktons-robotic-revenge-review"><div>
+    <img src="../media/blog/thumb-prrr.png" class="thumb">
+    <span class="title">Plankton's Robotic Revenge Review: <span style="color:black">No</span></span><br>
+    <p class="desc">"The default one and the Tartar Sauce shooter were the only ones that
+        really mattered. Everything else was just there, kind of like this game."</p>
+    <span class="date">Febuary 6</span>
+</div></a>
+
+<a href="2025/early-days"><div>
+    <img src="../media/blog/thumb-early-days.png" class="thumb">
+    <span class="title">Early Days</span><br>
+    <p class="desc">"For example, one time in my grandma's house I accidentally dropped the
+        phone when it was at 100%, rebooted it, and saw that it went back to 20%."</p>
+    <span class="date">January 27</span>
+</div></a>
+
+<a href="2025/cheapo-phones"><div>
+    <img src="../media/blog/thumb-cheapo-phones.png" class="thumb">
+    <span class="title">Cheapo Phones</span><br>
+    <p class="desc">"I'm gonna go over my last phones I remember having! And I'll end with the one I am typing this on now."</p>
+    <span class="date">January 24</span>
+</div></a>
+
+<div class="locked">
+    <img src="../media/blog/thumb-none.png" class="thumb">
+    <span class="title">Blog Locked</span><br>
+    <p class="desc">...</p>
+    <span class="date">January 21</span>
+    <!--https://gemdation.com/blog/2024/these-are-my-people-->
+</div>
+
+<a href="2025/my-teachers"><div>
+    <img src="../media/blog/thumb-none.png" class="thumb">
+    <span class="title">My Teachers</span><br>
+    <p class="desc">"he suddenly retired because someone sent an email about how he
+        treated a certain student, to this day I wonder who that was."</p>
+    <span class="date">January 11</span>
+</div></a>
+
+<h2 id="2024">2024</h2>
+
+<a href="2024/memey"><div>
+    <img src="../media/blog/thumb-memey.png" class="thumb">
+    <span class="title">Memey</span><br>
+    <p class="desc">"Have a dank new year."</p>
+    <span class="date">December 31</span>
+</div></a>
+
+<a href="2024/minecraft-trolling-days"><div>
+    <img src="../media/blog/thumb-mctd.png" class="thumb">
+    <span class="title">Minecraft Trolling Days</span><br>
+    <p class="desc">"I quickly demoted them to the standard role and promoted to Operator,
+        this removed their flying ability and made them have to re-add their creative mode."</p>
+    <span class="date">December 28</span>
+</div></a>
+
+<a href="2024/pc-simulator-magic-carpet-trick"><div>
+    <img src="../media/blog/thumb-pc-sim-mc.png" class="thumb">
+    <span class="title">PC Simulator 'magic carpet' trick</span><br>
+    <p class="desc">"Here is a little something I found out when I was experimenting with physics in a
+       mobile game called PC Simulator. Items do not fall when being held."</p>
+    <span class="date">December 23</span>
+</div></a>
+
+<a href="2024/plushtuber-apocalypse-animebromii"><div>
+    <img src="../media/blog/thumb-pta-abm.png" class="thumb">
+    <span class="title">PlushTuber Apocalypse: <span style="color:red">AnimeBroMii</span></span><br>
+    <p class="desc">"Goodbye gang, I'll see you another time!"</p>
+    <span class="date">December 17</span>
+</div></a>
+
+<a href="2024/dogeminer"><div>
+    <img src="../media/blog/thumb-dmr.png" class="thumb">
+    <span class="title">Dogeminer: <i style="color:lightblue">Need More Coins!</i></span><br>
+    <p class="desc">"Skipping some real-life days...I now have 1,000,000,000,000."</p>
+    <span class="date">November 20</span>
+</div></a>
+
+<a href="2024/discord-shenanigans"><div>
+    <img src="../media/blog/thumb-dsc-sh.png" class="thumb">
+    <span class="title">Discord Shenanigans</span><br>
+    <p class="desc">"I made Discord bots! You don't think so? You're right."</p>
+    <span class="date">November 15</span>
+</div></a>
+
+<a href="2024/matsu-memories"><div>
+    <img src="../media/blog/thumb-matsu.png" class="thumb">
+    <span class="title">MatsuMemories</span><br>
+    <p class="desc">"I specifically remember one time when I was waiting for the school
+        bus I was playing a Super Mario Bros. 2 ROM hack."</p>
+    <span class="date">November 3</span>
+</div></a>
+
+<a href="2024/getting-the-website-ready"><div>
+    <img src="../media/blog/thumb-website-ready.png" class="thumb">
+    <span class="title">Getting the website ready</span><br>
+    <p class="desc">"After fiddling with CSS, downloading every image on the internet, and getting cheat sheets with Copilot"</p>
+    <span class="date">November 2</span>
+</div></a>
+
+<p>Posts below will lead to Google Sites.</p>
+
+<a href="https://sites.google.com/view/gemdation/blogs/2024/old-times"><div>
+    <img src="../media/blog/thumb-old-times.png" class="thumb">
+    <span class="title">Old Times</span><br>
+    <p class="desc">"Today, I am publishing a Google Site that contains all of my old cringy websites."</p>
+    <span class="date">September 28</span>
+</div></a>
+
+<a href="https://sites.google.com/view/gemdation/blogs/2024/tux-nightmares"><div>
+    <img src="../media/blog/thumb-tuxn.png" class="thumb">
+    <span class="title">Tux Nightmares</span><br>
+    <p class="desc"><i>"Fast forward way into 2024, I have found a few issues with Fedora."</i></p>
+    <span class="date">September 21</span>
+</div></a>
+
+<a href="https://sites.google.com/view/gemdation/blogs/2024/the-memecord-moment"><div>
+    <img src="../media/blog/thumb-memecord.png" class="thumb">
+    <span class="title">The Memecord Moment</span><br>
+    <p class="desc"><i>"If I could blame why I liked causing chaos around Discord so much it was them, so thanks for all the fun guys! :P"</i></p>
+    <span class="date">August 9</span>
+</div></a>
+
+<div class="locked">
+    <img src="../media/blog/thumb-none.png" class="thumb">
+    <span class="title">Blog Locked</span><br>
+    <p class="desc">...</p>
+    <span class="date">August 8, 2024,<br>January 29, 2025</span>
+    <!-----------https://gemdation.blogspot.com/2024/08/the-wii-shop-experience.html--------->
+    <!--Bonus----https://sites.google.com/view/gemdation/blogs/2024/the-wii-shop-experience-->
+</div>
+
+<a href="https://gemdation.blogspot.com/2024/08/video-game-consoles.html"><div>
+    <img src="../media/blog/thumb-consoles.png" class="thumb">
+    <span class="title">Consoles</span><br>
+    <p class="desc"><i>"I have had 3 Nintendo consoles, 2 Xbox consoles, and 3 PlayStation consoles.</i></p>
+    <span class="date">August 2</span>
+</div></a>
+
+<a href="https://gemdation.blogspot.com/2024/08/soblogger.html"><div>
+    <img src="../media/blog/thumb-blogger.png" class="thumb">
+    <span class="title">So...Blogger?</span><br>
+    <p class="desc"><i>"I have had 3 Nintendo consoles, 2 Xbox consoles, and 3 PlayStation consoles.</i></p>
+    <span class="date">August 1</span>
+</div></a>
+
+<h2 id="2020">2020</h2>
+
+<a href="https://sites.google.com/view/gemdation-archive/postps-archive/posts/big-mcthankies"><div>
+    <img src="../media/blog/thumb-big-mc.png" class="thumb">
+    <span class="title">Big McThankies</span><br>
+    <p class="desc"><i>"Only Big McThankies which was really old, But the WebDev called him out on being a [...]</i></p>
+    <span class="date">November 7</span>
+</div></a>
+
+<a href="https://sites.google.com/view/gemdation-archive/postps-archive/posts/streisand-enderman"><div>
+    <img src="../media/blog/thumb-streisand.png" class="thumb">
+    <span class="title">Streisand Enderman</span><br>
+    <p class="desc"><i>"Then he deleted the public discord probably because people were spreading the image of him being [...]</i></p>
+    <span class="date">October 16</span>
+</div></a>
+
+<a href="https://sites.google.com/view/gemdation-archive/postps-archive/posts/GPMshutdown"><div>
+    <img src="../media/blog/thumb-gpm-shutdown.png" class="thumb">
+    <span class="title">Google Play Music Store shutdown</span><br>
+    <p class="desc"><i>"This doesn't effect me, because I use YouTube music"</i></p>
+    <span class="date">October 6</span>
+</div></a>
+
+<div style="padding: 0;border: none;box-shadow: none;margin-bottom: 0;"><img src="../media/gems-blog-bottom.png" style="width:250px"></div>
 
 </body>
 </html>

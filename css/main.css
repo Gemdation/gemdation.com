@@ -1,10 +1,10 @@
-body {color:white; background-image: url('../media/stars.png'); background-color: black; /*fallback*/ background-size:auto; background-repeat: repeat; font-family: Verdana;}
+body {margin:0;color:white; background-image: url(../media/rain.png);background-repeat: repeat-y; background-size: 100%; font-family: 'Verdana',sans-serif;}
 h1, h2, h3, h4, h5, h6, li, p, div {text-align: center;}
 div {width: 50%; margin: 0 auto; box-sizing: border-box; border-style: solid; border-width: 5px; border-radius: .25rem; border-spacing: 2px; backdrop-filter: blur(1px); padding: 5px; margin-top: 5px; margin-bottom: 5px; overflow: auto;}
 
-button {font-family: 'Verdana',sans-serif;box-shadow: 0 0 10px rgb(255, 255, 255); border-width: 2px; border-color: white; border-radius: .25rem; border-style: solid; background-color: black; color:white}
+button {font-family: 'Verdana',sans-serif;box-shadow: 0 0 10px white; border-width: 2px;border-color:white;border-radius:.25rem;border-style:solid;background:none;color:white}
 button:hover {text-shadow: 0 0 10px yellow; box-shadow: 0 0 10px yellow; border-color:yellow; color:yellow; cursor:pointer}
-button:disabled {text-shadow: 0 0 10px grey; box-shadow: 0 0 10px grey; border-color:grey; color:grey; cursor:not-allowed}
+button:disabled {text-shadow: 0 0 10px #FFFFFF9D; box-shadow: 0 0 10px #FFFFFF9D; border-color:#FFFFFF9D; color:#FFFFFF9D; cursor:not-allowed}
 button:active {box-shadow: none;}
 
 a {text-shadow: 0 0 10px white; font-weight: bold; color:white; text-decoration: none;}
@@ -15,13 +15,12 @@ table {border: 1px solid white; border-collapse: collapse;}
 th, td {border: 1px solid}
 ul {list-style-type: circle; margin: 0; padding: 0;}
 ul {text-align: left;}
-dd {color:grey}
+dd {color:#FFFFFF9D}
 
 .left {float: left; margin-right: 20px;}
 .right {float: right; margin-left: 20px;}
-.hidden {color:grey}
-.date {font-family: monospace;}
+.hidden {color:#FFFFFF9D}
 .buttons {border-width: 0px;}
 .buttons img {border: solid 1px}
 
-@media (max-width: 768px) {div {width: 100%;}}
+@media (max-width: 768px) {div {width: 90%;}}

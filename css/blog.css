@@ -1,14 +1,14 @@
-body {font-family: verdana, sans-serif; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px  1px 0 #000, 1px  1px 0 #000; color: white; background-image: url(../media/moon.png); background-color: black; background-size: 20%; background-position: right; background-attachment: fixed; background-repeat: no-repeat; text-align: center;}
+body {font-family: verdana, sans-serif;text-align: center; text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px  1px 0 #000, 1px  1px 0 #000; color: white; background-color: black;background-image: url(../../media/gems-blog.png);background-color: black; background-size: 125px; background-position: right; background-attachment: fixed; background-repeat: no-repeat;}
 button {font-family: 'Verdana',sans-serif; box-shadow: 0 0 10px rgb(255, 255, 255); border-width: 2px; border-color: white; border-radius: .25rem; border-style: solid; background-color: black; color:white}
-button:hover {cursor:pointer}
+button:hover {text-shadow: 0 0 10px yellow; box-shadow: 0 0 10px yellow; border-color:yellow; color:yellow; cursor:pointer}
 button:active {box-shadow: none;}
-button:disabled {text-shadow: 0 0 10px grey; box-shadow: 0 0 10px grey; border-color:grey; color:grey; cursor:not-allowed}
+button:disabled {text-shadow: 0 0 10px #FFFFFF9D; box-shadow: 0 0 10px #FFFFFF9D; border-color:#FFFFFF9D; color:#FFFFFF9D; cursor:not-allowed}
 
 table {border: 1px solid white; border-collapse: collapse; margin: auto;}
 th, td {border: 1px solid}
 .date {font-family: monospace;}
 li {text-align: left;}
-dd {text-align: left;color:grey}
+dd {text-align: left;color:#FFFFFF9D}
 
 mark {color:black; text-shadow: none;}
 img {width: 100%;}
@@ -19,8 +19,8 @@ a:active {box-shadow: none;}
 .back {text-align: left; font-weight: bold;}
 .b {font-weight: bold}
 h2.highlight {color: yellow;}
-i.grey {color:grey; font-weight: normal;}
-.hidden {color:grey}
+i.grey {color:#FFFFFF9D; font-weight: normal;}
+.hidden {color:#FFFFFF9D}
 
 div {width: 40%; margin: 0 auto;}
 @media (max-width: 768px) {div {width: 100%;}}
