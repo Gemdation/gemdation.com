@@ -6,26 +6,24 @@
    <meta content="These are my blogs." property="og:description" />
    <meta content="https://gemdation.com/blog" property="og:url" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-   <link rel="stylesheet" href="../css/main.css" />
-   <link rel="stylesheet" href="../css/verdana.css" />
-   <link rel="icon" type="image/x-icon" href="../media/favicon.ico" />
+   <link rel="stylesheet" href="../meta/gem.css" />
+   <link rel="icon" type="image/x-icon" href="../meta/favicon.ico" />
    <style>
         body {background-image: url(../media/background/rainbow-darker.png);}
-        div {box-shadow: 0 0 10px white}
-        div:hover {box-shadow: 0 0 10px yellow;border-color:yellow;cursor: pointer}
-        div:active {box-shadow: none}
+        div {box-shadow: 0 0 10px white;}
+        a {text-shadow:none;font-weight:normal}
+        a:hover {text-shadow:none;color:white}
+        a:hover div {box-shadow: 0 0 10px yellow;border-color:yellow;cursor: pointer}
+        a:active div {box-shadow: none}
+
         div.locked {box-shadow:none;border-color:#ffffff81;color:#ffffff81}
         div.locked:hover {cursor:help}
         img.thumb {height: 160px;float: left;border-radius: .25rem;margin-right: 4px;}
+
         span.title {float: left;font-weight: bold;margin-top: 10px;font-size: larger;position: absolute;top: 0;left: 170px}
         p.desc {text-align: left;margin-top: 65px;font-style:italic}
         span.date {position: absolute;bottom: 4px;right: 4px}
-        a {text-shadow:none;font-weight:normal}
-        a:hover {text-shadow:none;color:white}
-        b {text-shadow: 0 0 10px white;}
-        b:hover {text-shadow: 0 0 10px yellow;color:yellow}
-        b:active {text-shadow:none}        
-    </style>    
+    </style>
    <script>function highlightElement() {var hash = window.location.hash.substring(1); var element = document.getElementById(hash); if (element && element.tagName === 'H2') {element.classList.add('highlight');}} window.onload = highlightElement;</script>
 </head>
 <body>

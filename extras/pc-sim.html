@@ -7,13 +7,14 @@
    <meta content="https://gemdation.com/extras/pc-sim" property="og:url" />
    <meta content="#000000" data-react-helmet="true" name="theme-color" />
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../css/main.css">
-   <link rel="stylesheet" href="../css/verdana.css">
-   <link rel="icon" type="image/x-icon" href="../media/favicon.ico">
-   <style>body {background-image: none;background-color: black;color:white;font-family: monospace;}
-          div {border-radius: 0;}
-          img {border-style: solid;border-width: 1px;}
-          button {border-radius: 0;font-family: monospace;border-width: 1px;}
+   <link rel="stylesheet" href="../meta/gem.css">
+   <link rel="icon" type="image/x-icon" href="../meta/favicon.ico">
+   <style>
+   @font-face {font-family: 'CMD'; src: url('/meta/cmd.ttf') format('truetype')}
+   body {background-image: none;background-color: black;color:white;font-family:'CMD',monospace;}
+   div {border-radius: 0;}
+   img {border-style: solid;border-width: 1px;}
+   button {border-radius: 0;font-family: monospace;border-width: 1px;}
    </style>
    <script>document.addEventListener("DOMContentLoaded", function () {document.querySelectorAll("img").forEach(img => {img.style.cursor = "pointer";img.addEventListener("click", function () {const link = document.createElement("a"); link.href = img.src; link.download = img.getAttribute("alt") || "downloaded-image"; document.body.appendChild(link); link.click(); document.body.removeChild(link); }); });});</script>
 </head>
