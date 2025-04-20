@@ -28,6 +28,7 @@ hr {border-width: 3px;border-radius: .25rem;border-style: solid;margin-left: 5px
 body.blog {background-image: url(../media/background/rainbow-darker.png);background-repeat: repeat-y; background-size: 100%;}
 body.blog div {background:none;border:none}
 .back {float: left;font-weight: normal;margin-left: 6px;}
+body.blog img {width:100%}
 
 .left {float: left; margin-right: 20px;}
 .right {float: right; margin-left: 20px;}
