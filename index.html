@@ -12,13 +12,16 @@
    <link rel="stylesheet" href="meta/gem.css">
    <link rel="icon" type="image/x-icon" href="meta/favicon.ico">
    <link rel="me" href="https://mastodon.social/@Gemdation" />
-   <style>ul li {text-align: left;} .hidden {display: none}</style>
+   <style>ul li {text-align: left;} .hidden {display: none} #songName {color:#ffffffab;margin-top: 10px; font-style: italic;}</style>
+   <script src="meta/song.js" defer></script>
 </head>
 <body>
 
-<header><a>gemdation.com</a></header>
+<header><a href="#" id="title-click">gemdation.com</a></header>
 
 <nav><a href="blog"><button>Blog</button></a> <a href="buttons"><button>Buttons</button></a> <a href="gallery"><button>Gallery</button></a> <a href="library"><button>Library</button></a> <a href="feed.xml"><button>Feed</button></a></nav>
+
+<p id="theP" style="display:none">Random Song: <span id="songName"></span></p>
 
 <div class="clear" style="margin-bottom:15px"><b>LATEST BLOG:</b> <a href="blog/2025/gift-card-incidents">Gift Card Incidents</a> [03/25]</div>
 
