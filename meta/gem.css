@@ -13,10 +13,10 @@ header {text-align:center;padding: 20px;font-size: 35px;}
 header a {text-shadow: 0 0 10px black;background-image: url(../media/bej-gems.png);background-size: 90%;background-repeat: no-repeat;background-position:top;padding-top: 15px}
 nav {text-align:center;padding: 10px;padding-top: 0;}
 
-button {font-family: 'Verdana',sans-serif;box-shadow: 0 0 10px white; border-width: 2px;border-color:white;border-radius:.25rem;border-style:solid;background:none;color:white}
-button:hover {text-shadow: 0 0 10px yellow; box-shadow: 0 0 10px yellow; border-color:yellow; color:yellow; cursor:pointer}
-button:disabled {text-shadow: 0 0 10px #FFFFFF9D; box-shadow: 0 0 10px #FFFFFF9D; border-color:#FFFFFF9D; color:#FFFFFF9D; cursor:not-allowed}
-button:active {box-shadow: none;}
+a.btn {font-family:'Verdana',sans-serif;box-shadow: 0 0 10px white; border: 2px solid white;border-radius:.25rem;display: inline-block;font-weight: normal;font-size: 13px;padding: 2px;}
+a.btn:hover {box-shadow: 0 0 10px yellow; border-color:yellow; color:yellow; cursor:pointer}
+span.btn-active {border: 2px solid #FFFFFF9D;border-radius:.25rem; color:#FFFFFF9D; cursor:not-allowed;font-size: 13px;padding: 2px;display: inline-block;}
+a.btn:active {box-shadow: none;}
 
 a {text-shadow: 0 0 10px white; font-weight: bold; color:white; text-decoration: none;}
 a:hover {text-shadow: 0 0 10px yellow; color: yellow}
