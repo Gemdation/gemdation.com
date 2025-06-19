@@ -1,4 +1,4 @@
 body {background-color:black; background-image: url('../media/diamond.png'); background-size: 280px;background-position: bottom; background-attachment: fixed; background-repeat: no-repeat; color:white; font-family:monospace}
 h1 {text-shadow: 0 0 10px white}
 table, th, td {border:1px solid white; background-color: #00000040; border-collapse: collapse; padding: 2px;}
-a {text-decoration: none; color:white;}
+a {text-decoration: none; color:white;font-weight: bold;}

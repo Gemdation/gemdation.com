@@ -22,6 +22,7 @@ a {text-shadow: 0 0 10px white; font-weight: bold; color:white; text-decoration:
 a:hover {text-shadow: 0 0 10px yellow; color: yellow}
 a:active {text-shadow: none;}
 
+article {display:block;text-align: center;margin:10px;border: solid 1px white;padding: 2rem;width: 50%;box-sizing: border-box;}
 table {border: 1px solid white; border-collapse:collapse}
 th, td {border: 1px solid}
 ul {list-style-type: circle;margin: 0;padding: 0;text-align:left}
@@ -30,9 +31,9 @@ img {border-radius: .25rem}
 hr {border-width: 3px;border-radius: .25rem;border-style: solid;margin-left: 5px;margin-right: 5px}
 
 
-body.blog {background-image: url(../media/background/rainbow-darker.png);background-repeat: repeat-y; background-size: 100%;}
+body.blog {background-image: url(../media/background/rainbow-darker.png);background-repeat: repeat-y; background-size: 100%;display: flex;justify-content: center;align-items: center;}
 body.blog div {background:none;border:none}
-.back {float: left;font-weight: normal;margin-left: 6px;}
+.back {background-color:#850006;position: absolute;left: 10px;top: 0px;}
 body.blog img {width:100%}
 
 a div.con {text-shadow:none;color:white}
@@ -53,4 +54,4 @@ span.date {position: absolute;bottom: 4px;right: 4px}
 .buttons {border-width: 0px;background:none}
 .buttons img {border: solid 1px}
 
-@media (max-width: 768px) {div {width: 95%;}}
+@media (max-width: 768px) {div {width: 95%;} article {width: 95%;}}
