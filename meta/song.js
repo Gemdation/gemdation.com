@@ -5,7 +5,7 @@ const quotes = [
   "fasho fashizzy, lil hero",
   "It's Not Over, Daughtry",
   "Glad You Came, We Came As Romans",
-  "Glad You Came, The Living Tombstone"
+  "Temporary Love, The Living Tombstone & CG5"
 ]; // will add more later
 
 const link = document.getElementById('title-click');
