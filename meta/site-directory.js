@@ -15,6 +15,8 @@
     const iconMap = {
         'apk': '/meta/dir-apk.svg',
         'css': '/meta/dir-css.svg',
+        'js': '/meta/dir-js.svg',
+        'html': '/meta/dir-html.svg',
         'ttf': '/meta/dir-font.svg',
         'psd': '/meta/dir-image.svg',
         'svg': '/meta/dir-image.svg',
@@ -22,7 +24,6 @@
         'jpg': '/meta/dir-image.svg',
         'gif': '/meta/dir-image.svg',
         'ico': '/meta/dir-image.svg',
-        'js': '/meta/dir-js.svg',
         'mp3': '/meta/dir-sound.svg',
         'txt': '/meta/dir-text.svg',
         'md': '/meta/dir-text.svg',

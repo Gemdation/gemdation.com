@@ -31,8 +31,11 @@ button:active {background:linear-gradient(to bottom, pink, fuchsia, fuchsia, pin
 button:disabled {background:linear-gradient(to bottom, silver, dimgray, dimgray, silver);box-shadow:none;color:white;cursor:default;}
 button.back {position:absolute;left:10px;top:10px;z-index:1;position:fixed;}
 
-article {clip-path:polygon(0% 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, 0% 100%);display:block;text-align:center;margin:10px auto;background:linear-gradient(to bottom, #afafaf80, #72727280);padding:1.5rem;width:50%;box-sizing:border-box;}
+article {clip-path:polygon(0% 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, 0% 100%);display:block;text-align:center;margin:10px auto;background:linear-gradient(to bottom, #afafaf80, #72727280);padding:1rem;width:50%;box-sizing:border-box;}
 article img {width:60%;}
+article ul {padding:10px;}
+article ul li {text-align: left;}
+article ul dd {margin:auto 0;}
 table {border:1px solid white;border-collapse:collapse}
 th, td {border:1px solid}
 ul {list-style-type:circle;margin:0;padding:0;text-align:left}
