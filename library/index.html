@@ -1,65 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <title>Gemdation's Library</title>
-   <meta content="Gemdation's Library" property="og:title">
-   <meta content="This is a collection of everything I like" property="og:description">
-   <meta content="https://gemdation.com/library" property="og:url">
-   <meta content="#4c5162" data-react-helmet="true" name="theme-color">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="../meta/gem.css">
-   <link rel="stylesheet" href="../css/verdana.css" />
-   <link rel="icon" type="image/x-icon" href="../meta/favicon.ico">
+    <title>Gemdation's Library</title>
+    <meta content="Gemdation's Library" property="og:title">
+    <meta content="This is a collection of everything I like" property="og:description">
+    <meta content="https://gemdation.com/library" property="og:url">
+    <meta content="#4c5162" data-react-helmet="true" name="theme-color">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../meta/gem.css">
+    <link rel="stylesheet" href="../css/verdana.css" />
+    <link rel="icon" type="image/x-icon" href="../meta/favicon.ico">
+    <style>
+        div.row div.block div.block {width:100%;margin:0 auto;}
+        hr {margin: 0 auto;border-radius:0;border-color:grey;}
+        #shelf {border-radius:.25rem;padding:0;background:none;border: solid 4px grey} 
+        #inf:hover {background-color:red}
+        #music:hover, #sound:hover {background-color:magenta}
+        #games:hover, #consoles:hover {background-color:green}
+        #shows:hover, #movies:hover {background-color:cyan}
+    </style>
 </head>
 <body>
 
 <header><a href="/">gemdation.com</a></header>
-<nav><a href="../blog" class="btn">Blog</a> <a href="../buttons" class="btn">Buttons</a> <a href="../gallery" class="btn">Gallery</a> <span class="btn-active">Library</span> <a href="../feed.xml" class="btn">Feed</a></nav>
 
-<hr style="border-width: 3px; border-radius: .25rem; border-style: solid;">
+<nav><a href="../blog"><button>Blog</button></a> <a href="../files"><button>Files</button></a> <button disabled>Library</button></nav>
 
-<p>These buttons lead to places in the library, click one :D</p>
-
-    <a href="influences">
-    <div style="border-color: red;">
-        <h2 style="color: red;">Influences</h2>
-    </div></a>
-
-
-    <a href="music"><div style="border-color: magenta;">
-        <h2 style="color: magenta;">Music</h2>
-    </div></a>
-
-
-    <a href="soundtracks"><div style="border-color: magenta;">
-        <h2 style="color: magenta;">Soundtracks</h2>
-    </div></a>
-
-
-    <a href="games"><div style="border-color:lime;">
-        <h2 style="color:lime;">Games</h2>
-    </div></a>
-
-    <a href="consoles"><div style="border-color: lime;">
-        <h2 style="color: lime;">Consoles</h2>
-    </div></a>
-
-
-    <div style="border-color: orange;">
-        <h2 style="color: orange;">Smartphones</h2>
+<div class="row">
+    <div class="block" id="shelf">
+        <a href="influences"><div class="block" id="inf">
+            <h2 style="color:red">Influences</h2>
+        </div></a>
+        <hr>
+        <a href="music"><div class="block" id="music">
+            <h2 style="color:magenta">Music</h2>
+        </div></a>
+        <hr>
+        <a href="soundtracks"><div class="block" id="sound">
+            <h2 style="color:magenta">Soundtracks</h2>
+        </div></a>
+        <hr>
+        <a href="games"><div class="block" id="games">
+            <h2 style="color:lime">Games</h2>
+        </div></a>
+        <hr>
+        <a href="consoles"><div class="block" id="consoles">
+            <h2 style="color:lime">Consoles</h2>
+        </div></a>
+        <hr>
+        <a href="shows"><div class="block" id="shows">
+            <h2 style="color:cyan">Shows</h2>
+        </div></a>
+        <hr>
+        <a href="movies"><div class="block" id="movies">
+            <h2 style="color:cyan">Movies</h2>
+        </div></a>
     </div>
-
-
-    <a href="shows">
-    <div style="border-color: cyan;">
-        <h2 style="color: cyan;">Shows</h2>
-    </div></a>
-
-
-    <a href="movies">
-        <div style="border-color: cyan;">
-            <h2 style="color: cyan;">Movies</h2>
-    </div></a>
+</div>
 
 </body>
 </html>

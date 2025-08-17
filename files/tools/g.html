@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Textbox</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>body {background-color: black;color:red;font-family: monospace;}
+           button {box-shadow: 0 0 10px rgb(255, 255, 255); border-width: 2px; border-color: white; border-radius: .25rem; border-style: solid; background-color: black; color:white}
+           button:hover {text-shadow: 0 0 10px red; box-shadow: 0 0 10px red; border-color:red; color:red; cursor:pointer}
+           button:active {box-shadow: none;}
+           input {background-color: rgb(255, 65, 65);border-width: 2px; border-color: rgba(0, 0, 0, 0) ; border-style: solid; color:black}
+    </style>
+</head>
+<body>
+
+<div id="Name">
+    <h2>Enter your name:</h2>
+    <input type="text" id="NameBox" required>
+    <button onclick="submitName()">Submit Name
+</div>
+
+<div id="realName" style="display:none;">
+    <h2>Enter your <i>real</i> name:</h2>
+    <input type="text" id="realNameBox" onkeydown="BoxReference(event)">
+    <button id="calenButton" onclick="submitTrueName()" disabled>Submit
+</div>
+
+<p id="specialMessage" style="display:none;">gemdation.com/tools/____0_.md</p>
+
+<script>
+    // don't make fun
+    function submitName() {const nameInput = document.getElementById("NameBox"); if (nameInput.value.trim() === "") {alert("Please enter your name.");} else {document.getElementById("Name").style.display = "none"; document.getElementById("realName").style.display = "block";}}
+    const theTrueName = "Calendula";
+    let currentIndex = 0;
+    function BoxReference(event) {const input = event.target; if (event.key !== 'Backspace') {if (currentIndex < theTrueName.length) {input.value += theTrueName[currentIndex]; currentIndex++; if (currentIndex === theTrueName.length) {document.getElementById("calenButton").disabled = false;}} event.preventDefault();}}
+    function submitTrueName() {document.getElementById("realName").style.display = "none"; document.getElementById("specialMessage").style.display = "block";}
+</script>
+
+</body>
+</html>

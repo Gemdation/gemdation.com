@@ -1,30 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <title>410</title>
-   <meta content="410 Gone" property="og:title">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="meta/dir.css">
-   <link rel="icon" type="image/x-icon" href="meta/favicon.ico">
-   <style>
-      *{text-align: center;}
-      body {background-color: black;background-image: none;}
-      #content {opacity: 0; transition: opacity 1s;}
-      button {font-family: 'Verdana',sans-serif;box-shadow: 0 0 10px rgb(255, 255, 255);border-color: white;border-radius: .25rem;border-style: solid;background-color: black;color:white}
-      button:hover {text-shadow: 0 0 10px yellow;box-shadow: 0 0 10px yellow;border-color:yellow;color:yellow;cursor:pointer}
-      button:active {box-shadow: none;}
-   </style>
+    <title>410</title>
+    <meta content="410 Gone" property="og:title">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="meta/dir.css">
+    <link rel="icon" type="image/x-icon" href="meta/favicon.ico">
+    <style>
+        *{text-align: center;}
+        body {background-color: black;background-image: none;}
+        #content {opacity: 0; transition: opacity 1s;}
+        button {font-family:'Verdana',sans-serif;background:linear-gradient(to bottom, violet, purple, purple, violet);color:white;font-weight:bold;border:none;padding:5px;border-radius:10px;}
+        button:hover {box-shadow:0 0 10px purple;color:violet;cursor:pointer}
+        button:active {background:linear-gradient(to bottom, pink, fuchsia, fuchsia, pink);box-shadow:none;}
+    </style>
 </head>
 <body>
 
 <div id="content">
-   <h1 style="font-size: 100px;margin-bottom: 0">410</h1>
-   <h4 style="margin-top: 0;">Gone</h4>
+    <h1 style="font-size: 100px;margin-bottom: 0">410</h1>
+    <h4 style="margin-top: 0;">Gone</h4>
 </div>
 
 <button id="start">View Page
 
-<audio id="fan" loop><source src="media/koronba-fan.mp3" type="audio/mpeg">If you are seeing this then your client does not support audio, sad.</audio>
+<audio id="fan" loop><source src="media/random/koronba-fan.mp3" type="audio/mpeg">If you are seeing this then your client does not support audio, sad.</audio>
 <script>document.getElementById('start').onclick = function() {var audio = document.getElementById('fan'); audio.play().catch(function(error) {console.log('Playback failed:', error);}); var content = document.getElementById('content');content.style.opacity = 1; this.style.display = 'none'; };</script>
 
 </body>

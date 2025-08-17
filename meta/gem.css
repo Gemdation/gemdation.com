@@ -1,58 +1,68 @@
-@font-face {font-family: 'Verdana'; src: url('verdana.ttf') format('truetype'); font-weight: normal; font-style: normal;}
-@font-face {font-family: 'Verdana'; src: url('verdana-italic.ttf') format('truetype'); font-weight: normal; font-style: italic;}
-@font-face {font-family: 'Verdana'; src: url('verdana-bold.ttf') format('truetype'); font-weight: bold; font-style: normal;}
-@font-face {font-family: 'Verdana'; src: url('verdana-bold-italic.ttf') format('truetype'); font-weight: bold; font-style: italic;}
+@font-face {font-family:'Verdana';src:url('verdana.ttf') format('truetype');font-weight:normal;font-style:normal;}
+@font-face {font-family:'Verdana';src:url('verdana-italic.ttf') format('truetype');font-weight:normal;font-style:italic;}
+@font-face {font-family:'Verdana';src:url('verdana-bold.ttf') format('truetype');font-weight:bold;font-style:normal;}
+@font-face {font-family:'Verdana';src:url('verdana-bold-italic.ttf') format('truetype');font-weight:bold;font-style:italic;}
 
-body {margin:0;color:white;background-image: url(../media/background/rainbow-dark.png);background-color:#850006;background-repeat: repeat-y; background-size: 100%; font-family: 'Verdana',sans-serif;}
-h1, h2, h3, h4, h5, h6, li, p, div {text-align: center;}
+body {margin:0;color:white;background-image:url(../media/background/blue-space.png);background-color:#042456;font-family:'Verdana',sans-serif;}
+header {text-align:center;padding:20px;font-size:35px;}
+header a {text-shadow:0 0 10px black;background-image:url(../media/bej-gems.png);background-size:90%;background-repeat:no-repeat;background-position:top;padding-top:15px}
+nav {text-align:center;padding:10px;padding-top:0;}
+
+h1, h2, h3, h4, h5, h6, li, p, div {text-align:center;}
 h3 {color:#FFFFFF80;}
-div {width: 50%;margin: 0 auto;background-color:#00000081; box-sizing: border-box; border-style: solid; border-width: 4px; border-radius: .25rem; border-spacing: 2px; backdrop-filter: blur(1px); padding: 5px; margin-top: 5px; margin-bottom: 5px; overflow: auto;}
-div.clear {background:none;border:none;padding:0;}
-div.gallery {width: 95%} div.gallery img {width:250px}
 
-header {text-align:center;padding: 20px;font-size: 35px;}
-header a {text-shadow: 0 0 10px black;background-image: url(../media/bej-gems.png);background-size: 90%;background-repeat: no-repeat;background-position:top;padding-top: 15px}
-nav {text-align:center;padding: 10px;padding-top: 0;}
+a {text-shadow:0 0 10px white;font-weight:bold;color:white;text-decoration:none;}
+a:hover {text-shadow:0 0 10px yellow;color:yellow}
+a:active {text-shadow:none;}
+a div.article {text-shadow:none;color:white}
+a:hover div.article {text-shadow:0 0 10px white;cursor:pointer}
+a:active div.block, a:active div.article {background:linear-gradient(to top, #afafaf80, #72727280);text-shadow:none;}
 
-a.btn {font-family:'Verdana',sans-serif;box-shadow: 0 0 10px white; border: 2px solid white;border-radius:.25rem;display: inline-block;font-weight: normal;font-size: 13px;padding: 2px;}
-a.btn:hover {box-shadow: 0 0 10px yellow; border-color:yellow; color:yellow; cursor:pointer}
-span.btn-active {border: 2px solid #FFFFFF9D;border-radius:.25rem; color:#FFFFFF9D; cursor:not-allowed;font-size: 13px;padding: 2px;display: inline-block;}
-a.btn:active {box-shadow: none;}
+div.block {width:50%;margin:0 auto;background:linear-gradient(to top, #3d3d3d80, #cfc6c680);backdrop-filter:blur(10px);box-sizing:border-box;border-spacing:2px;backdrop-filter:blur(1px);padding:5px;margin-bottom:5px;overflow:auto;}
+div.article {width:50%;margin:0 auto;display:flex;justify-content:space-between;align-items: stretch;background:linear-gradient(to bottom, #afafaf80, #72727280);clip-path:polygon(0% 0%, calc(100% - 30px) 0%, 100% 30px, 100% 100%, 0% 100%);box-sizing:border-box;margin-top:5px;overflow:auto;}
+div.article img {height:160px;float:left;border-radius:0;}
+.article-content {display: flex;flex-direction: column;flex-grow: 1;justify-content: space-between;padding-right: 10px; word-wrap: break-word;}
+div.gallery {width:95%}
+div.gallery img {width:250px}
 
-a {text-shadow: 0 0 10px white; font-weight: bold; color:white; text-decoration: none;}
-a:hover {text-shadow: 0 0 10px yellow; color: yellow}
-a:active {text-shadow: none;}
+button {font-family:'Verdana',sans-serif;background:linear-gradient(to bottom, violet, purple, purple, violet);color:white;font-weight:bold;border:none;padding:5px;border-radius:10px;}
+button:hover {box-shadow:0 0 10px purple;color:violet;cursor:pointer}
+button:active {background:linear-gradient(to bottom, pink, fuchsia, fuchsia, pink);box-shadow:none;}
+button:disabled {background:linear-gradient(to bottom, silver, dimgray, dimgray, silver);box-shadow:none;color:white;cursor:default;}
+button.back {position:absolute;left:10px;top:10px;z-index:1;position:fixed;}
 
-article {clip-path: polygon(0% 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, 0% 100%);display:block;text-align: center;margin:10px;background: linear-gradient(to bottom, #afafaf80, #72727280);;padding: 2rem;width: 50%;box-sizing: border-box;}
-table {border: 1px solid white; border-collapse:collapse}
-th, td {border: 1px solid}
-ul {list-style-type: circle;margin: 0;padding: 0;text-align:left}
+article {clip-path:polygon(0% 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, 0% 100%);display:block;text-align:center;margin:10px auto;background:linear-gradient(to bottom, #afafaf80, #72727280);padding:1.5rem;width:50%;box-sizing:border-box;}
+article img {width:60%;}
+table {border:1px solid white;border-collapse:collapse}
+th, td {border:1px solid}
+ul {list-style-type:circle;margin:0;padding:0;text-align:left}
 dd {color:#FFFFFF9D}
-img {border-radius: .25rem}
-hr {border-width: 3px;border-radius: .25rem;border-style: solid;margin-left: 5px;margin-right: 5px}
+img {border-radius:.25rem}
+img.min {width:50%}
+img.wide {width:100%}
+hr {border-width:3px;border-radius:.25rem;border-style:solid;margin-left:5px;margin-right:5px}
 
-
-body.blog {background-image: url(../media/background/rainbow-darker.png);background-repeat: repeat-y; background-size: 100%;display: flex;justify-content: center;align-items: center;}
+body.blog {background-image:url(../media/background/rainbow-darker.png);background-repeat:repeat-y;background-size:100%;display:flex;justify-content:center;align-items:center;}
 body.blog div {background:none;border:none}
-.back {background-color:#850006;position: absolute;left: 10px;top: 0px;z-index:1;position:fixed;}
 body.blog img {width:100%}
 
-a div.con {text-shadow:none;color:white}
-a:hover div.con {box-shadow: 0 0 10px yellow;border-color:yellow;cursor: pointer}
-a:active div.con {box-shadow: none}
+div.articlelocked {box-shadow:none;border-color:#ffffff81;color:#ffffff81}
+div.articlelocked:hover {cursor:help}
 
-div.conlocked {box-shadow:none;border-color:#ffffff81;color:#ffffff81}
-div.conlocked:hover {cursor:help}
-img.thumb {height: 160px;float: left;border-radius: .25rem;margin-right: 4px;}
+span.title {font-weight:bold;font-size:larger;text-align:left;padding:10px;padding-bottom:0;}
+span.desc {font-style:italic;font-weight:normal;text-align:left;padding-left:10px;}
+span.date {color:#FFFFFF9D;text-align:right;padding-bottom:10px;}
 
-span.title {float: left;font-weight: bold;margin-top: 10px;font-size: larger;position: absolute;top: 0;left: 170px}
-p.desc {text-align: left;margin-top: 65px;font-style:italic;font-weight:normal;}
-span.date {position: absolute;bottom: 4px;right: 4px}
-
-.left {float: left; margin-right: 20px;}
-.right {float: right; margin-left: 20px;}
+.left {float:left;margin-right:20px;}
+.right {float:right;margin-left:20px;}
 .hide {color:#FFFFFF9D}
-.buttons {border-width: 0px;background:none}
-.buttons img {border: solid 1px}
+.buttons {border-width:0px;background:none}
+.buttons img {border:solid 1px}
 
-@media (max-width: 768px) {div {width: 95%;} article {width: 95%;}}
+body.dir {text-align:left;max-width:550px}
+body.dir li {justify-content:center;vertical-align:middle;border-top:solid 1px white;text-align:left;}
+body.dir img {vertical-align:middle;width:30px}
+
+
+
+@media (max-width:768px) {div.row div.block, div.row div.article {width:95%;} article {width:95%;}}

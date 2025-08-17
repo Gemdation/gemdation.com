@@ -1,62 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-   <title>Gemdation's Domain</title>
-   <meta content="Gemdation's Domain" property="og:title">
-   <meta content="This website is a collection of stuff I like, thoughts, and more!" property="og:description">
-   <meta content="https://gemdation.com/media/gems-rainbow.png" property="og:image">
-   <meta content="https://gemdation.com" property="og:url">
-   <meta content="#850006" data-react-helmet="true" name="theme-color">
-   <meta name="keywords" content="Gemdation, tech blogs, gaming">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <link rel="stylesheet" href="meta/gem.css">
-   <link rel="icon" type="image/x-icon" href="meta/favicon.ico">
-   <style>ul li {text-align: left;} .hidden {display: none} #songName {color:#ffffffab;margin-top: 10px; font-style: italic;}</style>
-   <script src="meta/song.js" defer></script>
+    <title>Gemdation's Domain</title>
+    <meta name="description" content="This website is a collection of stuff I like, thoughts, and more!">
+    <meta name="theme-color" content="#850006">
+    <meta name="keywords" content="Gemdation, tech blogs, gaming">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="Gemdation's Domain">
+    <meta property="og:description" content="This website is a collection of stuff I like, thoughts, and more!">
+    <meta property="og:url" content="https://gemdation.com">
+    <meta property="og:image" content="https://gemdation.com/media/gems.png">
+    <meta property="og:image:alt" content="An array of gemstones">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Gemdation's Domain">
+    <link rel="stylesheet" href="meta/gem.css">
+    <link rel="icon" type="image/x-icon" href="meta/favicon.ico">
+    <style>
+        ul li {text-align:left}
+        .hidden {display:none}
+        #songName {color:#FFFFFFAB;margin-top:10px;font-style:italic;}
+    </style>
+    <script src="meta/song.js" defer></script>
 </head>
 <body>
 
 <header><a href="#" id="title-click">gemdation.com</a></header>
 
-<nav><a href="blog" class="btn">Blog</a> <a href="buttons" class="btn">Buttons</a> <a href="gallery" class="btn">Gallery</a> <a href="library" class="btn">Library</a> <a href="feed.xml" class="btn">Feed</a></nav>
+<nav><a href="blog"><button>Blog</button></a> <a href="files"><button>Files</button></a> <a href="library"><button>Library</button></a></nav>
 
 <p id="theP" style="display:none">Random Song: <span id="songName"></span></p>
 
-<div class="clear" style="margin-bottom:15px"><b>LATEST BLOG:</b> <a href="blog/2025/customer-support">Customer Support</a> [06/28]</div>
+<div style="margin-bottom:15px"><b>LATEST BLOG:</b> <a href="blog/2025/customer-support">Customer Support</a> [06/28]</div>
 
-<div style="text-align: left">
-    <img src="media/gems.png" style="float:left;height: 100%;width: 100px;" title="Profile picture" alt="Gemstones">
-    <p>I've been going by <b>Gemdation</b> on the Internet since 2022 and
-       I like technology, cartoons, and casual video games.</p>
+<div class="row">
+    <div class="block" style="text-align:left">
+        <img src="media/gems.png" style="float:left;height:100%;width: 100px;" title="Profile picture" alt="Gemstones">
+        <p>I've been going by <b>Gemdation</b> on the Internet since 2022 and
+        I like technology, cartoons, and casual video games.</p>
+    </div>
+
+    <div class="block">
+        <img src="media/pavilion.png" style="float:right;padding: 5px;max-width: 150px;height: 100%;" title="HP Pavilion 24-R114" alt="HP computer">
+        <p><b>My favorite electronic</b> I own is my HP Pavilion computer! I have owned it since 2020.</p>
+    </div>
+
+    <div class="block">
+        <p><b>My favorite video games</b> are Pac-Man and Super Mario!</p>
+        <p>My favorite Pac-Man game is <i>Pac-Man Chapionship Edition DX+</i>. and my favorite is <i>Super Mario 3D World</i>.</p>
+        <img src="media/pac-man-with-mario.png" style="width: 200px;" alt="Pac-Man and Mario">
+    </div>
+
+    <div class="block">
+        <p><b>My favorite mascot</b> is Bugdroid!</p>
+        <p>I have adored it since 2014 and I even bought various merchandise of the bot.</p>
+        <img src="media/android.png" style="width: 100px;" alt="Android 2006 logo">
+        <p>I later started the <b style="color:#A2C53A">Droid Pack</b>, a website archive of all Bugdroid merchandise.</p>
+    </div>
+
+    <div class="block">
+        <p><b>One of my favorite hobbies</b> is coding. I can write in <b style="color:#d85939">HTML</b> and
+        <b style="color:#b06bf5">CSS</b>, <span style="color:#eddcff">sometimes</span>.</p>
+        <p>All of my projects involve websites in some way. I am also the website developer for the Wii Shop revival
+        <b style="color:#1164E9">WiiMart</b>.</p>
+    </div>
 </div>
 
-<div>
-    <img src="media/pavilion.png" style="float:right;padding: 5px;max-width: 150px;height: 100%;" title="HP Pavilion 24-R114" alt="HP computer">
-    <p><b>My favorite electronic</b> I own is my HP Pavilion computer! I have owned it since 2020.</p>
-</div>
-
-<div>
-    <p><b>My favorite video games</b> are Pac-Man and Super Mario!</p>
-    <p>My favorite Pac-Man game is <i>Pac-Man Chapionship Edition DX+</i>. and my favorite is <i>Super Mario 3D World</i>.</p>
-    <img src="media/pac-man-with-mario.png" style="width: 200px;" alt="Pac-Man and Mario">
-</div>
-
-<div>
-    <p><b>My favorite mascot</b> is Bugdroid!</p>
-    <p>I have adored it since 2014 and I even bought various merchandise of the bot.</p>
-    <img src="media/android.png" style="width: 100px;" alt="Android 2006 logo">
-    <p>I later started the <b style="color:#A2C53A">Droid Pack</b>, a website archive of all Bugdroid merchandise.</p>
-</div>
-
-<div>
-    <p><b>One of my favorite hobbies</b> is coding. I can write in <b style="color:#d85939">HTML</b> and
-       <b style="color:#b06bf5">CSS</b>, <span style="color:#eddcff">sometimes</span>.</p>
-    <p>All of my projects involve websites in some way. I am also the website developer for the Wii Shop revival
-       <b style="color:#1164E9">WiiMart</b>.</p>
-</div>
-
-<div class="clear" style="margin-top:15px"><b>Contact:</b> <a href="mailto:gem@techie.com">gem@techie.com</a></div>
-
+<div style="margin-top:15px"><b>Contact:</b> <a href="mailto:gem@techie.com">gem@techie.com</a></div>
 
 <p class="buttons">
     <a href="extras"><img src="media/buttons/gemdation.com-rainbow.gif" alt="Gem website"></a>
