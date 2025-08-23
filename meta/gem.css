@@ -18,6 +18,7 @@ a div.article {text-shadow:none;color:white}
 a:hover div.article {text-shadow:0 0 10px white;cursor:pointer}
 a:active div.block, a:active div.article {background:linear-gradient(to top, #afafaf80, #72727280);text-shadow:none;}
 
+div.row {margin-bottom:5px;}
 div.block {width:50%;margin:0 auto;background:linear-gradient(to top, #3d3d3d80, #cfc6c680);backdrop-filter:blur(10px);box-sizing:border-box;border-spacing:2px;backdrop-filter:blur(1px);padding:5px;margin-bottom:5px;overflow:auto;}
 div.article {width:50%;margin:0 auto;display:flex;justify-content:space-between;align-items: stretch;background:linear-gradient(to bottom, #afafaf80, #72727280);clip-path:polygon(0% 0%, calc(100% - 30px) 0%, 100% 30px, 100% 100%, 0% 100%);box-sizing:border-box;margin-top:5px;overflow:auto;}
 div.article img {height:160px;float:left;border-radius:0;}
@@ -60,7 +61,7 @@ span.date {color:#FFFFFF9D;text-align:right;padding-bottom:10px;}
 .right {float:right;margin-left:20px;}
 .hide {color:#FFFFFF9D}
 .buttons {border-width:0px;background:none}
-.buttons img {border:solid 1px}
+#buttons img {border:solid 1px}
 
 body.dir {text-align:left;max-width:550px}
 body.dir li {justify-content:center;vertical-align:middle;border-top:solid 1px white;text-align:left;}

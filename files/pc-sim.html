@@ -2,76 +2,82 @@
 <html lang="en">
 <head>
     <title>PC Simulator Goodies!</title>
-    <meta content="PC Simulator Goodies!" property="og:title">
-    <meta content="Here are some things that can be used with PC Simulator!" property="og:description">
-    <meta content="https://gemdation.com/files/pc-sim" property="og:url">
-    <meta content="#000000" data-react-helmet="true" name="theme-color">
+    <meta name="description" content="Here are some things that can be used with PC Simulator!">
+    <meta name="theme-color" content="#000000">
+    <meta name="keywords" content="pc simulator, computer simulator, gaming pc, pc builder">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta property="og:title" content="PC Simulator Goodies!">
+    <meta property="og:description" content="Here are some things that can be used with PC Simulator!">
+    <meta property="og:url" content="https://gemdation.com/files/pc-sim">
+    <meta property="og:image" content="https://gemdation.com/images/random/pc-sim-app-icon.png">
+    <meta property="og:image:alt" content="PC Simulator game icon">
+    <meta property="og:image:width" content="800">
+    <meta property="og:image:height" content="800">
+    <meta property="og:image:type" content="image/png">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Gemdation">
     <link rel="stylesheet" href="/meta/gem.css">
     <link rel="icon" type="image/x-icon" href="/meta/favicon.ico">
-    <style>
-        @font-face {font-family: 'CMD'; src: url('/meta/cmd.ttf') format('truetype')}
-        body {background-image: none;background-color: black;color:white;font-family:'CMD',monospace;}
-        div {border-radius: 0;}
-        img {border-style: solid;border-width: 1px;}
-        button {border-radius: 0;font-family: monospace;border-width: 1px;}
-    </style>
-    <script>document.addEventListener("DOMContentLoaded", function () {document.querySelectorAll("img").forEach(img => {img.style.cursor = "pointer";img.addEventListener("click", function () {const link = document.createElement("a"); link.href = img.src; link.download = img.getAttribute("alt") || "downloaded-image"; document.body.appendChild(link); link.click(); document.body.removeChild(link); }); });});</script>
+    <style>img {border-radius:0;border:solid 1px white}</style>
+    <script>document.addEventListener("DOMContentLoaded", function () {document.querySelectorAll("img.downloadable").forEach(img => {img.style.cursor = "pointer"; img.addEventListener("click", function () {const imageUrl = img.src; const filename = imageUrl.substring(imageUrl.lastIndexOf('/') + 1); const link = document.createElement("a"); link.href = imageUrl; link.download = filename; document.body.appendChild(link); link.click();document.body.removeChild(link);});});});</script>
 </head>
 <body>
 
-<div class="row">
+<header><a href="/">gemdation.com</a></header>
+
+<nav><a href="../files/"><button>Back to Files</button></a></nav>
 
 <h1>PC Simulator Goodies!</h1>
 
-<a href="../files/">Back to Files</a>
+<div class="row">
+    <div class="block" id="Pictures">
+        <h2>Pictures</h2>
+        <p>Here are pictures you can use for your in-game displays and papers, bonus web button is included.</p>
 
-    <p>Here is a page for some stuff in PC Simulator, clicking on any image in this page will download it.</p>
+        <h3>Default <small>(32x32)</small></h3>
+        <img src="../media/random/pc-sim-img-disc.png" class="downloadable" alt="Disc">
+        <img src="../media/random/pc-sim-img-nintendo-homebrew.png" class="downloadable" alt="Nintendo Homebrew">
+        <img src="../media/random/pc-sim-img-mario.png" class="downloadable" alt="Classic Super Mario Bros.">
+        <img src="../media/random/pc-sim-img-youtube.png" class="downloadable" alt="Classic YouTube logo">
+        
+        <h3>Banner <small>(32x70)</small></h3>
+        <img src="../media/random/pc-sim-banner-bliss.png" class="downloadable" alt="XP 'Bliss' image, green mountain with a cloudy sky">
+        <img src="../media/random/pc-sim-banner-pac-man.png" class="downloadable" alt="Sprites seen in Pac-Man">
+        <img src="../media/random/pc-sim-banner-wii.png" class="downloadable" alt="Wii console logo, horizontally alligned">
+        
+        <h3>Web Button <small>(88x31)</small></h3>
+        <img src="../media/buttons/pc-sim.gif" class="downloadable" alt="PC Simulator web button">
+        <p class="hide"><small>Clicking on any image in this page will download it.</small></p>
+    </div>
 
-    <h2>Pictures</h2>
+    <div class="block" id="Websites">
+        <h2>In-game Websites</h2>
+        <p>Here are all of the hidden websites that are currently known, and what they do.</p>
 
-    <p>Four <i>Default</i> images, three <i>Banner</i> images, and one 88x31 button for websites.</p>
+        <h3>www.giveaway.com</h3>
+        <img src="../../media/random/pc-sim-giveaway-thumbnail.png" class="min" alt="Minimal webpage where a code can be entered">
+        <p>This website has been once used for giving away 30 Bitcoins in the PC Simulator Discord server.</p>
 
-    <h3>Default</h3>
-    <img src="../media/random/pc-sim-img-disc.png">
-    <img src="../media/random/pc-sim-img-nintendo-homebrew.png">
-    <img src="../media/random/pc-sim-img-mario.png">
-    <img src="../media/random/pc-sim-img-youtube.png">
-    <h3>Banner</h3>
-    <img src="../media/random/pc-sim-banner-bliss.png">
-    <img src="../media/random/pc-sim-banner-pac-man.png">
-    <img src="../media/random/pc-sim-banner-wii.png">
-    <h3>Website Button</h3>
-    <img src="../media/buttons/pc-sim.gif">
+        <h3>www.darknet.com</h3>
+        <img src="../../media/random/pc-sim-silk-road-thumbnail.png" class="min" alt="Dark webpage named 'Silk Road'">
+        <p>Named after the illegal marketplace, this hidden shop can be used to buy¹ the Super Glue and the PUOIO Phone.</p>
+        <p><small class="hide">¹ While they do have price tags, they will not deduct from your in-game money.</small></p>
 
-    <h2>Extra Websites</h2>
+        <h3>www.giveaway.com</h3>
+        <img src="../../media/random/pc-sim-free-coins-thumbnail.png" class="min" alt="Scam-looking webpage with an AI-generated image of an exaggerated man">
+        <p>Website for free coins! Just kidding, when you click that <mark style="background-color: lime;padding: 1px;font-family: sans-serif;">Claim</mark>
+        button, the computer you are on will explode. This is a less expensive version of the Used SSD bomb.</p>  
+    </div>
 
-    <img src="../../media/random/pc-sim-giveaway-thumbnail.png" width="300px">
-
-    <p><b>www.giveaway.com</b> is used for giveaways, this was used for giving away 30 BitCoins in the PC Simulator
-    Discord server.</p>
-
-    <img src="../../media/random/pc-sim-silk-road-thumbnail.png" width="300px">
-
-    <p><b>www.darknet.com</b> is the website for the Silk Road website, named after the actual illegal marketplace.
-    This website can be used to buy(?) Super Glue and the PUOIO Phone.</p>
-
-    <img src="../../media/random/pc-sim-free-coins-thumbnail.png" width="300px">
-
-    <p><b>www.freecoins.com</b> is a website for free coins! Just kidding, when you click that <mark style="background-color: lime;padding: 1px;font-family: sans-serif;">Claim</mark>
-    button, the computer you are on will explode. This is a less expensive version of the Used SSD bomb.</p>
-
-    <h2>Save Editor</h2>
-
-    <p>This save editor says it is made by N204, some people say it isn't but it <i>does</i> exist! This
-    Python tool can decrypt and save PC files for the game, it likely can work with future versions.</p>
-
-    <img src="../../media/random/pc-sim-save-editor-thumbnail.png" width="300px">
-    <br><br>
-    <a href="../../media/random/pc-simulator-save-editor.exe" download><button style="padding: 20px;">Download Save Editor</a>
+    <div class="block" id="SaveEditor" style="margin-bottom:20px;">
+        <h2>Save Editor</h2>
+        <p>This Python-built save editor can decrypt and save files for the game, it can likely work with future versions.</p>
+        <img src="../../media/random/pc-sim-save-editor-thumbnail.png" class="min" alt="Screenshot of the PC Simulator save editor">
+        
+        <p><a href="../../media/random/pc-simulator-save-editor.exe" download><button>Download Save Editor</button></a></p>
+    </div>
 </div>
-
-<br><br>
 
 </body>
 </html>
