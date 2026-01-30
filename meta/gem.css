@@ -3,7 +3,7 @@
 @font-face {font-family:'Verdana';src:url('verdana-bold.ttf') format('truetype');font-weight:bold;font-style:normal;}
 @font-face {font-family:'Verdana';src:url('verdana-bold-italic.ttf') format('truetype');font-weight:bold;font-style:italic;}
 
-body {margin:0;color:white;background-image:url(../media/background/black-grit-tet-3.png);background-color:#3b3b3b;font-family:'Verdana',sans-serif;}
+body {margin:0;color:white;background-image:url(../media/background/green-nebula-7.png);background-color:#3b3b3b;font-family:'Verdana',sans-serif;}
 header {text-align:center;padding:20px;font-size:35px;}
 header a {text-shadow:0 0 10px black;background-image:url(../media/bej-gems.png);background-size:90%;background-repeat:no-repeat;background-position:top;padding-top:15px}
 nav {text-align:center;padding:10px;padding-top:0;}
