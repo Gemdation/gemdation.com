@@ -22,6 +22,7 @@
         'svg': '/meta/dir-image.svg',
         'png': '/meta/dir-image.svg',
         'jpg': '/meta/dir-image.svg',
+        'jpeg': '/meta/dir-image.svg',
         'gif': '/meta/dir-image.svg',
         'ico': '/meta/dir-image.svg',
         'mp3': '/meta/dir-sound.svg',
