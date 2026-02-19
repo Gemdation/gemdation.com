@@ -6,7 +6,7 @@
 
 body {margin:0;background-color:#092a55;font-family:'Roboto',sans-serif;font-size:19px;overflow-x: hidden;}
 header {margin:0 auto;text-align:center;padding:10px;}
-header img#dynamic-header {margin: 0 auto;max-width:100%;height:auto;display:block;}
+header img#dynamic-header {margin: 0 auto;width:50%;}
 nav {text-align:center;padding:10px;padding-top:0;}
 
 h1, h2, h3, h4, h5, h6, li, p, div {text-align:center;}
@@ -64,4 +64,4 @@ body.dir img {vertical-align:middle;width:30px}
 
 
 
-@media (max-width:768px) {div.row div.block, div.row div.article {width:95%;} article {width:95%;}}
+@media (max-width:768px) {div.row div.block, div.row div.article {width:95%;} article, header img#dynamic-header {width:95%;}}
