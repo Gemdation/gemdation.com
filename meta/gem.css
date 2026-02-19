@@ -3,9 +3,10 @@
 @font-face {font-family:'Roboto';src:url('/meta/font-roboto-bold.ttf') format('truetype');font-weight:bold;font-style:normal;}
 @font-face {font-family:'Roboto';src:url('/meta/font-roboto-bold-italic.ttf') format('truetype');font-weight:bold;font-style:italic;}
 
-body {margin:0;background-color:#00467b;font-family:'Roboto',sans-serif;font-size:19px;}
-header {text-align:center;padding:10px;font-size:40px;font-weight:bold;color:white}
-header small {font-size:medium}
+
+body {margin:0;background-color:#092a55;font-family:'Roboto',sans-serif;font-size:19px;overflow-x: hidden;}
+header {margin:0 auto;text-align:center;padding:10px;}
+header img#dynamic-header {margin: 0 auto;max-width:100%;height:auto;display:block;}
 nav {text-align:center;padding:10px;padding-top:0;}
 
 h1, h2, h3, h4, h5, h6, li, p, div {text-align:center;}
