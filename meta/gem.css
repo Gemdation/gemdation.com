@@ -18,7 +18,7 @@ div.row {margin-bottom:5px}
 div.block {width:50%;margin:0 auto;background-color:white;box-sizing:border-box;border-spacing:2px;padding:5px;margin-bottom:5px;overflow:auto;}
 div.article {width:50%;margin:0 auto;display:flex;justify-content:space-between;align-items: stretch;background-color:white;clip-path:polygon(0% 0%, calc(100% - 30px) 0%, 100% 30px, 100% 100%, 0% 100%);box-sizing:border-box;margin-top:5px;overflow:auto;}
 div.article img {height:160px;float:left;border-radius:0;}
-div.article:hover span.title {text-decoration:underline;}
+a div.article:hover span.title {text-decoration:underline;}
 .article-content {display:flex;flex-direction:column;flex-grow:1;justify-content:space-between;padding-right:10px; word-wrap: break-word;}
 div.gallery {width:95%}
 div.gallery img {width:250px}
@@ -49,7 +49,7 @@ div.articlelocked:hover {cursor:help}
 
 span.title {font-weight:bold;font-size:larger;text-align:left;padding:10px;padding-bottom:0;}
 span.desc {font-style:italic;font-weight:normal;text-align:left;padding-left:10px;}
-span.date {color:grey;text-align:right;padding-bottom:10px;text-decoration:none;}
+span.date {color:grey;text-align:right;padding-bottom:10px;text-decoration:none;font-weight:bold;}
 
 .left {float:left;margin-right:20px;}
 .right {float:right;margin-left:20px;}
@@ -64,4 +64,5 @@ body.dir img {vertical-align:middle;width:30px}
 
 
 
-@media (max-width:768px) {div.row div.block, div.row div.article {width:95%;} article, header img#dynamic-header {width:95%;}}
+@media (max-width:768px) {div.row div.block, div.row div.article, article, header img#dynamic-header {width:95%;}}
+@media (min-width:1500px) {div.row div.block, div.row div.article, article, header img#dynamic-header {width:30%;}}
