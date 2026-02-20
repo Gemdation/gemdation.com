@@ -20,15 +20,14 @@
     <script src="/meta/site-header.js" defer></script>
     <link rel="stylesheet" href="/meta/gem.css">    <link rel="icon" type="image/x-icon" href="/meta/favicon.ico">
     <style>
-        img {border-radius:0;border:solid 1px white}
+        article img {border-radius:0;border:solid 1px black}
         div#Pictures img {width:32px;}
-
     </style>
     <script>document.addEventListener("DOMContentLoaded", function () {document.querySelectorAll("img.downloadable").forEach(img => {img.style.cursor = "pointer"; img.addEventListener("click", function () {const imageUrl = img.src; const filename = imageUrl.substring(imageUrl.lastIndexOf('/') + 1); const link = document.createElement("a"); link.href = imageUrl; link.download = filename; document.body.appendChild(link); link.click();document.body.removeChild(link);});});});</script>
 </head>
 <body>
 
-<header><img src="/meta/header-blank.png" id="dynamic-header" alt="Gemdation.com"></header>
+<header><img src="/meta/header-roboto.png" id="dynamic-header" alt="Gemdation.com"></header>
 
 <nav><a href="/"><button>Back</button></a></nav>
 
