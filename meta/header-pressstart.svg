@@ -1,10 +1,6 @@
 <svg version="1.2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 100" width="500" height="100">
 	<style>
-		tspan { white-space:pre } 
-		.t0 { font-size: 38px;fill: #ffffff;font-weight: 400;font-family: "PressStart2P-Regular", "Press Start 2P" } 
+		.s0 { fill: #ffffff } 
 	</style>
-	<text id="Gemdation.com" transform="translate(-7,-13)">
-		<tspan x="12" y="83.9" class="t0">G</tspan><tspan  y="83.9" class="t0">e</tspan><tspan  y="83.9" class="t0">m</tspan><tspan  y="83.9" class="t0">d</tspan><tspan  y="83.9" class="t0">a</tspan><tspan  y="83.9" class="t0">t</tspan><tspan  y="83.9" class="t0">i</tspan><tspan  y="83.9" class="t0">o</tspan><tspan  y="83.9" class="t0">n</tspan><tspan  y="83.9" class="t0">.</tspan><tspan  y="83.9" class="t0">c</tspan><tspan  y="83.9" class="t0">o</tspan><tspan  y="83.9" class="t0">m
-</tspan>
-	</text>
+	<path id="Gemdation.com" class="s0" aria-label="Gemdation.com"  d="m38.2 66.3h-23.7v-4.8h-4.8v-4.8h-4.7v-14.2h4.7v-4.7h4.8v-4.8h23.7v4.8h-19v4.7h-4.7v14.2h4.7v4.8h9.5v-9.5h-4.7v-4.7h14.2zm33.3 0h-23.8l0.1-4.8h-4.8v-14.2h4.8v-4.8h23.7v4.8h4.8v9.4h-23.8v4.8h19zm-19-19v4.8h14.3v-4.8zm33.2 19h-4.7v-23.7h28.5v4.7h4.7v19h-9.5v-19h-4.7v19h-9.5v-19h-4.8zm66.5 0h-28.5v-4.7h-4.7v-14.3h4.7v-4.7h19v-9.5h9.5zm-23.8-19v14.2h14.3v-14.2zm61.8 19h-28.5v-4.8h-4.8v-4.7h4.8v-4.8h19v-4.7h-19v-4.8h23.7v4.8h4.8zm-23.8-9.5v4.7h14.3v-4.7zm52.2 9.5h-9.5v-19h-9.5v-4.8h9.5v-9.5h9.5v9.5h9.5v4.8h-9.5zm38-28.5h-9.5v-4.8h9.5zm9.5 28.5h-28.5v-4.7h9.5v-14.3h-4.7v-4.7h14.2v19h9.5zm33.3 0h-23.8v-4.8h-4.7v-14.2h4.7v-4.8h23.8v4.8h4.7v14.2h-4.7zm-19-19v14.3h14.2v-14.3zm38 19h-9.5v-23.7h28.5v4.7h4.8v19h-9.5v-19h-14.3zm47.5 0h-9.5v-9.5h9.5zm52.3 0h-28.5v-4.7h-4.8v-14.3h4.8v-4.7h28.5v4.7h-23.8v14.3h23.8zm33.2 0h-23.7v-4.8h-4.8v-14.2h4.8v-4.8h23.7v4.8h4.8v14.2h-4.8zm-19-19v14.3h14.3v-14.3zm33.2 19h-4.7v-23.7h28.5v4.7h4.7v19h-9.5v-19h-4.8v19h-9.4v-19h-4.8z"/>
 </svg>
