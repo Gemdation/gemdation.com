@@ -1,0 +1,1 @@
+function toggleInfo(id,but){var b=document.getElementById(but);var e=document.getElementById(id);if(e.style.display==="block"){document.getElementById(id).style.display="none";b.innerHTML=b.innerHTML.replace("Hide","Show");b.className="show-element"}else{document.getElementById(id).style.display="block";b.innerHTML=b.innerHTML.replace("Show","Hide");b.className="hide-element"}}

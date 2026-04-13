@@ -1,0 +1,131 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>Wiimmfi ISO Patcher</title>
+<link rel='stylesheet' type='text/css' href='../css/dclib/base.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='../css/dclib/dclib.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='../css/wiimmfi.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='../css/mii-font.css?v=8vQgLA'>
+<script src="../js/dclib/dclib.js?v=8vQgLA"></script>
+<script src="../js/wiimmfi.js?v=8vQgLA"></script>
+<script>
+dcLib_DEVELOP = 0;
+dcLib_AjaxUsePostDef = 1
+
+</script>
+<meta name="keywords" content="Wiimmfi">
+</head>
+<body class="js-disabled" >
+<script>
+if (document.body)
+{
+    document.body.classList.remove('js-disabled');
+    document.body.classList.add('js-enabled');
+}
+</script><noscript><div class=js-warning>Please activate JavaScript.
+JavaScript is used for many interactive elements of this website.</div></noscript>
+<div style="margin-bottom:28px"></div>
+<div id=navbar class=nb-fixed><span class="nb-frame nb-classic">
+<div class=nb-menu><button class=nb-button>Wiimmfi</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../" title="Wiimmfi main page — includes announcements.">Main page</a>
+<a class="nb-menu-link" href="../changelog">Change log</a>
+<a class="nb-menu-link" href="../game-history">Game history</a>
+<a class="nb-menu-link" href="../development">Development</a>
+<a class="nb-menu-link" href="../rules">Wiimmfi Rule Booklet</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../fc-converter">Friend-Code converter</a>
+<a class="nb-menu-link" href="../patcher">Wiimmfi patcher</a>
+<a class="nb-menu-link" href="../error">Error codes</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../login">Login</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Status</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../stat">Server status</a>
+<a class="nb-menu-link" href="../stats/login">Login statistics</a>
+<a class="nb-menu-link" href="../stats/game">Game statistics</a>
+<a class="nb-menu-link" href="../show-bans">List of bans</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../stats/mkw" title="Mario Kart Wii statistics">MKW statistics</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Regions</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../region/stat" title="MKWii region usage statistics">Region usage</a>
+<a class="nb-menu-link" href="../region/list" title="List MKWii regions">List custom regions</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Competitions</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="https://competitions.wiimmfi.de/">Overview</a>
+<a class="nb-menu-link" href="../comp-stat">Statistics</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<a class="nb-menu-link" href="../privacy">Privacy Policy</a>
+<a class="nb-menu-link" href="../donate">Donate</a>
+</span>
+</div>
+<div class=logo><a href=/><img src="../images/wiimmfi-light.svg" alt="Wiimmfi logo" title="Wiimmfi logo"></a><p><a href=https://wiimmfi.de/donate>Donate</a></div>
+<h1>Wiimmfi ISO Patcher</h1>
+
+<div class=text>
+<h2>Overview</h2>
+<p>The Wiimmfi ISO Patcher can be used to patch existing game image files for Wiimmfi.
+To do that, all you need to do is download and run it, and all game images that are present
+in the same folder (and are in a supported format) will automatically be patched for Wiimmfi.
+</div>
+
+<div class=text id="supp">
+<h2>Supported image formats</h2>
+All image formats supported by <a>Wiimms ISO Tools</a> can be used
+as source image.
+These are currently <b>ISO</b>, <b>WDF</b>, <b>WIA</b>, <b>CISO</b> (=<b>WBI</b>),
+<b>WBFS</b>, <b>GCZ</b> and <b>FST</b> (<a>details</a>).
+
+<p>
+Note: <b>NKIT</b> images are <b>not</b> supported → <a href="nkit">More information</a>.
+
+<p>
+The patched images will be stored in the "wiimmfi-images" subdirectory (with their original name and file format). 
+</div>
+
+
+<div class=text>
+<h2>Download and patching</h2>
+<p>The newest version of the Wiimmfi ISO Patcher (for all games) can be downloaded here:</p>
+<ul><li><a href="../../download.wiimmfi.de/patcher">Wiimmfi ISO Patcher</a> (zip, 35 MB)</li></ul>
+
+<p>Download the patcher and extract the ZIP file to your computer, then open the extracted folder and copy your Wii game images into it.</p>
+
+<p>If you're on <b>Linux</b>, double-click on the <tt>patch-images.desktop</tt> file (this may also be displayed as "Patch Images") or 
+execute the <tt>./patch-images.sh</tt> file in a Terminal after making it executable (<tt style="white-space: nowrap">chmod +x *.sh</tt>).</p>
+<p>If you're on <b>Windows</b>, double-click on the <tt>patch-images.bat</tt> file (this may also be displayed as "patch-images" Batch File). 
+If you run into Cygwin-related issues, try the <tt>patch-images-32.bat</tt> file instead.</p>
+<p>If you're on <b>MacOS</b>, open a command line prompt in the current folder, make the shell script executable (<tt style="white-space: nowrap">chmod +x *.sh</tt>) and then run it (<tt>./patch-images.sh</tt>).</p>
+
+<p>Once you did that, a window will show up that displays the patching progress. Wait until that is done, then you'll find the Wiimmfi-patched images in a new folder called "wiimmfi-images".</p>
+</div>
+
+<div class=text>
+<h3>Helper Tools</h3>
+<p>The folder "tools" in the downloaded archive contains a couple scripts that might be useful:</p>
+
+<ul>
+<li><tt>remove-patchdir</tt> can be used to delete the temporary "patch-dir" folder after the patching process is done (although you could just delete that manually)</li>
+<li><tt>verify-images</tt> can be used to make sure that your images are not corrupted in any way</li>
+<li><tt>view-images</tt> can be used to display all game images that are present in the main folder</li>
+</ul>
+
+<p>Though, you usually don't need any of these scripts if you just want to patch your games for Wiimmfi.</p>
+</div>
+
+<a href=".">Back to the overview page</a><script>
+addEventOnLoad(function(){scrollHashToScreenById('navbar',5)});
+registerLocalTooltips(undefined,1);
+</script>
+</body>
+</html>

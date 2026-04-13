@@ -1,0 +1,1107 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Development</title>
+<link rel='stylesheet' type='text/css' href='css/dclib/base.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='css/dclib/dclib.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='css/wiimmfi.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='css/mii-font.css?v=8vQgLA'>
+<link rel="icon" type="image/x-icon" href="images/favicon.png">
+<script src="js/dclib/dclib.js?v=8vQgLA"></script>
+<script src="js/wiimmfi.js?v=8vQgLA"></script>
+</head>
+<body>
+
+<div style="margin-bottom:28px"></div>
+<div id=navbar class=nb-fixed><span class="nb-frame nb-classic">
+<span class="nb-menu-user">»<a href="user/status">Account</a>« <span class="nb-menu-info">⇒</span></span><div class=nb-menu><button class=nb-button>Wiimmfi</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../wiimmfi.de" title="Wiimmfi main page — includes announcements.">Main page</a>
+<a class="nb-menu-link" href="changelog">Change log</a>
+<a class="nb-menu-link" href="game-history">Game history</a>
+<a class="nb-menu-link active" href="development">Development</a>
+<a class="nb-menu-link" href="rules">Wiimmfi Rule Booklet</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="fc-converter">Friend-Code converter</a>
+<a class="nb-menu-link" href="patcher">Wiimmfi patcher</a>
+<a class="nb-menu-link" href="error">Error codes</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="login">Login</a>
+<a class="nb-menu-link" href="logout">Logout</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Status</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="stat">Server status</a>
+<a class="nb-menu-link" href="stats/login">Login statistics</a>
+<a class="nb-menu-link" href="stats/game">Game statistics</a>
+<a class="nb-menu-link" href="show-bans">List of bans</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="stats/mkw" title="Mario Kart Wii statistics">MKW statistics</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Manage</button><div class=nb-submenu>
+    <div class="nb-menu-sep"> </div>
+    <a class="nb-menu-link" href="user/settings">Private settings</a>
+    <a class="nb-menu-link" href="mkw-settings">Private MKW settings</a>
+    <a class="nb-menu-link" href="user/status" title="Rights, consoles, profiles, ...">Private status</a>
+    <a class="nb-menu-link" href="user/messages">Private messages</a>
+    <div class="nb-menu-sep"> </div>
+    <a class="nb-menu-link" href="user/assign-console">Assign a console</a>
+    <a class="nb-menu-link" href="openhost">Manage OPENHOST</a>
+    <span class="nb-menu-sep"> </span>
+    </div></div>
+<div class=nb-menu><button class=nb-button>Regions</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="region/stat" title="MKWii region usage statistics">Region usage</a>
+<a class="nb-menu-link" href="region/list" title="List MKWii regions">List custom regions</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Competitions</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="competitions">Overview</a>
+<a class="nb-menu-link" href="comp-stat">Statistics</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<a class="nb-menu-link" href="privacy">Privacy Policy</a>
+<a class="nb-menu-link" href="donate">Donate</a>
+</span>
+</div>
+<div class=logo><a href=../wiimmfi.de><img src="images/wiimmfi-light.svg" alt="Wiimmfi logo" title="Wiimmfi logo"></a><p><a href=donate>Donate</a></div>
+<div class="contents">
+<h1>Development of Wiimmfi</h1>
+<h2>History</h2>
+<ul><li><a href="#traffic">First traffic analysis</a><ul class="toc-list">
+<li><a href="#t-2012-11"><div class="toc-date">2012-11</div> Analyzing the network traffic of MKWii</a></li>
+<li><a href="#t-2012-12-06"><div class="toc-date">2012-12-06</div> Tool mkw-ana</a></li>
+<li><a href="#t-2013-06-01"><div class="toc-date">2013-06-01</div> mkw-ana prints a live racing table</a></li>
+</ul></li>
+<li><a href="#devel">Wiimmfi development</a><ul class="toc-list">
+<li><a href="#d-2014-02-27"><div class="toc-date">2014-02-27</div> Nintendo announced WFC shutdown</a></li>
+<li><a href="#d-2014-04-07"><div class="toc-date">2014-04-07</div> Profile id and nickname</a></li>
+<li><a href="#d-2014-04-12"><div class="toc-date">2014-04-12</div> NAS</a></li>
+<li><a href="#d-2014-04-20"><div class="toc-date">2014-04-20</div> MKW patcher for the tester team</a></li>
+<li><a href="#d-2014-04-28"><div class="toc-date">2014-04-28</div> New NATNEG server</a></li>
+<li><a href="#d-2014-05-03"><div class="toc-date">2014-05-03</div> Start of Wiimmfi (tester team only)</a></li>
+</ul></li>
+<li><a href="#replace">Wiimmfi replaced Nintendo WFC</a><ul class="toc-list">
+<li><a href="#r-2014-05-10"><div class="toc-date">2014-05-10</div> Official start of Wiimmfi</a></li>
+<li><a href="#r-2014-05-20"><div class="toc-date">2014-05-20</div> Shutdown of Nintendo WFC</a></li>
+</ul></li>
+<li><a href="#portal">Wiimmfi portal</a><ul class="toc-list">
+<li><a href="#p-2014-09-05"><div class="toc-date">2014-09-05</div> Development of Wiimmfi portal</a></li>
+<li><a href="#p-2014-10-03"><div class="toc-date">2014-10-03</div> Official start of Wiimmfi portal</a></li>
+<li><a href="#p-2014-10-26"><div class="toc-date">2014-10-26</div> Naming of consoles and profiles</a></li>
+<li><a href="#p-2014-11-15"><div class="toc-date">2014-11-15</div> New Ban System</a></li>
+<li><a href="#p-2016-08-02"><div class="toc-date">2016-08-02</div> New error page</a></li>
+<li><a href="#p-2016-08-20"><div class="toc-date">2016-08-20</div> Updated MKW status pages</a></li>
+<li><a href="#p-2017-01-17"><div class="toc-date">2017-01-17</div> New MKW status page</a></li>
+<li><a href="#p-2017-06"><div class="toc-date">2017-06</div> Competitions</a></li>
+<li><a href="#p-2017-07-02"><div class="toc-date">2017-07-02</div> Development of competitions</a></li>
+<li><a href="#p-2017-08-10"><div class="toc-date">2017-08-10</div> Private messages</a></li>
+<li><a href="#p-2017-08-12"><div class="toc-date">2017-08-12</div> MKW custom region management</a></li>
+<li><a href="#p-2018-03-18"><div class="toc-date">2018-03-18</div> MKW custom region management</a></li>
+<li><a href="#p-2019-03-11"><div class="toc-date">2019-03-11</div> New login and game statistics page</a></li>
+</ul></li>
+<li><a href="#improve">Wiimmfi servers</a><ul class="toc-list">
+<li><a href="#s-2014-07-05"><div class="toc-date">2014-07-05</div> New MASTER server</a></li>
+<li><a href="#s-2015-06-06"><div class="toc-date">2015-06-06</div> Advanced NATNEG functionality</a></li>
+<li><a href="#s-2015-07-25"><div class="toc-date">2015-07-25</div> Server JOB and mkw-ana</a></li>
+<li><a href="#s-2015-12-20"><div class="toc-date">2015-12-20</div> Backend with TELNET support</a></li>
+<li><a href="#s-2015-12-23"><div class="toc-date">2015-12-23</div> Smart restart of servers</a></li>
+<li><a href="#s-2016-01-09"><div class="toc-date">2016-01-09</div> Watchdog for servers</a></li>
+<li><a href="#s-2016-01-30"><div class="toc-date">2016-01-30</div> MS integrated into MASTER</a></li>
+<li><a href="#s-2016-03-13"><div class="toc-date">2016-03-13</div> SAKE and RACE support</a></li>
+<li><a href="#s-2016-05-10"><div class="toc-date">2016-05-10</div> MKW competitions</a></li>
+<li><a href="#s-2016-09-03"><div class="toc-date">2016-09-03</div> New server: SV (SUPERVISOR)</a></li>
+<li><a href="#s-2016-10-27"><div class="toc-date">2016-10-27</div> Dual login (NDS and Wii)</a></li>
+<li><a href="#s-2017-08-12"><div class="toc-date">2017-08-12</div> MKW region management</a></li>
+<li><a href="#s-2018-11-11"><div class="toc-date">2018-11-11</div> Required Wiimmfi Patcher update for MKW</a></li>
+<li><a href="#s-2020-04-16"><div class="toc-date">2020-04-16</div> NATNEG communication</a></li>
+</ul></li>
+</ul>
+<p>
+<h2>Servers</h2>
+<ul class="toc-list"><li><a href="#ncat"><div class="toc-server">NCAT</div> Concatenate and redirect sockets</a></li>
+<li><a href="#nas"><div class="toc-server">NAS</div> Login server</a></li>
+<li><a href="#gpcm"><div class="toc-server">GPCM</div> Client server</a></li>
+<li><a href="#sv"><div class="toc-server">SV</div> Supervisor</a></li>
+<li><a href="#gpsp"><div class="toc-server">GPSP</div> Retrieving friends</a></li>
+<li><a href="#master"><div class="toc-server">MASTER</div> Master matchmaking server</a></li>
+<li><a href="#ms"><div class="toc-server">MS</div> Matchmaking retrieving server</a></li>
+<li><a href="#natneg"><div class="toc-server">NATNEG</div> Enable client-to-client connections behind firewalls</a></li>
+<li><a href="#job"><div class="toc-server">JOB</div> Server to execute mkw-ana jobs</a></li>
+<li><a href="#sake"><div class="toc-server">SAKE</div> Server to exchange user-created content</a></li>
+<li><a href="#race"><div class="toc-server">RACE</div> Mario-Kart-specific server for rankings</a></li>
+<li><a href="#competition"><div class="toc-server">COMPETITION<br/>&nbsp;</div> Competition management server for Mario Kart Wii</a></li>
+</ul>
+</div><div class="text" id="traffic"><h1>History: First traffic analysis</h2>
+<div class="text2" id="t-2012-11"><h2><b>2012-11</b>: Analyzing the network traffic of MKWii</h2>
+In November 2012, Wiimm decided to analyze the network protocol
+of Mario Kart Wii. The main goal was to detect online cheaters.
+Another goal was to set up an own server if Nintendo ever shut down its
+servers, which eventually happened on <a href="#r-2014-05-20">May 20th, 2014</a>.
+<p>
+Wiimm saved all of his network dumps together with videos of the races
+for later analysis. This was a good decision and helped a lot when developing Wiimmfi.
+</div>
+<div class="text2" id="t-2012-12-06"><h2><b>2012-12-06</b>: Tool mkw-ana</h2>
+In December 2012 Wiimm began development of the tool
+<a href="http://mkw-ana.wiimm.de">mkw-ana</a>.
+The main feature was to dump the packets of network dumps
+(captured by tcpdump or wireshark) in a user-friendly format.
+<p>
+mkw-ana is a hex dumper, that can identify different packet types
+and split them into different sub-records. Known values are printed
+in user-friendly formats instead of simple hex numbers.
+</div>
+<div class="text2" id="t-2013-06-01"><h2><b>2013-06-01</b>: mkw-ana prints a live racing table</h2>
+At the beginning Wiimm was focused analysis of racing data.
+So mkw-ana was taught to print live statistics on the screen
+with the current rank and other status values.
+</div>
+</div>
+<div class="text" id="devel"><h1>History: Wiimmfi development</h2>
+<div class="text2" id="d-2014-02-27"><h2><b>2014-02-27</b>: Nintendo announced WFC shutdown</h2>
+Nintendo announced the
+<a href="http://www.nintendo.com/consumer/info/en_na/services-update.jsp"
+>WFC Shutdown<a> for <a href="#r-2014-05-20">May 20, 2014</a>.
+Wiimm was prepared, due to his dumps, and started the server development just a few days later.
+<p>
+<i>Leseratte</i> was already involved in the
+<a href="http://mkw-ana.wiimm.de">mkw-ana</a> development
+and helped in many ways to develop Wiimmfi.
+By a few days we had created a master plan:
+<ul class="narrow1">
+<li>
+  We need to dump and to document all aspects of <i>Mario Kart Wii</i>
+  including races, events, friend code management.
+  For most dumps we created videos to see what happened.
+</li>
+<li>
+  We planned to support other games that use the same or a similar
+  protocol if we had enough time left over from MKW dumping.
+</li>
+<li>
+  Wiimm had to develop a patcher for all Wii games.
+  The plan was to integrate the patch into his tool
+  <a href="http://wit.wiimm.de/">wit</a>.
+</li>
+<li>
+  <a href="http://mkw-ana.wiimm.de">mkw-ana</a> must be improved
+  for a better analysis of server packets.
+</li>
+<li>
+  At the beginning, approximately 100 players had routed their
+  matchmaking through my server (DNS redirection),
+  so that we had a variety of dumps from different players,
+  with more data from Nintendo WFC.
+</li>
+<li>
+  We had to collect the game-specific secrets, which are used to encrypt
+  the matchmaking answers on the <a href="#ms">MS</a> server.
+</li>
+<li>
+  A new <a href="https://forum.wii-homebrew.com/index.php/Board/329-Wiimmfi-Project-English/"
+  >sub-forum</a> for Wiimmfi development was created at
+  <a href="https://forum.wii-homebrew.com">forum.wii-homebrew.com</a>.
+  Here we found many helpers who wished to preserve the Nintendo WiFi Connection.
+</li>
+</ul>
+</div>
+<div class="text2" id="d-2014-04-07"><h2><b>2014-04-07</b>: Profile id and nickname</h2>
+Only the Wii and the server know the relation
+between the NICKNAME and the PROFILE ID (=&nbsp;decoded friend code).
+And for our own server we must have this information,
+because the Wii logs in with the nickname
+and the server has to answer with the correct profile id.
+<p>
+So Wiimm developed a retrieving tool that asked the GameSpy servers
+for the nicknames.
+A problem was that GameSpy only sends back the nicknames of friends.
+So the tool asks for friends, and then for friends of the friends, and so on.
+<p>
+The tool run until GameSpy server shutdown in June 2016.
+By the time it was shutdown, about 2.9 million nicknames
+for different Wii and NDS games were retrieved.
+</div>
+<div class="text2" id="d-2014-04-12"><h2><b>2014-04-12</b>: NAS</h2>
+<a href="#nas">NAS</a> was the first working server.
+It is used for the primary logins to Wiimmfi.
+Nowadays it also manages bans and delayed console activation.
+<p>
+At this day Wiimm started with the development of the
+<a href="">Wiimmfi Portal</a> as an information centre.
+</div>
+<div class="text2" id="d-2014-04-20"><h2><b>2014-04-20</b>: MKW patcher for the tester team</h2>
+Wiimm started to develop a MKW patcher, 6 days later
+it was ready and served to the <a href="https://forum.wii-homebrew.com/index.php?page=Thread&postID=587859">tester team</a>.
+<p>
+The patcher created 3 images that share a new savegame.
+The images are for Nintendo WFC, Wiimmfi and AltWFC.
+So it was possible to use all 3 servers and compare dumps.
+The first profiles were created at Nintendo WFC and imported to Wiimmfi.
+<p>
+In the following 2 weeks we (the tester team) made many tests
+with many dumps and Wiimmfi was improved step by step.
+Sometimes the testers had to wait 15 to 30 minutes for a server update
+and the next test.
+<p>
+At the beginning of this phase we used the <a href="#natneg">NATNEG</a>
+server, created by <i>Nagato</i> (written in <i>python</i>).
+All other servers were written in PHP.
+The standalone servers (= not web servers) used a tool named <a href="#ncat">NCAT</a>
+(a NETCAT variant) as the main server, and a PHP script for each instance.
+</div>
+<div class="text2" id="d-2014-04-28"><h2><b>2014-04-28</b>: New NATNEG server</h2>
+One problem was that the <a href="#ms">MS</a> server must send UDP/IP packets
+with port 27900 (owned by <a href="#master">MASTER</a>) as sender.
+It seemed to be the easier to implement it in C by creating raw
+UDP packets with a faked sender address.
+<p>
+And so Wiimm had written a new <a href="#natneg">NATNEG</a> server in C.
+It supports a communication channel to accept jobs for faked UDP packets.
+The <a href="#ms">MS</a> server used this channel.
+Another advantage is that the standalone NATNEG server doesn't need
+a database as all protocol data is stored in an internal memory array.
+<p>
+From this day, the complete server software was written by Wiimm.
+This changed later with DLS1 and <a href="#sake">SAKE</a>,
+<a href="#race">RACE</a> and <a href="#competition">COMPETITION</a> support.
+</div>
+<div class="text2" id="d-2014-05-03"><h2><b>2014-05-03</b>: Start of Wiimmfi (tester team only)</h2>
+The tester team started to play full Mario Kart races via Wiimmfi.
+We tested global, regional and room races and also battles.
+The creation of new profiles worked too.
+<p>
+In the following days we tested much, and improved the server step by step.
+</div>
+</div>
+<div class="text" id="replace"><h1>History: Wiimmfi replaced Nintendo WFC</h2>
+<div class="text2" id="r-2014-05-10"><h2><b>2014-05-10</b>: Official start of Wiimmfi</h2>
+Ten days before shutdown of Nintendo WFC, Wiimmfi was enabled for the public.
+At this day a <a href="https://forum.wii-homebrew.com/index.php?page=Thread&postID=590399">generic patcher for all Wii games</a>
+and a <a href="https://forum.wii-homebrew.com/index.php?page=Thread&postID=590523">specific patcher for Mario Kart Wii</a>
+were released.
+</div>
+<div class="text2" id="r-2014-05-20"><h2><b>2014-05-20</b>: Shutdown of Nintendo WFC</h2>
+Nintendo shut down their WFC servers.
+At this day, Wiimmfi already supported <a href="game-history">17 games</a>!
+<p>
+A first version of the web <a href="stats/mkw">Mario Kart statistics</a>
+was also available.
+</div>
+</div>
+<div class="text" id="portal"><h1>History: Wiimmfi portal</h2>
+<div class="text2" id="p-2014-09-05"><h2><b>2014-09-05</b>: Development of Wiimmfi portal</h2>
+The development of the new <b>Wiimmfi portal</b> started. The key idea
+was for users to be able to login and manage their consoles and profiles.
+The trigger was the idea of <a href="https://wiiki.wii-homebrew.com/Wiimmfi_(en)/OPENHOST">OPENHOST</a>.
+</div>
+<div class="text2" id="p-2014-10-03"><h2><b>2014-10-03</b>: Official start of Wiimmfi portal</h2>
+The new <b>Wiimmfi portal</b> was opened.
+<p>
+The Wiimmfi portal allows users to login and to manage their consoles
+and profiles. It also has support for a per-user <i>rights system</i>
+and was a base for the later ban system.
+A valid account at <a href="https://forum.wii-homebrew.com">Wii-Homebrew.com</a>
+is needed for login, as it shares a database with Wiimmfi.
+</div>
+<div class="text2" id="p-2014-10-26"><h2><b>2014-10-26</b>: Naming of consoles and profiles</h2>
+<a href="https://wiiki.wii-homebrew.com/Wiimmfi_(en)/Portal#reg-con">Consoles can be registered</a>
+to a Wiimmfi account. All profiles of these consoles are listed.
+The user can assign names to consoles and profiles for easier identification.
+<p>
+<a href="https://wiiki.wii-homebrew.com/Wiimmfi_(en)/OPENHOST">OPENHOST</a> was ready to use.
+<p>
+Two days later is was possible to reactivate old profiles via the portal.
+</div>
+<div class="text2" id="p-2014-11-15"><h2><b>2014-11-15</b>: New Ban System</h2>
+Users with a special right (moderators) can use the Wiimmfi portal to
+kick or ban users. All bans are logged and are publicly visible at a
+<a href="show-bans">special ban page</a>.
+</div>
+<div class="text2" id="p-2016-08-02"><h2><b>2016-08-02</b>: New error page</h2>
+The new <a href="error">error page</a> is a web formular now
+and allows to enter a list of error codes.
+<p>
+For each error code, a list with class and error description is printed.
+For some codes, solutions to fix the error are also offered.
+</div>
+<div class="text2" id="p-2016-08-20"><h2><b>2016-08-20</b>: Updated MKW status pages</h2>
+Both Mario Kart Wii related statistic pages are updated.
+The <a href="region/stat">region table</a> now only shows regions
+with activities. Forbidden regions are also shown if used. The
+<a href="stats/mkw">online table</a> now supports
+<a href="stats/mkw/info">4 different views</a>.
+The newest view shows a single match. It is longer available than
+other statistics and should be used for reports.
+</div>
+<div class="text2" id="p-2017-01-17"><h2><b>2017-01-17</b>: New MKW status page</h2>
+A complete new <a href="stats/mkw">MKW status table</a> about players currently
+online is now available. It is based on the information collected
+by the new server <a href="#sv">SV</a>. ⇒ <a href="stats/mkw/intro">Details</a>
+<p>
+Server <a href="#sv">SV</a> (SuperVisor) is connected to the other servers
+<a href="#natneg">NATNEG</a>, <a href="#master">MASTER+MS</a>
+and to each instance of <a href="#gpcm">GPCM</a>.
+It collects status data and observes connections and disconnections.
+With this information, server SV is able to create a very exact
+<a href="stats/mkw/intro#model">room model</a> and can also determine race starts.
+<p>
+The old status page is available as <a href="stats/mkw">mkw0</a>.
+</div>
+<div class="text2" id="p-2017-06"><h2><b>2017-06</b>: Competitions</h2>
+In June 2017, Wiimm implemented a new statistics page for
+competitions. The new features were published step by step:
+<ul class=narrow>
+<li>Support of different languages.
+<li>Filters (driver, vehicle, controller, region).
+<li>Highlighting of own results (if logged-in into Wiimmfi).
+<li>References to previous competitions of same kind.
+</ul>
+</div>
+<div class="text2" id="p-2017-07-02"><h2><b>2017-07-02</b>: Development of competitions</h2>
+The Wiimmfi portal supports the development of competitions.
+Therefor, an interface with the following featurs was written:
+<ul class=narrow>
+<li>Uploads of competitions.
+<li>Competitions can be named and published to testers.
+<li>Download manager at servers side and at Wii side.
+    The user can select, which competition th Wi should load next.
+</ul>
+</div>
+<div class="text2" id="p-2017-08-10"><h2><b>2017-08-10</b>: Private messages</h2>
+In only one day, Wiimm implemented a simple message system.
+It is designed for notifications by the system about different events.
+It supports the following features:
+<ul class=narrow>
+<li>HTML messages and links.
+<li>Priority messages and <i>seen</i>&thinsp; flag.
+<li>Overwritable messages (message of same class overwrites old message).
+<li>Direct messages to single user.
+<li>Subscriptions for events and notifications.
+    Available subscriptions depend on granted rights.
+</ul>
+The main purpose is to support the comming
+<a href="#p-2017-08-12">region management</a>.
+</div>
+<div class="text2" id="p-2017-08-12"><h2><b>2017-08-12</b>: MKW custom region management</h2>
+The management of MKW custom regions switched to a new data model.
+Regions can be assigned to Wiimmfi users and the users
+can modifiy names and settings bei theirself.
+<p>
+The whole working process from <a href="region/apply">applying regions</a>,
+managing applications, <a href="region/manage">managing regions</a>
+by users and administration is implemented as service of the Wiimmfi portal.
+The new <a href="#p-2017-08-10">message system</a> is used to inform
+users and administration about changes.
+</div>
+<div class="text2" id="p-2018-03-18"><h2><b>2018-03-18</b>: MKW custom region management</h2>
+The management of MKW custom regions revised.
+<p>
+Until August 2017, users reservered custom regions by the
+<a href="https://wiimm.de/r/ctw/">Custom Track Wiiki</a>.
+Until now, these regions were reserved at Wiimmfi too
+and Wiiki users had an chance for re-applying then regions.
+From now, most of these regions are available for new applications.
+<p>
+In the following days, the complete region interface as Wiimmfi was revised.
+Once a day, a robot searches unused regions, sends messages to the owners,
+blocks regions and free them. The whole process goes on for years.
+The timings are explained <a href=/region/apply#info-block>here</a>.
+<p>
+The first relevant robot activity is expected in August 2018,
+one year after start of the <a href="#p-2017-08-12">region management</a>.
+So Wiimm have enough time, to play and test with temporary acquired regions
+by manipulating timestamps.
+</div>
+<div class="text2" id="p-2019-03-11"><h2><b>2019-03-11</b>: New login and game statistics page</h2>
+In the beginning of March, Wiimm implemented a new statistics system about
+logins. Subject of counting are total logins, online duration and logging
+of distinct profiles, consoles and games.
+On March 11, the statistics were reset and the official logging started.
+A week later, Wiimm announced this topic.
+<p>
+⇒ <a href=/stats/login>Login Statistics</a>
+</div>
+</div>
+<div class="text" id="improve"><h1>History: Wiimmfi servers</h2>
+<a name="c_master"><div class="text2" id="s-2014-07-05"><h2><b>2014-07-05</b>: New MASTER server</h2>
+The <a href="#master">MASTER</a> server has now been implemented in C
+as a single thread tool (multi process <a href="#ncat">NCAT+PHP</a> before).
+It is fast enough to handle the UDP/IP packets of more than 20000 clients.
+<p>
+There are many advantages with the new server:
+<ul class="narrow">
+<li>
+  The new MASTER needs much less resources (only one thread, &lt;6 MB RAM).
+</li>
+<li>
+  Packets are no longer lost.
+</li>
+<li>
+  Generic game tables are now handled much better.
+</li>
+<li>
+  An internal copy of the game database reduces database lookups
+  dramaticaly, and makes game verificaton much faster.
+  When the MASTER receives a HANGUP signal, it reloads the game database.
+</li>
+<li>
+  The new MASTER remembers the previous records and updates the matchmaking
+  tables only on changes. It also has an optimized timeout handling.
+</li>
+</ul>
+</div>
+<div class="text2" id="s-2015-06-06"><h2><b>2015-06-06</b>: Advanced NATNEG functionality</h2>
+The <a href="#natneg">NATNEG</a> server was improved to support some
+more NATNEG protocol variants.
+From now on, the NATNEG instances run at 3 different servers
+for improvement of connection tests of the clients.
+</div>
+<a name="new_job"><div class="text2" id="s-2015-07-25"><h2><b>2015-07-25</b>: Server JOB and mkw-ana</h2>
+<a href="http://mkw-ana.wiimm.de">mkw-ana</a> is now able to connect to the
+new <a href="#job">JOB</a> server.
+When connected it can retrive information about the current room
+of the client and about other players in the same room.
+<p>
+mkw-ana is also able to send kick and ban requests to the JOB server.
+After checking rights of the user sending the requests,
+JOB will execute the job and thus kick or ban the player in question.
+</div>
+<a name="backend"><div class="text2" id="s-2015-12-20"><h2><b>2015-12-20</b>: Backend with TELNET support</h2>
+The servers <a href="#master">MASTER</a>, <a href="#natneg">NATNEG</a>
+and <a href="#job">JOB</a> now support an interactive backend.
+After connecting with a TELNET client, an administrator can manage the servers.
+The backends support a command history, a pager for long output and also
+a <i>watch</i> command for repeated status messages.
+The backends also support non-interactive jobs using a <a href="#ncat">NCAT</a> tool.
+<p>
+If you wish to test the backend,
+try the tool <a href="http://mkw-ana.wiimm.de">mkw-ana</a>.
+It supports the same backend as the Wiimmfi servers, but with other commands.
+</div>
+<a name="restart"><div class="text2" id="s-2015-12-23"><h2><b>2015-12-23</b>: Smart restart of servers</h2>
+The <i>restart</i> feature was finished.
+A restart is triggered using the <a href="#backend">backend</a>.
+When triggered, the following things happen:
+<ul class="narrow">
+<li>
+  The running server stores all internal data to a temporary text file
+  (format: NAME=VALUE with sections).
+</li>
+<li>
+  It executes its successor with a complete parameter list
+  and some more options to inform the successor about the restart
+  and the file descriptor of the temporary file.
+  It is a Unix concept that a successor inherits all open file descriptors.
+</li>
+<li>
+  The successor scans the temporary text file, sets up the internal
+  data structures and continues the server job.
+</li>
+</ul>
+With this concept it is possible to restart a server with new code
+but without lost of any network connection or packet.
+The switch from the old to the new server is done in less than half a second.
+</div>
+<a name="watchdog"><div class="text2" id="s-2016-01-09"><h2><b>2016-01-09</b>: Watchdog for servers</h2>
+The servers <a href="#master">MASTER</a>, <a href="#natneg">NATNEG</a>
+and <a href="#job">JOB</a> are started by a watchdog now.
+If one server crashes, it is restarted immediately.
+The reaction time is &lt;100 milliseconds.
+All servers read the database tables on watchdog restart
+to allow a smart continuation of the crashed server job.
+<p>
+Wiimm implemented the watchdogs, because the <a href="#master">MASTER+MS</a>
+crashed on an attack with invalid packets and we had to restart it manually.
+From the watchdog implementation, until August 2017,
+only one watchdog-restart for the MASTER is counted,
+but no restart for the NATNEG or JOB servers.
+</div>
+<a name="ms_master"><div class="text2" id="s-2016-01-30"><h2><b>2016-01-30</b>: MS integrated into MASTER</h2>
+The <a href="#ms">MS</a> server was integrated
+into the <a href="#master">MASTER</a> server.
+<p>
+The combination of both servers into one process reduces the database lookups
+and queries again. Additionaly, the MS can now send messages as MASTER
+directly without using <a href="#natneg">NATNEG</a> as delivering agent.
+</div>
+<div class="text2" id="s-2016-03-13"><h2><b>2016-03-13</b>: SAKE and RACE support</h2>
+The <a href="#sake">SAKE</a> and RACE servers were integrated into Wiimmfi with help by
+<i>Leseratte</i> and <i>PokemonAcer</i>.
+<p>
+<a href="#sake">SAKE</a> is used by the games to share user-created content like ghosts and Miis
+        in <i>Mario Kart Wii</i> or friend lists in <i>Wii Speak Channel</i>.
+<p>
+RACE is a Mario-Kart-specific server used to manage the in-game rankings
+of tracks and competitions.
+</div>
+<div class="text2" id="s-2016-05-10"><h2><b>2016-05-10</b>: MKW competitions</h2>
+Exactly 2 years after Wiimmfi had publically allowed login,
+the competitions of <i>Mario Kart Wii</i> came back.
+<i>Leseratte</i> collected almost every Nintendo competition,
+analyzed the data and the protocol, and implemented the Wiimmfi code.
+</div>
+<div class="text2" id="s-2016-09-03"><h2><b>2016-09-03</b>: New server: SV (SUPERVISOR)</h2>
+Based on the code of the comming <a href="#gpcm">GPCM</a>,
+Wiimm created a new server: <a href="#sv">SV</a>
+(<a href="#sv">SUPERVISOR)</a>.
+<p>
+<a href="#sv">SV</a> is the central server and has permanent connections
+to <a href="#master">MASTER+MS</a>, <a href="#natneg">NATNEG</a>,
+<a href="#job">JOB</a>, and all <a href="#gpcm">GPCM</a> instances.
+It analyse the data of all other instances to build internal models.
+</div>
+<div class="text2" id="s-2016-10-27"><h2><b>2016-10-27</b>: Dual login (NDS and Wii)</h2>
+Wiimmfi suports now »Dual login«. This feature allows,
+that NDS and Wii users can connect to the same game at the same time.
+The first supported game is
+<a href="game-history/ffccechods">FFCC :Echoes of Time</a>.
+</div>
+<div class="text2" id="s-2017-08-12"><h2><b>2017-08-12</b>: MKW region management</h2>
+Servers <a href="#master">NAS</a> and <a href="#master">MASTER</a> support
+now the new <a href="#p-2017-08-12">region management</a>.
+Especially <a href="#master">MASTER</a> have to observe the correct usage
+of the regions.
+</div>
+<div class="text2" id="s-2018-11-11"><h2><b>2018-11-11</b>: Required Wiimmfi Patcher update for MKW</h2>
+All Mario Kart Wii users have to update the game image
+to protect their hardware against cheat code that can brick it.
+<p>
+⇒ <a href=/update>Details</a>
+</div>
+<div class="text2" id="s-2020-04-16"><h2><b>2020-04-16</b>: NATNEG communication</h2>
+The <a href="#natneg">NATNEG</a> servers were improved:
+They can now communicate with each other.
+This is the basis for the implementation of NATNEG type 12
+(NATIFY_REQUEST with ERT_TEST as reply from other server).
+In addition, NATNEG type 10 (ADDRESS_CHECK) was also implemented.
+</div>
+</div>
+<div id="server" class= "text">
+<h1>Servers</h1>
+
+<div class="text2" id="ncat">
+<h1>NCAT : Concatenate and redirect sockets</h1>
+
+NCAT is a feature-packed networking utility which reads and writes data across
+networks from the command line.
+It supports TCP/IP and UDP/IP as well as UNIX sockets.
+It is one of all NETCAT incarnations. Both tools have existed for many years.
+
+<p>
+NCAT is used as network server in combination with Wiimmfi's PHP scripts.
+For each connection (TCP/IP) or packet (UDP/IP),
+a new sub-process is created to manage the single connection or packet.
+So we have an own independent instance for each network client.
+
+<p>
+It was a solution to have a stable and well tested server without the need
+to develop and test such a management server.
+And when an instance crashes,
+it had no impact to the NCAT server or the other instances.
+A disadvantage is that a new sub-process is created for each network client,
+using more processing power.
+
+<p>
+At the beginning, NCAT was used as server for
+<a href="#gpcm">GPCM</a>, <a href="#gpsp">GPSP</a>, <a href="#master">MASTER</a>
+and <a href="#ms">MS</a>.
+Nowadays it is used for GPCM, GPSP and <a href="#competition">COMPETITION</a>.
+
+<p>
+NCAT can also used for non-interactive connections to the
+<a href="#backend">backends</a> of servers.
+It allows a script to send commands to the servers and to collect the output.
+</div>
+
+<div class="text2" id="nas">
+<h1>NAS : Login server</h1>
+
+NAS is the <b>N</b>intendo <b>A</b>uthentication <b>S</b>erver, using HTTP/POST.
+Original Wii games use HTTPS, as do most DS, DSiWare and WiiWare games.
+Because Wiimmfi can not serve certificates signed by Nintendo,
+Wii games must be patched to login to Wiimmfi with HTTP and without SSL,
+by either a RAM patch (i.e. MrBean35000vr's patcher),
+or a permanent file patch (via ISO patcher).
+
+<p>
+The NAS server is written as a PHP script, run by an Apache web server.
+The devices send their request for authentication as POST data,
+and NAS replies in the usual way.
+
+<p>
+On login NAS checks parameters, maintenance mode
+and login restrictions like disabled games or bans.
+It also manages new consoles and new profiles.
+Login data needed by the other servers is stored into the database.
+</div>
+
+<div class="text2" id="gpcm">
+<h1>GPCM : Client server</h1>
+
+After a succesful <a href="#nas">NAS</a> login,
+the game tries to connect the GPCM server using TCP/IP, authenticating
+with a token from NAS. The connection will be closed with logout.
+When the server closes the connection, the client is kicked from Wiimmfi immediately.
+
+<p>
+At Wiimmfi, GPCM is a combination of <a href="#ncat">NCAT</a> and PHP scripts.
+NCAT is the server and creates an own PHP instance for each connecting client.
+So each GPCM process manages exactly one client.
+
+<p>
+GPCM uses UNIX sockets for communication.
+The communication is needed to deliver messages between the clients
+(client → own GPCM → friend GPCM → friend client) and from and to other servers.
+The <a href="#master">MASTER</a> server is informed about
+logins and logouts for an optimized management.
+
+<h2 id="gpcm-plans">Plans</h2>
+
+Wiimm has already started to implement GPCM in C end 2015, but
+paused the development.
+The following points are already implemented but are hardly tested yet:
+
+<p>
+A main server (supervisor) manages all external connections
+and creates a sub-process for new clients.
+Each sub-process can handle any number of clients;
+the limit is changeable at runtime.
+If the limit set to NULL, the supervisor manages all clients by itself.
+So a single process and a multi process server is available.
+The single process is faster, but the multi process is more efficient
+and stable if one process terminates unexpectedly.
+So the multiprocess method was preferred at the beginning.
+
+<p>
+Each sub-process communicates with the supervisor using an unnamed socket
+to exchange status messages and to deliver file descriptors of clients.
+The supervisor redirects messages for other clients to the sub-processes.
+This is very fast.
+After sending a PING from the supervisor's <a href="#backend">backend</a>
+to a sub-process the answer arrives in 50–100 microseconds.
+In this time the message is queued and send, the sub-process is woken up
+and the message received and analysed, a reply is queued and send,
+the supervisor is woken up and the message received and analysed
+and last not least a summary is printed at the backend.
+
+<p>
+The supervisor collects status data of all clients.
+So the supervisor knows all relevant data for statistics.
+It would be possible to follow all connections and disconnections of
+guests and hosts to create better status pages.
+
+<p>
+Data transfer with the servers <a href="#master">MASTER</a> and
+<a href="#job">JOB</a> is done by SEQPACKET connections.
+SEQPACKET is only available for UNIX sockets,
+and is a network stream (like TCP) with record support (like UDP).
+Once connected, the connection is only closed if one server is halted.
+At restart, the connections are established again.
+
+<p>
+GPCM allows push messages to MASTER and JOB for status changes of profiles.
+A test version of the JOB server already uses this to deliver some status
+values to <a href="http://mkw-ana.wiimm.de">mkw-ana</a>.
+
+<p>
+The new GPCM supports a <a href="#backend">backend</a> like the other C servers.
+It is available for the supervisor via such backend,
+and can be used to send commands to each sub-process.
+
+<p>
+<a href="https://wiiki.wii-homebrew.com/Wiimmfi_(en)/OPENHOST">OPENHOST</a> is already implemented, but has some
+small issues. It needs more tests.
+
+<p>
+We tested the new GPCM at the Wiimmfi test server in March and April.
+Therefore, <a href="https://forum.wii-homebrew.com/index.php?page=Thread&postID=565752">MKW Intermezzos</a> were patched
+to use the test server.
+Overall, the new GPCM must be tested more intensively.
+
+<p>
+At the moment, the new GPCM runs as server <a href="#sv">SV</a> (SUPERVISOR).
+</div>
+
+<div class="text2" id="sv">
+<h1>SV : Supervisor</h1>
+
+<b>SUPERVISOR</b> (short <b>SV</b>) is a new analytic server.
+In real, it is a special working mode of the coming
+<a href="#gpcm-plans">GPCM</a> written in C,
+so it can run in the background if the new GPCM is activated.
+
+<p>
+SV is the central server and has permanent connections to
+<a href="#master">MASTER+MS</a>, <a href="#natneg">NATNEG</a>,
+<a href="#job">JOB</a>, and all <a href="#gpcm">GPCM</a> instances.
+It analyses the data of all other instances to build internal models.
+
+<p>
+Another point is the gpcm-to-gpcm communication.
+Before SV, each GPCM opens a UNIX stream socket of other GPCM to
+deliver status messages.
+With the new SV, GPCM use only one UNIX stream socket and use SV
+as delivery agent. Also MASTER use SV as delivery agent to e.g. kick a player.
+
+<p>
+SV has the same <a href="#watchdog">watchdog</a>, <a href=#restart>restart</a>
+and <a href="#backend">backend</a> features like the other servers.
+
+<h2 id="sv-state">Status quo</h2>
+
+<b>September 2016</b>
+<ul>
+<li>
+  SV runs as central server with permanent connections to
+  <a href="#master">MASTER+MS</a>, <a href="#natneg">NATNEG</a>,
+  <a href="#job">JOB</a>, and all <a href="#gpcm">GPCM</a> instances.
+</li>
+<li>
+  GPCM instances use SV as delivery agent.
+  The old UNIX sockets (one for each instance) can be used as an alternative
+  communication way until all services are switched to the new model.
+</li>
+<li>
+  GPCM instances inform SV about status changes of the clients.
+  GPCM90 messages (connection details) are additional send to SV.
+</li>
+<li>
+  MS informs SV about GPCM90 messages too.
+</li>
+<li>
+  MASTER informs SV about changes of MASTER-ID and NATNEG-ID.
+  It is used to identify for example NATNEG connections.
+</li>
+<li>
+  NATNEG informs SV about successful connections.
+</li>
+<li>
+  SV uses all data to create a room model especially for <i>Mario Kart Wii</i>.
+  So it knows exactly the memebers of the rooms and the NATNEG status.
+  But it is not clear, if special events like a room split is handled in a correct way.
+</li>
+<li>
+  The <a href="stats/mkw">mkw status page</a> gets data (JSON) from SV
+  to print all game statistics. This minimizes the database access.
+</li>
+</ul>
+
+<h2 id="sv-plans">Plans</h2>
+
+<ul>
+<li>
+  SV integrates special \wiimmfi\ messages into the GPCM stream to give
+  tools like <a href="http://mkw-ana.wiimm.de">mkw-ana</a> additional information.
+  The games itself ignore the unknown message type.
+</li>
+<li>
+  Analyse the data more deeply.
+  One point are split rooms. At the moment it is not clear,
+  if SV handles this event in a correct way.
+</li>
+<li>
+  Inform MASTER about rooms to support a new optimized matchmaking (MKW only).
+</li>
+</ul>
+</div>
+
+<div class="text2" id="gpsp">
+<h1>GPSP : Retrieving friends</h1>
+
+GPSP is used to retrieve information about friends.
+The server is usually connected once after <a href="#gpcm">GPCM</a> login using TCP/IP.
+
+<p>
+At Wiimmfi, GPSP is implemented as a combination of <a href="#ncat">NCAT</a> and PHP scripts.
+NCAT is the server and creates an own instance for each connection.
+Usually, a connection is closed within a second.
+</div>
+
+<div class="text2" id="master">
+<h1>MASTER : Master matchmaking server</h1>
+
+While online, each client (game) sends a UDP/IP packet
+with the current online status to the MASTER approximately every 30–60sec.
+This data is stored in a game specific database table for matchmaking,
+which can be retrieved by the <a href="#ms">MS</a> server.
+
+<p>
+In the beginning, MASTER was inplemented as a PHP script.
+A <a href="#ncat">NCAT</a> server creates a client for each TCP/UDP packet,
+which results in a very low performance.
+The MASTER was the most database-querying server of Wiimmfi.
+
+<p>
+Very early Wiimm decided that the MASTER is the first server to be rewritten.
+In June 2014 he started with the development of the C server.
+At <a href="#c_master">July 5, 2014</a>
+it replaced the old multiprocess <a href="#ncat">NCAT+PHP</a> version.
+
+<p>
+The next step was the integration of the <a href="#ms">MS</a>
+server into the MASTER code.
+At the end of 2014 a first version was implemented and running at the test server.
+It took a long time until all issues are solved.
+So it was activated at Wiimmfi in <a href="#ms_master">January 2016</a>.
+The combination of both servers into one process reduces the database
+lookups and queries even further.
+
+<p>
+In December 2015 the <a href="#backend">new backend</a> and the
+<a href=#restart>restart feature</a> were implemented.
+Since January 2016, <a href="#watchdog">watchdog</a> will restart MASTER
+after a crash. Only one crash happend until July 2016.
+
+<p>
+The MASTER+MS is now fully implemented.
+Only special game specific features will be added if needed.
+
+<h3>Some facts (based on an average of 150 online clients)</h3>
+<ul>
+<li>
+  The MASTER part of the combined server receives about 1.3 millions packets (230 MB)
+  per day. 600&nbsp;000 packets are matchmaking data,
+  and for only 20% the database is updated.
+</li>
+<li>
+  The MS part is connected about 130&nbsp;000 times per day.
+  MS receives about 530&nbsp;000 packets (34 MB)
+  and sends one packet for each connection.
+</li>
+<li>
+  The server makes about 280&nbsp;000 database queries (100 MB) per day
+  and waits less than 5 minutes (&lt;0.34%) for replies.
+</li>
+<li>
+  Analysis and execution need only about 0.24% of one CPU.
+  Most of the time (99.44%) MASTER+MS is waiting for packets.
+</li>
+<li>
+  The server needs about 4 to 4.5 MB of RAM.
+  The more games and MKW regions, the more memory is needed.
+</li>
+</ul>
+</div>
+
+<div class="text2" id="ms">
+<h1>MS : Matchmaking retrieving server</h1>
+
+MS is used by the clients to search for hosts for matchmaking.
+Answers of MS are encrypted by a game-specific secret key.
+If successful, MS is also used as relay for try-to-connect messages.
+
+<p>
+At Wiimmfi, MS was implemented as an <a href="#ncat">NCAT</a> and PHP script combination.
+NCAT is the server and creates an own instance for each connection.
+Usually, a connection is closed within 5 seconds.
+
+<p>
+In August 2014, Wiimm had rewritten the MS to solve different problems.
+
+<p>
+In <a href="#ms_master">January 2016</a>, the PHP version was replaced
+by a combined <a href="#master">MASTER+MS</a> server written in C.
+The combination of both servers into one process reduces the database
+lookups and queries again and allows to implement special game specific features.
+</div>
+
+<div class="text2" id="natneg">
+<h1>NATNEG : Enable client-to-client connections behind firewalls</h1>
+
+The name <b>NATNEG</b> is a combination of <b>NAT</b>
+(<b>N</b>etwork <b>A</b>ddress <b>T</b>ranslation)
+and <b>NEG</b> (<b>NEG</b>otiation).
+
+<p>
+When playing with other players, the clients (games) must create
+a client-to-client connection to exchange game data.
+Because of firewalls and network address translations (NAT)
+a server must be used to open the gates. And this server is NATNEG.
+
+<p>
+At the beginning of the development, Wiimmfi used the NATNEG server of
+<i>Nagato</i> written in <i>python</i>, using an <i>SQLite</i> database.
+
+<p>
+Two weeks before official Wiimmfi start, Wiimm finished his own NATNEG server
+written in C. It is a standalone NATNEG server and doesn't need a database,
+because all protocol data is stored in an internal memory array.
+It also supports 2 UNIX sockets: One for the delivering of faked UDP packets
+and one for maintenance. The maintenance port accepts commands and sends back
+the output.
+<a href="#ncat">NCAT</a> can be used to establish the bidirectional connection.
+
+<p>
+Since <a href=#s-2015-06-06>June 2015</a>,
+there are 3 instances of NATNEG at 3 different servers.
+In December 2015 the <a href="#backend">new backend</a> and the
+<a href=#restart>restart feature</a> were implemented.
+Since January 2016, <a href="#watchdog">watchdog</a> will restart NATNEG
+after a crash; but a crash never happened.
+
+<p>
+The 3 NATNER servers have been able to communicate with each other
+since <a href=#s-2020-04-16>April 2020</a>.
+This is used to support other NATNEG types.
+Log messages can also be forwarded to make debugging easier.
+
+<h3>Some facts (based on an average of 150 online clients)</h3>
+<ul>
+<li>
+  The primary NATNEG server receives about 200&nbsp;000 packets (7.6 MB) per day.
+  Analysis and executions need only about 0.016% of one CPU in the server.
+  Most of the time (99.98%) NATNEG is waiting for packets.
+</li>
+<li>
+  Each of the secondary NATNEG servers receives about 50&nbsp;000 packets
+  (1.7 MB) per day.
+  Analysis and executions need only about 0.002% of one CPU.
+  Most of the time (99.998%) the secondary NATNEGs are waiting for packets.
+</li>
+<li>
+  All 3 NATNEGs now run without any interruption.
+  Only manual restarts (e.g. after system reboot) were done.
+  For example, NATNEG #2 ran now for 3 years (since July 2017)
+  and get 34 backups (<a href=#restart>smart restart</a>) in between.
+</li>
+<li>
+  The NATNEG server supports up to 1000 open connection requests at the same time.
+  The limit is hard coded, but could easily be increased if needed.
+  The maximum usage was 80.
+</li>
+<li>
+  To support a delayed answer (20ms; direct answers are too fast for the clients),
+  a send queue with 500 slots is implemented.
+  On overflow, the answers are sent earlier.
+  The limit is hard coded too, but could easily be increased if needed.
+  The maximum usage was 35.
+</li>
+<li>
+  Each NATNEG server needs about 4 MB of RAM.
+</li>
+</ul>
+</div>
+
+<div class="text2" id="sake">
+<h1>SAKE : Server to exchange user-created content</h1>
+
+The SAKE server is used by games to store user-created content.
+For Mario Kart Wii, this server stores Miis and uploaded ghost data.
+
+<p>
+Mid-2015, Leseratte used the AltWFC SAKE server to understand how basic data
+storage worked, and implemented bugfixes and additional features needed by
+Mario Kart Wii.
+
+<p>
+In March 2016, Wiimm and Leseratte reimplemented the SAKE server with all its
+improvements in PHP in order to use it on Wiimmfi, run by an Apache web server.
+</div>
+
+<div class="text2" id="race">
+<h1>RACE : Mario-Kart-specific server for rankings</h1>
+
+The RACE server is a Mario-Kart-specific server. The game uses this server
+to up- and download data to / from the in-game rankings (both for regular tracks
+and competitions).
+
+<p>
+The first test implementation in Python has been written by <i>Leseratte</i> in
+mid-2015, and in March 2016, at the same time as the <a href="#sake">SAKE</a> server,
+it has been reimplemented in PHP by Wiimm and Leseratte, run by an Apache web server.
+</div>
+
+<div class="text2" id="competition">
+<h1>COMPETITION : Competition management server for Mario Kart Wii</h1>
+
+The competition service was integrated into the RACE service on the original
+servers, but on Wiimmfi it has been implemented as an own service for easier
+development and debugging.
+
+<p>
+All the details and protocols needed for competitions were found out
+by <i>Leseratte</i> with some help by <i>PokeAcer</i>.
+Leseratte has then developed the server software
+needed to deliver the competitions to the Wiis,
+and has also improved and updated <i>amibu</i>s
+first test patcher so that it now uploads old competition data to Wiimmfi
+and permanently patches the Wii competition download to the Wiimmfi servers.
+
+<p>
+The competition service has been developed from January 2016 to June 2016,
+with the first competition starting on May 10th. The server then moved from
+<i>Leserattes</i> development server to the actual Wiimmfi server in July.
+The PHP scripts of COMPETITION are run by an Apache web server.
+</div>
+
+<div class="text2" id="job">
+<h1>JOB : Server to execute mkw-ana jobs</h1>
+
+The JOB server is available since <a href="#new_job">July 2015</a>.
+It is a new server and was not available at GameSpy/Nintendo WFC,
+as it was written differently.
+
+<p>
+<a href="http://mkw-ana.wiimm.de">mkw-ana</a> connects to the JOB server to get
+information about the current room and its players.
+It also sends kick and ban jobs.
+Special rights at the Wiimmfi server are needed for such kick and ban jobs.
+
+<p>
+In December 2015 the <a href="#backend">new backend</a> and the
+<a href=#restart>restart feature</a> were implemented.
+Since January 2016, <a href="#watchdog">watchdog</a> will restart NATNEG
+after a crash; but a crash never happened.
+
+<h2 id="job-plans">Plans</h2>
+It is planned that the JOB server sends much more information to mkw-ana
+after the new <a href="#gpcm">GPCM</a> server is finished.
+</div>
+
+<div class="text2" id="more servers ...">
+<h1>More servers ...</h1>
+
+There are some more servers in Wiimmfi that aren't for main game play:
+<ul class="narrow">
+<li> DLS1 (game file download server).</li>
+<li> GAMESTATS (game statistics, leaderboards and data).</li>
+</ul>
+More information will be added later.
+</div>
+
+</div>
+<div class="text">
+<h1>Public Pages</h1>
+<ul class="narrow">
+<li><a href="index">Wiimmfi main page</a></li>
+<li><a href="development">Wiimmfi development</a></li>
+<li><a href="stat">Server status and game overview</a></li>
+<ul class="narrow">
+<li><a href="game-history">Game history</a></li>
+<li><a href="stats/game">Game statistics</a></li>
+<li><a href="stats/mkw">MKW statistics</a></li>
+<li><a href="region/stat">MKW regions</a></li>
+</ul>
+<li><a href="show-bans">View Bans</a></li>
+</ul>
+<h1>User Pages</h1>
+<ul class="narrow">
+<li><a href="user/settings">Private settings</a></li>
+<li><a href="user/status">Private status</a></li>
+<li><a href="user/messages">Private messages</a></li>
+<li><a href="user/assign-console">Assign a console</a></li>
+</li>
+<li><a href="logout">Logout</a></li>
+</ul>
+</div>
+<script>
+addEventOnLoad(function(){scrollHashToScreenById('navbar',5)});
+registerLocalTooltips(undefined,1);
+</script>
+</body>
+</html>

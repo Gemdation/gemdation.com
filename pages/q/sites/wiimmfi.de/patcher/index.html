@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>Wiimmfi Patcher</title>
+<link rel='stylesheet' type='text/css' href='../css/dclib/base.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='../css/dclib/dclib.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='../css/wiimmfi.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='../css/mii-font.css?v=8vQgLA'>
+<script src="../js/dclib/dclib.js?v=8vQgLA"></script>
+<script src="../js/wiimmfi.js?v=8vQgLA"></script>
+<script>
+dcLib_DEVELOP = 0;
+dcLib_AjaxUsePostDef = 1
+
+</script>
+<meta name="keywords" content="Wiimmfi">
+</head>
+<body class="js-disabled" >
+<script>
+if (document.body)
+{
+    document.body.classList.remove('js-disabled');
+    document.body.classList.add('js-enabled');
+}
+</script><noscript><div class=js-warning>Please activate JavaScript.
+JavaScript is used for many interactive elements of this website.</div></noscript>
+<div style="margin-bottom:28px"></div>
+<div id=navbar class=nb-fixed><span class="nb-frame nb-classic">
+<div class=nb-menu><button class=nb-button>Wiimmfi</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../" title="Wiimmfi main page — includes announcements.">Main page</a>
+<a class="nb-menu-link" href="../changelog">Change log</a>
+<a class="nb-menu-link" href="../game-history">Game history</a>
+<a class="nb-menu-link" href="../development">Development</a>
+<a class="nb-menu-link" href="../rules">Wiimmfi Rule Booklet</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../fc-converter">Friend-Code converter</a>
+<a class="nb-menu-link" href="../patcher/">Wiimmfi patcher</a>
+<a class="nb-menu-link" href="../error">Error codes</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../login">Login</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Status</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../stat">Server status</a>
+<a class="nb-menu-link" href="../stats/login">Login statistics</a>
+<a class="nb-menu-link" href="../stats/game">Game statistics</a>
+<a class="nb-menu-link" href="../show-bans">List of bans</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../stats/mkw" title="Mario Kart Wii statistics">MKW statistics</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Regions</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../region/stat" title="MKWii region usage statistics">Region usage</a>
+<a class="nb-menu-link" href="../region/list" title="List MKWii regions">List custom regions</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Competitions</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="https://competitions.wiimmfi.de/">Overview</a>
+<a class="nb-menu-link" href="../comp-stat">Statistics</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<a class="nb-menu-link" href="../privacy">Privacy Policy</a>
+<a class="nb-menu-link" href="../donate">Donate</a>
+</span>
+</div>
+<div class=logo><a href=/><img src="../images/wiimmfi-light.svg" alt="Wiimmfi logo" title="Wiimmfi logo"></a><p><a href=https://wiimmfi.de/donate>Donate</a></div>
+<h1>Wiimmfi Patcher</h1>
+
+<div class=text>
+<h2>Overview</h2>
+<p>Connecting to Wiimmfi requires a Wiimmfi patcher to redirect the game's connection
+requests to Wiimmfi instead of the defunct Nintendo Wi-Fi Connection. Below you'll
+find a list of all existing Wiimmfi patchers. The links lead to subpages that will
+explain these particular patchers in detail.</p>
+
+<p>All Wiimmfi Patchers can be downloaded from <a href="../../download.wiimmfi.de/patcher">the download page</a>.</p>
+</div>
+
+<div class=text>
+<h2>Patcher variants</h2>
+<dl>
+<dt><a href=disc>Auto Wiimmfi Patcher</a></dt><dd>
+	For real game discs booted through the HBC.
+	</dd>
+<dt><a href=iso>Wiimmfi ISO Patcher</a></dt><dd>
+	For game images booted through USB Loaders or Dolphin.
+	</dd>
+<dt><a href=dnspatch>Wiimmfi patch through a custom DNS</a></dt><dd>
+        Very easy setup without homebrew, but only for MKWii, SSBB and a couple other games.
+        </dd>
+<dt><a href=usbloader>USB Loaders</a></dt><dd>
+	For USB Loader users.
+	</dd>
+<dt><a href=brainslug>Brainslug Module</a></dt><dd>
+	For developers.
+	</dd>
+<dt><a href=flashhax>FlashHax exploit</a></dt><dd>
+	Wii only: Loads a Wiimmfi Patcher through the Internet Channel.
+	</dd>
+<dt><a href=str2hax>str2hax EULA exploit</a></dt><dd>
+	Wii only: Loads a Wiimmfi Patcher through the License Agreement screen.
+	</dd>
+<dt><a href=wiiware>Auto WiiWare Patcher</a></dt><dd>
+	For WiiWare WAD files.
+	</dd>
+<dt><a href=priiloader>Priiloader Hack</a></dt><dd>
+	Wii only: Hacks configuration for Priiloader to patch games in the Disk Channel.
+	</dd>
+</dl>
+
+<h2>Dolphin</h2>
+<dl>
+<dt><a href=dolphin>Using Wiimmfi on the Dolphin Emulator</a></dt><dd>
+	How to setup Dolphin to use Wiimmfi.</dd>
+</dl>
+</div>
+<script>
+addEventOnLoad(function(){scrollHashToScreenById('navbar',5)});
+registerLocalTooltips(undefined,1);
+</script>
+</body>
+</html>
+

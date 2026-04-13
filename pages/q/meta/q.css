@@ -1,0 +1,20 @@
+@font-face {font-family: 'Verdana'; src: url('verdana.ttf') format('truetype'); font-weight: normal; font-style: normal;}
+@font-face {font-family: 'Verdana'; src: url('verdana-bold.ttf') format('truetype'); font-weight: bold; font-style: normal;}
+body {margin:0;background-color:#5272A1;color:white;font-family:'Verdana',sans-serif;text-align:left;}
+body.dir {text-align: left;}
+body.dir table {text-align: left;margin: 0;margin-left:5px;}
+
+table, th, td {border:1px solid white;border-collapse: collapse;text-align: center;margin: auto;}
+th, td {padding: 2px;text-align: left;}
+th {text-align: center;}
+
+ul {list-style: none;padding-left: 0px}
+li {margin-bottom: 10px;}
+
+img {border:1px solid white}
+a {text-decoration:none;color:white;cursor: pointer;}
+a:hover {color:#95BCF7}
+a:active {color:#354A69}
+mark {color:#5272A1;background-color: white;font-weight: bold;}
+div.images {text-align: center}
+header {border-bottom: solid 1px white;width: 100%;padding-top: 4px;padding-bottom: 4px;}

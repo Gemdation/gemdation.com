@@ -1,0 +1,119 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>FlashHax Internet Channel exploit</title>
+<link rel='stylesheet' type='text/css' href='../css/dclib/base.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='../css/dclib/dclib.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='../css/wiimmfi.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='../css/mii-font.css?v=8vQgLA'>
+<script src="../js/dclib/dclib.js?v=8vQgLA"></script>
+<script src="../js/wiimmfi.js?v=8vQgLA"></script>
+<script>
+dcLib_DEVELOP = 0;
+dcLib_AjaxUsePostDef = 1
+
+</script>
+<meta name="keywords" content="Wiimmfi">
+</head>
+<body class="js-disabled" >
+<script>
+if (document.body)
+{
+    document.body.classList.remove('js-disabled');
+    document.body.classList.add('js-enabled');
+}
+</script><noscript><div class=js-warning>Please activate JavaScript.
+JavaScript is used for many interactive elements of this website.</div></noscript>
+<div style="margin-bottom:28px"></div>
+<div id=navbar class=nb-fixed><span class="nb-frame nb-classic">
+<div class=nb-menu><button class=nb-button>Wiimmfi</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../" title="Wiimmfi main page — includes announcements.">Main page</a>
+<a class="nb-menu-link" href="../changelog">Change log</a>
+<a class="nb-menu-link" href="../game-history">Game history</a>
+<a class="nb-menu-link" href="../development">Development</a>
+<a class="nb-menu-link" href="../rules">Wiimmfi Rule Booklet</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../fc-converter">Friend-Code converter</a>
+<a class="nb-menu-link" href="../patcher">Wiimmfi patcher</a>
+<a class="nb-menu-link" href="../error">Error codes</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../login">Login</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Status</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../stat">Server status</a>
+<a class="nb-menu-link" href="../stats/login">Login statistics</a>
+<a class="nb-menu-link" href="../stats/game">Game statistics</a>
+<a class="nb-menu-link" href="../show-bans">List of bans</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../stats/mkw" title="Mario Kart Wii statistics">MKW statistics</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Regions</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../region/stat" title="MKWii region usage statistics">Region usage</a>
+<a class="nb-menu-link" href="../region/list" title="List MKWii regions">List custom regions</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Competitions</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="https://competitions.wiimmfi.de/">Overview</a>
+<a class="nb-menu-link" href="../comp-stat">Statistics</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<a class="nb-menu-link" href="../privacy">Privacy Policy</a>
+<a class="nb-menu-link" href="../donate">Donate</a>
+</span>
+</div>
+<div class=logo><a href=/><img src="../images/wiimmfi-light.svg" alt="Wiimmfi logo" title="Wiimmfi logo"></a><p><a href=../donate>Donate</a></div>
+<h1>FlashHax Internet Channel exploit</h1>
+
+<div class=text>
+<h2>Overview</h2>
+<p>FlashHax is an exploit that was found by Fullmetal5. It's an implementation of CVE-2016-0974 for the Wii Internet Channel.
+You can find more information about the FlashHax exploit on <a>its GitHub page</a> or 
+<a>this GBAtemp thread</a>.</p>
+
+<p>MrBean took a Wiimmfi patcher and embedded it within this FlashHax exploit, which allows you to run a Wiimmfi patcher
+just by going to a particular web page in the Wii's Internet Channel.</p>
+
+<p>Due to the fact that this exploit is a bit unreliable (it sometimes takes a couple attempts to work) and the fact that the
+Internet Channel can no longer be downloaded on Wiis that don't already have it, we usually recommend using the <a href="/patcher/str2hax">str2hax EULA exploit</a> instead.</p>
+</div>
+
+<div class=text>
+<h2>Setup</h2>
+<p>There's no archive or program that needs to be downloaded in order to use FlashHax. 
+All you need to do is make sure your Wii is running in 60Hz mode, then open the following webpage in the Wii Internet Channel: 
+<tt><a href="flashhax-launch">http://chadsoft.co.uk/wiimmfi</a></tt></p>
+<p>Add the page to the browser favorites by clicking the Star icon, then the "Add Favorite" button; and then exit back to the Wii menu by pressing HOME.</p>
+<p>Open the Internet Channel again and access the favorite you just added, and the Wiimmfi Patcher should start.</p>
+
+<p>Note that this exploit isn't 100% reliable, if you are stuck on the page and the Wiimmfi Patcher does not start, just restart the console and try again.</p>
+
+<p>If you run into UPnP-related issues (like the patcher getting stuck at the "Init network ..." or "add UPnP port forward" steps for more than 10 seconds) 
+you can press the Minus button on your Wii Remote, or the Y button on your Gamecube controller as soon as the patcher loads to get around that.</p>
+<p>If that happens to you, please let us know so we can fix this issue for the future.</p>
+
+</div>
+
+<div class=text>
+<h2>Credits</h2>
+<ul>
+<li>FlashHax Exploit by Fullmetal5</li>
+<li>ELF Loader by Segher Boessenkool</li>
+<li>Patcher by MrBean & Leseratte, based on Brainslug by Chadderz</li>
+</ul>
+</div>
+
+<a href="..">Back to the overview page</a>
+<script>
+addEventOnLoad(function(){scrollHashToScreenById('navbar',5)});
+registerLocalTooltips(undefined,1);
+</script>
+</body>
+</html>
