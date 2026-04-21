@@ -4,7 +4,7 @@
 @font-face {font-family:'Roboto';src:url('/meta/font-roboto-bold-italic.ttf') format('truetype');font-weight:bold;font-style:italic;}
 
 
-body {margin:0;background-image: url(/media/background/tile-corners-and-circles.jpg);background-color:#0a041f;font-family:'Roboto',sans-serif;font-size:19px;}
+body {margin:0;background-image: url(/media/background/tile-corners-and-circles.jpg);background-color:#0a041f;color:white;font-family:'Roboto',sans-serif;font-size:19px;}
 header {margin:0 auto;text-align:center;padding:10px;}
 header img#dynamic-header {margin: 0 auto;width:50%;}
 nav {text-align:center;padding:10px;padding-top:0;}

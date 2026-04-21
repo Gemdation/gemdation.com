@@ -17,8 +17,7 @@
     <meta property="og:site_name" content="Gemdation.com">
     <script src="/meta/site-header.js" defer></script>
     <link rel="stylesheet" href="/meta/gem.css">
-    <script>function highlightElement() {var hash = window.location.hash.substring(1); var element = document.getElementById(hash); if (element && element.tagName === 'H2') {element.classList.add('highlight');}} window.onload = highlightElement;</script>
-    <style>h2, p {color:#ffffffc9}</style>
+    <style>td, tr, table {padding:0;border-collapse:collapse}</style>
 </head>
 <body>
 
@@ -27,10 +26,15 @@
 <div id="articles" class="row">
 
 <div class="block" style="background-color:#00000080;backdrop-filter:blur(10px);border-radius:10px;color:white;padding:0;">
-    <table style="width:100%;">
+    <table>
     <tr>
-    <td><img src="/media/profiles/gems.png" style="width:100px;"></td>
-    <td><p>I like tech, collectibles, animation, and more.</p><a href="about"><button style="float:right;border-radius:10px;">About Me</button></a></td>
+    <td rowspan="2"><img src="/media/profiles/gems.png" style="width:100px;"></td>
+    <td><p>I'm from Texas and I like pop music, tech, collectibles, animation, and more.</p></td>
+    </tr>
+    <tr>
+        <td>
+            <a href="about"><button style="float:right;border-radius:10px;border-bottom-left-radius:0;border-top-right-radius:0;">About Me</button></a>
+        </td>
     </tr>
     </table>    
 </div>
@@ -330,7 +334,7 @@
         </div>
     </figure>
     <h2 id="Pages">Pages</h2>
-    <figure style="background-color:#c23737c2" class="page"><a href="buttons">
+    <figure style="background-color:#c23737c2" class="page"><a href="pages/buttons">
         <div class="article-content">
             <span class="title">Buttons</span>
             <span class="desc">Collection of 88x31 buttons that I like, sourced from various websites. Some created by me.</span>
@@ -338,7 +342,7 @@
         </div>
     </a></figure>
 
-    <figure style="background-color:#525252c2" class="page"><a href="pc-sim">
+    <figure style="background-color:#525252c2" class="page"><a href="pages/pc-sim">
         <div class="article-content">
             <span class="title">PC Simulator Goodies!</span>
             <span class="desc">Imagery, in-game sites, save editor for the indie mobile game PC Simulator by Yiming.</span>
@@ -346,7 +350,7 @@
         </div>
     </a></figure>
 
-    <figure style="background-color:#9a9a9ac2" class="page"><a href="wii-roms">
+    <figure style="background-color:#9a9a9ac2" class="page"><a href="pages/wii-roms">
         <div class="article-content">
             <span class="title">Wii ROMs Guide</span>
             <span class="desc">Guide of Wii WBFS and WAD ROMs. Contains links for ease of access.</span>
