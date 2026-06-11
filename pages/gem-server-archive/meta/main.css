@@ -1,0 +1,28 @@
+@font-face {font-family: Verdana; src: url('verdana.ttf') format('truetype'); font-weight: normal; font-style: normal;}
+@font-face {font-family: Verdana; src: url('verdana-bold.ttf') format('truetype'); font-weight: bold; font-style: normal;}
+
+body {margin: 0;text-align: center;color:white;background-color: grey; background-size:auto; background-repeat: repeat; font-family:'Verdana', sans-serif;}
+h1, h2, h3, h4, h5, h6 {color:lightgrey}
+button {font-family: 'Verdana',sans-serif;color: #444444; background-color:lightgrey; border-style: none; padding: 10px;font-weight: bold;}
+button:hover {cursor: pointer;}
+button:active {background-color: #444444; color:lightgrey;}
+div {border-color: white; width: 100%; width: 50%; margin: 0 auto; box-sizing: border-box; border-style: solid; border-width: 5px; padding: 5px; margin-top: 5px; margin-bottom: 5px; overflow: auto;}
+div.clear {background:none; color:white;border-color: lightgrey;}
+
+mark {background-color: lightgrey; font-weight: bold;}
+mark.inv {background-color: white; color:lightgrey; font-weight: bold;}
+table {border: 1px solid white; border-collapse: collapse;}
+table a {color:white; font-weight: normal;}
+
+a {color:#525252;font-weight: bold;text-decoration: none;}
+a:hover {color:lightgrey}
+th, td {border: 1px solid}
+li {text-align: left;}
+
+body.dir {background-color: black;font-family: 'Verdana',sans-serif;color:white;padding-left: 10px;}
+body.dir table {border: 1px solid white; border-collapse: collapse;text-align: left;}
+body.dir th, td {border: 1px solid}
+body.dir a {color:white;text-decoration: none;}
+body.dir h1 {text-align: left;}
+
+@media (max-width: 768px) {div {width: 95%;}}

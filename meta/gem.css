@@ -83,5 +83,5 @@ body.dir img {vertical-align:middle;width:30px}
 
 @media (max-width:768px) {div.row div.block, div.row figure, div.back, article, header img#dynamic-header {width:95%;}}
 @media (min-width:1500px) {div.row div.block, div.row figure, div.back, article, header img#dynamic-header {width:30%;}}
-@media (max-width:450px) {figure{font-size:17px}}
-@media (max-width:350px) {figure{font-size:15px}}
+@media (max-width:450px) {figure {font-size:17px}}
+@media (max-width:350px) {figure {font-size:15px}}
