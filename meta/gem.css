@@ -24,11 +24,14 @@ figure img {height:auto;width:150px;align-self:stretch;object-fit:cover}
 figure div.article-content {display:flex;flex-direction:column;flex-grow:1;flex:1;justify-content:space-between;padding-right:10px;word-wrap: break-word;}
 figure.article {background:#deedff}
 figure.draft {background:#deedff2f;color:white}
+figure.delete {background:#0000006b;color:#25628ba2}
 figure:active {box-shadow:inset #00000080 0px 5px 15px}
 figure.draft:active {box-shadow:inset #ffffff80 0px 5px 15px}
 
 article {background:#deedff;clip-path:polygon(0% 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, 0% 100%);text-align:left;margin:10px auto;padding:1rem;width:50%;box-sizing:border-box;}
 article.draft {background:#deedff2f;color:white;font-family:monospace}
+article.alert {background:none;clip-path:none;padding:5px;line-height:30px;color:white;border:solid 2px red;box-shadow:0 0 0.75rem red}
+article.alert a {color:red}
 article img {width:60%}
 article ul {padding:10px}
 article ul li {text-align:left}
