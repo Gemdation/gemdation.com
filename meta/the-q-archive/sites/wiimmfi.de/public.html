@@ -1,0 +1,103 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>Login</title>
+<link rel='stylesheet' type='text/css' href='css/dclib/base.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='css/dclib/dclib.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='css/wiimmfi.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='css/mii-font.css?v=8vQgLA'>
+<link rel="icon" type="image/x-icon" href="images/favicon.png">
+<script src="js/dclib/dclib.js?v=8vQgLA"></script>
+<script src="js/wiimmfi.js?v=8vQgLA"></script>
+</head>
+<body>
+
+<div style="margin-bottom:28px"></div>
+<div id=navbar class=nb-fixed><span class="nb-frame nb-classic">
+<span class="nb-menu-user">»<a href="user/status">Account</a>« <span class="nb-menu-info">⇒</span></span><div class=nb-menu><button class=nb-button>Wiimmfi</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../wiimmfi.de" title="Wiimmfi main page — includes announcements.">Main page</a>
+<a class="nb-menu-link" href="changelog">Change log</a>
+<a class="nb-menu-link" href="game-history">Game history</a>
+<a class="nb-menu-link" href="development">Development</a>
+<a class="nb-menu-link" href="rules">Wiimmfi Rule Booklet</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="fc-converter">Friend-Code converter</a>
+<a class="nb-menu-link" href="patcher">Wiimmfi patcher</a>
+<a class="nb-menu-link" href="error">Error codes</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="login">Login</a>
+<a class="nb-menu-link" href="logout">Logout</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Status</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="stat">Server status</a>
+<a class="nb-menu-link" href="stats/login">Login statistics</a>
+<a class="nb-menu-link" href="stats/game">Game statistics</a>
+<a class="nb-menu-link" href="show-bans">List of bans</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="stats/mkw" title="Mario Kart Wii statistics">MKW statistics</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Manage</button><div class=nb-submenu>
+    <div class="nb-menu-sep"> </div>
+    <a class="nb-menu-link" href="user/settings">Private settings</a>
+    <a class="nb-menu-link" href="mkw-settings">Private MKW settings</a>
+    <a class="nb-menu-link" href="user/status" title="Rights, consoles, profiles, ...">Private status</a>
+    <a class="nb-menu-link" href="user/messages">Private messages</a>
+    <div class="nb-menu-sep"> </div>
+    <a class="nb-menu-link" href="user/assign-console">Assign a console</a>
+    <a class="nb-menu-link" href="openhost">Manage OPENHOST</a>
+    <span class="nb-menu-sep"> </span>
+    </div></div>
+<div class=nb-menu><button class=nb-button>Regions</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="region/stat" title="MKWii region usage statistics">Region usage</a>
+<a class="nb-menu-link" href="region/list" title="List MKWii regions">List custom regions</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Competitions</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="competitions">Overview</a>
+<a class="nb-menu-link" href="comp-stat">Statistics</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<a class="nb-menu-link" href="privacy">Privacy Policy</a>
+<a class="nb-menu-link" href="donate">Donate</a>
+</span>
+</div>
+<div class=logo><a href=../wiimmfi.de><img src="images/wiimmfi-light.svg" alt="Wiimmfi logo" title="Wiimmfi logo"></a><p><a href=donate>Donate</a></div>
+<h1>Welcome!</h1>
+<div class="text">
+<h2>Public Pages</h2>
+<ul class="narrow">
+<li><a href="index">Wiimmfi main page</a></li>
+<li><a href="development">Wiimmfi development</a></li>
+<li><a href="stat">Server status and game overview</a></li>
+<ul class="narrow">
+<li><a href="game-history">Game history</a></li>
+<li><a href="stats/game">Game statistics</a></li>
+<li><a href="stats/mkw">MKW statistics</a></li>
+<li><a href="region/stat">MKW regions</a></li>
+</ul>
+<li><a href="show-bans">View Bans</a></li>
+</ul>
+<h2>User Pages</h2>
+<ul class="narrow">
+<li><a href="user/settings">Private settings</a></li>
+<li><a href="user/status">Private status</a></li>
+<li><a href="user/messages">Private messages</a></li>
+<li><a href="user/assign-console">Assign a console</a></li>
+<li><a href="openhost">Manage OPENHOST</a></li>
+<li><a href="logout">Logout</a></li>
+</ul>
+</div>
+<script>
+addEventOnLoad(function(){scrollHashToScreenById('navbar',5)});
+registerLocalTooltips(undefined,1);
+</script>
+</body>
+</html>

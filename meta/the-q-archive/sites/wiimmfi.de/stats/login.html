@@ -1,0 +1,497 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>Login Statistics</title>
+<style>
+
+table.toc
+{
+	margin-top:		1em;
+}
+
+table.toc td + td
+{
+	min-width:		3.2em;
+	text-align:		center;
+}
+
+table.toc td[colspan]:not([colspan="1"])
+{
+	text-align:		center;
+}
+
+table.toc td a
+{
+	text-decoration:	none;
+	color:			inherit;
+	display:		block;
+}
+
+td.toc-head
+{
+	color:			#ffff00;
+	background-color:	#000060;
+	text-align:		center;
+	font-weight:		bold;
+	font-size:		110%;
+	line-height:		180%;
+}
+
+td.toc-title
+{
+	color:			#ffffff;
+	background-color:	#000090;
+	text-align:		left;
+}
+
+span.toc-loc,
+td.toc-loc
+{
+	color:			#000000;
+	background-color:	#90ffa0;
+}
+
+span.toc-ext,
+td.toc-ext
+{
+	color:			#000000;
+	background-color:	#ffe0e0;
+}
+
+td.toc-none
+{
+	color:			#000000;
+	background-color:	#c0c0c0;
+}
+
+.skip-date,
+tr.gtitle
+{
+	color:			#000 !important;
+	background-color:	#ccc !important;
+}
+
+tr.xgtitle td
+{
+	text-align:		left;
+}
+
+.hl-date,
+.hl-date0,
+.hl-date1
+{
+	background-color:	#60f0f0;
+}
+
+.hl-date2
+{
+	color:			#ffffff;
+	background-color:	#0070b0;
+}
+
+span.hl-date,
+span.hl-date0,
+span.hl-date1,
+span.hl-date2,
+span.toc-loc,
+span.toc-ext
+{
+	padding:		1px 3px;
+}
+
+td.xsep
+{
+	font-size:		200%;
+	background-color:	orange;
+}
+
+table.blocklink a
+{
+	text-decoration:	none;
+	display:		block;
+}</style>
+<link rel='stylesheet' type='text/css' href='../css/dclib/base.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='../css/dclib/dclib.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='../css/wiimmfi.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='../css/mii-font.css?v=8vQgLA'>
+<link rel="icon" type="image/x-icon" href="../images/favicon.png">
+<script src="../js/dclib/dclib.js?v=8vQgLA"></script>
+<script src="../js/wiimmfi.js?v=8vQgLA"></script>
+</head>
+<body>
+
+<div style="margin-bottom:28px"></div>
+<div id=navbar class=nb-fixed><span class="nb-frame nb-classic">
+<span class="nb-menu-user">»<a href="../user/status">Account</a>« <span class="nb-menu-info">⇒</span></span><div class=nb-menu><button class=nb-button>Wiimmfi</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../../wiimmfi.de" title="Wiimmfi main page — includes announcements.">Main page</a>
+<a class="nb-menu-link" href="../changelog">Change log</a>
+<a class="nb-menu-link" href="../game-history">Game history</a>
+<a class="nb-menu-link" href="../development">Development</a>
+<a class="nb-menu-link" href="../rules">Wiimmfi Rule Booklet</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../fc-converter">Friend-Code converter</a>
+<a class="nb-menu-link" href="../patcher">Wiimmfi patcher</a>
+<a class="nb-menu-link" href="error">Error codes</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../login">Login</a>
+<a class="nb-menu-link" href="../logout">Logout</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Status</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../stat">Server status</a>
+<a class="nb-menu-link active" href="../stats/login">Login statistics</a>
+<a class="nb-menu-link" href="../stats/game">Game statistics</a>
+<a class="nb-menu-link" href="../show-bans">List of bans</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../stats/mkw" title="Mario Kart Wii statistics">MKW statistics</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Manage</button><div class=nb-submenu>
+    <div class="nb-menu-sep"> </div>
+    <a class="nb-menu-link" href="../user/settings">Private settings</a>
+    <a class="nb-menu-link" href="../mkw-settings">Private MKW settings</a>
+    <a class="nb-menu-link" href="../user/status" title="Rights, consoles, profiles, ...">Private status</a>
+    <a class="nb-menu-link" href="../user/messages">Private messages</a>
+    <div class="nb-menu-sep"> </div>
+    <a class="nb-menu-link" href="../user/assign-console">Assign a console</a>
+    <a class="nb-menu-link" href="../openhost">Manage OPENHOST</a>
+    <span class="nb-menu-sep"> </span>
+    </div></div>
+<div class=nb-menu><button class=nb-button>Regions</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../region/stat" title="MKWii region usage statistics">Region usage</a>
+<a class="nb-menu-link" href="../region/list" title="List MKWii regions">List custom regions</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Competitions</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../competitions">Overview</a>
+<a class="nb-menu-link" href="../comp-stat">Statistics</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<a class="nb-menu-link" href="../privacy">Privacy Policy</a>
+<a class="nb-menu-link" href="../donate">Donate</a>
+</span>
+</div>
+<div class=logo><a href=../../wiimmfi.de><img src="../images/wiimmfi-light.png" alt="Wiimmfi logo" title="Wiimmfi logo"></a><p><a href=../donate>Donate</a></div>
+
+</head>
+<div style="margin-bottom:28px"></div>
+<div id=navbar class=nb-fixed><span class="nb-frame nb-classic">
+<span class="nb-menu-user">»<a href="/user/status">Gemdation</a>« <span class="nb-menu-info">⇒</span></span><div class=nb-menu><button class=nb-button>Wiimmfi</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../../wiimmfi.de" title="Wiimmfi main page — includes announcements.">Main page</a>
+<a class="nb-menu-link" href="../changelog">Change log</a>
+<a class="nb-menu-link" href="../game-history">Game history</a>
+<a class="nb-menu-link" href="../development">Development</a>
+<a class="nb-menu-link" href="../rules">Wiimmfi Rule Booklet</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../fc-converter">Friend-Code converter</a>
+<a class="nb-menu-link" href="../patcher">Wiimmfi patcher</a>
+<a class="nb-menu-link" href="../error">Error codes</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../privacy">Privacy Policy</a>
+<a class="nb-menu-link" href="../donate">Donate</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../logout">Logout</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Status</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../stat">Server status</a>
+<a class="nb-menu-link active" href="../stats/login">Login statistics</a>
+<a class="nb-menu-link" href="../stats/game">Game statistics</a>
+<a class="nb-menu-link" href="../show-bans">List of bans</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../stats/mkw" title="Mario Kart Wii statistics">MKW statistics</a>
+<a class="nb-menu-link" href="../stats/track/mo/111650" title="User related track statistics">MKW track usage</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Manage</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../user/settings">Private settings</a>
+<a class="nb-menu-link" href="../payload/settings">Private MKW settings</a>
+<a class="nb-menu-link" href="../user/status" title="Rights, consoles, profiles, ...">Private status</a>
+<a class="nb-menu-link" href="../user/messages">Private messages</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../user/assign-console">Assign a console</a>
+<a class="nb-menu-link" href="../openhost">Manage OPENHOST</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Regions</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../region/stat" title="MKWii region usage statistics">Region usage</a>
+<a class="nb-menu-link" href="../region/list" title="List MKWii regions">List custom regions</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../region/apply" title="Apply MKWii regions">Apply regions</a>
+<a class="nb-menu-link" href="../region/manage" title="Manage own MKWii regions">Manage own regions</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Competitions</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../comp">Overview</a>
+<a class="nb-menu-link" href="../comp-stat">Statistics</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+</span>
+</div>
+<small>Thu, 24.10.2024 18:13 CDT</small><br>
+<div id=top class="text cyan">
+<div class=text-nodeco>
+<h1>Login Statistics</h1>
+Here you find login statistics for profiles, consoles and games.
+The summaries are printed by hour, day, week, month, quarter and year.
+The days change at 0:00 UTC and the weeks on Monday 0:00 UTC.
+All reference dates are printed in UTC.
+
+<p>
+A login is only counted, if a player stays online at least some minutes.
+Shorter periods are ignored to avoid counting of failed logins or other issues.
+The counting started on Monday, 2019-03-11, 0:00 UTC.
+Therefore the numbers of the very first month, quarter and year are too short.
+<span class=hl-date2>Special dates</span> and <span class=hl-date1>week ends</span>
+are highlighted, the tooltips tell details.
+
+<p>
+Some of the column headers give tooltips about the columns when touching
+it with the mouse or finger.
+The tooltip of the active <i>»total logins«</i> shows an estimated number
+of logins, and the tooltip of every <i>»average online duration«</i>
+shows some calculations.
+
+<p>
+The top values of different columns are highlighted by a
+<span class=rate100>green background</span>.
+Some columns support <span class=data-rate>orange bars</span> to visualize
+the rating relative to the top value.
+If such a bar is <span class=data-rate2>red-brown</span>
+then it is considered a <i>global top value</i>.
+</div><div class=text-nodeco>
+<h2 id=toc>Contents</h2>
+The following table contains links to all <i>login statistics</i>.
+Links to this page (jump down) are displayed with a
+<span class=toc-loc>green background</span>.
+Links to other pages (page load necessary) are displayed with a
+<span class=toc-ext>light red background</span>.
+</div>
+<table class="table11 toc"><tr><td class=toc-head colspan=9>Lists of logins</td></tr>
+<tr><td class=toc-title>Logins, overview</td><td class=toc-loc><a href=#top><i>Intro</i></a></td><td class=toc-loc><a href=#tab-hour>hour</a></td><td class=toc-loc><a href=#tab-day>day</a></td><td class=toc-loc><a href=#tab-week>week</a></td><td class=toc-loc><a href=#tab-month>month</a></td><td class=toc-loc><a href=#tab-quarter>quarter</a></td><td class=toc-loc><a href=#tab-year>year</a></td><td class=toc-none></td></tr>
+<tr><td class=toc-title>Logins, extended lists</td><td class=toc-ext><a href=/stats/login/ext><i>Intro</i></a></td><td class=toc-ext><a href=/stats/login/ext#hour>hour</a></td><td class=toc-ext><a href=/stats/login/ext#day>day</a></td><td class=toc-ext><a href=/stats/login/ext#week>week</a></td><td class=toc-ext><a href=/stats/login/ext#month>month</a></td><td class=toc-ext><a href=/stats/login/ext#quarter>quarter</a></td><td class=toc-ext><a href=/stats/login/ext#year>year</a></td><td class=toc-none></td></tr>
+<tr><td class=toc-title>Logins, full lists</td><td class=toc-ext><a href=/stats/login/full/hour><i>Intro</i></a></td><td class=toc-ext><a href=/stats/login/full/hour#hour>hour</a></td><td class=toc-ext><a href=/stats/login/full/day#day>day</a></td><td class=toc-ext><a href=/stats/login/full/week#week>week</a></td><td class=toc-ext><a href=/stats/login/full/month#month>month</a></td><td class=toc-ext><a href=/stats/login/full/quarter#quarter>quarter</a></td><td class=toc-ext><a href=/stats/login/full/year#year>year</a></td><td class=toc-none></td></tr>
+<tr><td class=toc-title>Logins, top values</td><td class=toc-ext><a href=/stats/login/top><i>Intro</i></a></td><td class=toc-ext><a href=/stats/login/top#hour>hour</a></td><td class=toc-ext><a href=/stats/login/top#day>day</a></td><td class=toc-ext><a href=/stats/login/top#week>week</a></td><td class=toc-ext><a href=/stats/login/top#month>month</a></td><td class=toc-ext><a href=/stats/login/top#quarter>quarter</a></td><td class=toc-ext><a href=/stats/login/top#year>year</a></td><td class=toc-none></td></tr>
+<tr><td class=toc-head colspan=9>Lists of logins, alternative order</td></tr>
+<tr><td class=toc-title>Logins by hour of day</td><td class=toc-ext><a href=/stats/login/dhour><i>Intro</i></a></td><td class=toc-ext><a href=/stats/login/dhour#tab-hour>0:xx</a></td><td class=toc-ext><a href=/stats/login/dhour#h04>4:xx</a></td><td class=toc-ext><a href=/stats/login/dhour#h08>8:xx</a></td><td class=toc-ext><a href=/stats/login/dhour#h12>12:xx</a></td><td class=toc-ext><a href=/stats/login/dhour#h16>16:xx</a></td><td class=toc-ext><a href=/stats/login/dhour#h20>20:xx</a></td><td class=toc-none></td></tr>
+<tr><td class=toc-title>Logins by weekday</td><td class=toc-ext><a href=/stats/login/wday><i>Intro</i></a></td><td class=toc-ext><a href=/stats/login/wday#tab-day>Mon</a></td><td class=toc-ext><a href=/stats/login/wday#d1>Tue</a></td><td class=toc-ext><a href=/stats/login/wday#d2>Wed</a></td><td class=toc-ext><a href=/stats/login/wday#d3>Thu</a></td><td class=toc-ext><a href=/stats/login/wday#d4>Fri</a></td><td class=toc-ext><a href=/stats/login/wday#d5>Sat</a></td><td class=toc-ext><a href=/stats/login/wday#d6>Sun</a></td></tr>
+<tr><td class=toc-title>Logins by week of year</td><td class=toc-ext><a href=/stats/login/yweek><i>Intro</i></a></td><td class=toc-ext><a href=/stats/login/yweek#tab-week>W.1</a></td><td class=toc-ext><a href=/stats/login/yweek#w09>W.9</a></td><td class=toc-ext><a href=/stats/login/yweek#w17>W.17</a></td><td class=toc-ext><a href=/stats/login/yweek#w25>W.25</a></td><td class=toc-ext><a href=/stats/login/yweek#w33>W.33</a></td><td class=toc-ext><a href=/stats/login/yweek#w41>W.41</a></td><td class=toc-ext><a href=/stats/login/yweek#w49>W.49</a></td></tr>
+<tr><td class=toc-title>Logins by month of year</td><td class=toc-ext><a href=/stats/login/ymonth><i>Intro</i></a></td><td class=toc-ext><a href=/stats/login/ymonth#tab-month>Jan</a></td><td class=toc-ext><a href=/stats/login/ymonth#m03>Mar</a></td><td class=toc-ext><a href=/stats/login/ymonth#m05>May</a></td><td class=toc-ext><a href=/stats/login/ymonth#m07>Jul</a></td><td class=toc-ext><a href=/stats/login/ymonth#m09>Sep</a></td><td class=toc-ext><a href=/stats/login/ymonth#m11>Nov</a></td><td class=toc-none></td></tr>
+<tr><td class=toc-title>Logins by quarter of year</td><td class=toc-ext><a href=/stats/login/yquarter><i>Intro</i></a></td><td class=toc-ext><a href=/stats/login/yquarter#tab-quarter>Q.1</a></td><td class=toc-ext><a href=/stats/login/yquarter#q2>Q.2</a></td><td class=toc-ext><a href=/stats/login/yquarter#q3>Q.3</a></td><td class=toc-ext><a href=/stats/login/yquarter#q4>Q.4</a></td><td class=toc-none></td><td class=toc-none></td><td class=toc-none></td></tr>
+<tr><td class=toc-head colspan=9>Game specific lists</td></tr>
+<tr><td class=toc-title>Alphabetical list of games</td><td class=toc-ext><a href=/stats/login/listgames><i>Intro</i></a></td><td class=toc-ext colspan=6><a href=/stats/login/listgames#list><i>Combined list of all periods</i></a></td><td class=toc-none></td></tr>
+<tr><td class=toc-title>Logins by game, overview</td><td class=toc-ext><a href=/stats/login/gamelist><i>Intro</i></a></td><td class=toc-ext><a href=/stats/login/gamelist#hour>hour</a></td><td class=toc-ext><a href=/stats/login/gamelist#day>day</a></td><td class=toc-ext><a href=/stats/login/gamelist#week>week</a></td><td class=toc-ext><a href=/stats/login/gamelist#month>month</a></td><td class=toc-ext><a href=/stats/login/gamelist#quarter>quarter</a></td><td class=toc-ext><a href=/stats/login/gamelist#year>year</a></td><td class=toc-none></td></tr>
+<tr><td class=toc-title>Logins by game, extended lists</td><td class=toc-ext><a href=/stats/login/gameref/hour><i>Intro</i></a></td><td class=toc-ext><a href=/stats/login/gameref/hour#hour>hour</a></td><td class=toc-ext><a href=/stats/login/gameref/day#day>day</a></td><td class=toc-ext><a href=/stats/login/gameref/week#week>week</a></td><td class=toc-ext><a href=/stats/login/gameref/month#month>month</a></td><td class=toc-ext><a href=/stats/login/gameref/quarter#quarter>quarter</a></td><td class=toc-ext><a href=/stats/login/gameref/year#year>year</a></td><td class=toc-none></td></tr>
+</table>
+</div>
+<div id=sum class=text><h1><a class=nodeco href=#toc title="Jump to list of contents">Logins, overview <img src=/images/link-up-19x19.png width=19 height=19'
+		.' alt="Jump to list of contents" title="Jump to list of contents"></a></h1>
+<table id=tab-hour class="table11 tr1-1p1 center"><tr><th colspan=13 class=tc>Logins of recent 10 hours</th></tr>
+<tr>
+ <th rowspan=2 style="min-width:5.1em">hour<br>(UTC)</th>
+ <th rowspan=2>max<br>online</th>
+ <th rowspan=2 style="min-width:8em">time of<br><i>max online</i><br>(CST/CDT)</th>
+ <th rowspan=2 style="min-width:4em">average<br>online<br>duration</i></th>
+ <th rowspan=2 style="min-width:3em">total<br>logins</th>	 <th colspan=3>distinct<br>profiles</th>
+ <th colspan=3>distinct<br>consoles</th>
+ <th colspan=2>distinct<br>games</th>
+</tr>
+<tr>
+ <th style="min-width:3em">total</th>
+ <th style="min-width:2.5em" title="average logins/profile">rate</th>
+ <th style="min-width:2.5em" title="maximum logins/profile">max</th>
+ <th style="min-width:3em">total</th>
+ <th style="min-width:2.5em" title="average logins/console">rate</th>
+ <th style="min-width:2.5em" title="maximum logins/console">max</th>
+ <th style="min-width:3em">total</th>
+ <th style="min-width:2.5em" title="average logins/game">rate</th>
+</tr>
+<tr id=cur-hour><td title="d3">24. 23:xx</td><td data-rate=73.5>180</td><td>2024-10-24&nbsp;18:12</td><td data-tooltip="2&thinsp;421 sec (40m+21s) total, 10 clients"> 4m&thinsp;02s</td><td data-rate=20.6 data-tooltip="<table class=right><tr><td>74 =</td><td>20.6%</td></tr><tr><td>390 =</td><td>108.3%</td><td>estimated</td></tr></table>">74</td><td data-rate=26.4>74</td><td>1.00</td><td>1</td><td data-rate=27.2>74</td><td>1.00</td><td>1</td><td data-rate=23.5>4</td><td>18.5</td></tr>
+<tr><td title="d3">24. 22:xx</td><td data-rate=85.3>209</td><td>2024-10-24&nbsp;17:11</td><td data-tooltip="210&thinsp;012 sec (2d+10h) total, 183 clients">19m&thinsp;07s</td><td data-rate=67.5>243</td><td data-rate=71.1>199</td><td>1.22</td><td>5</td><td data-rate=73.2>199</td><td>1.22</td><td>5</td><td data-rate=58.8>10</td><td>24.3</td></tr>
+<tr><td title="d3">24. 21:xx</td><td data-rate=90.6>222</td><td>2024-10-24&nbsp;16:03</td><td data-tooltip="391&thinsp;977 sec (4d+12h) total, 236 clients">27m&thinsp;40s</td><td data-rate=72.8>262</td><td data-rate=76.4>214</td><td>1.22</td><td>4</td><td data-rate=76.8>209</td><td>1.25</td><td>7</td><td data-rate=76.5>13</td><td>20.2</td></tr>
+<tr><td title="d3">24. 20:xx</td><td class=rate100 title=top>245</td><td>2024-10-24&nbsp;15:32</td><td class=" xrate100" data-tooltip="708&thinsp;284 sec (8d+4h) total, 343 clients">34m&thinsp;24s</td><td class=rate100 title=top>360</td><td class=rate100 title=top>280</td><td>1.29</td><td>5</td><td class=rate100 title=top>272</td><td>1.32</td><td>6</td><td data-rate=76.5>13</td><td>27.7</td></tr>
+<tr><td title="d3">24. 19:xx</td><td data-rate=88.2>216</td><td>2024-10-24&nbsp;14:51</td><td data-tooltip="677&thinsp;234 sec (7d+20h) total, 334 clients">33m&thinsp;47s</td><td data-rate=93.9>338</td><td data-rate=88.6>248</td><td>1.36</td><td>7</td><td data-rate=86.0>234</td><td>1.44</td><td>9</td><td data-rate=70.6>12</td><td>28.2</td></tr>
+<tr><td title="d3">24. 18:xx</td><td data-rate=70.6>173</td><td>2024-10-24&nbsp;13:58</td><td class=" rate100" data-tooltip="688&thinsp;824 sec (7d+23h) total, 293 clients">39m&thinsp;10s</td><td data-rate=82.5>297</td><td data-rate=82.1>230</td><td>1.29</td><td>5</td><td data-rate=82.7>225</td><td>1.32</td><td>5</td><td data-rate=94.1>16</td><td>18.6</td></tr>
+<tr><td title="d3">24. 17:xx</td><td data-rate=60.0>147</td><td>2024-10-24&nbsp;12:14</td><td data-tooltip="420&thinsp;944 sec (4d+20h) total, 209 clients">33m&thinsp;34s</td><td data-rate=58.9>212</td><td data-rate=60.4>169</td><td>1.25</td><td>5</td><td data-rate=59.2>161</td><td>1.32</td><td>5</td><td data-rate=70.6>12</td><td>17.7</td></tr>
+<tr><td title="d3">24. 16:xx</td><td data-rate=60.4>148</td><td>2024-10-24&nbsp;11:15</td><td data-tooltip="363&thinsp;554 sec (4d+4h) total, 169 clients">35m&thinsp;51s</td><td data-rate=46.9>169</td><td data-rate=50.4>141</td><td>1.20</td><td>4</td><td data-rate=50.4>137</td><td>1.23</td><td>4</td><td data-rate=52.9>9</td><td>18.8</td></tr>
+<tr><td title="d3">24. 15:xx</td><td data-rate=64.5>158</td><td>2024-10-24&nbsp;10:15</td><td data-tooltip="558&thinsp;199 sec (6d+11h) total, 254 clients">36m&thinsp;37s</td><td data-rate=70.8>255</td><td data-rate=70.0>196</td><td>1.30</td><td>6</td><td data-rate=70.6>192</td><td>1.33</td><td>6</td><td class=rate100 title=top>17</td><td>15.0</td></tr>
+<tr><td title="d3">24. 14:xx</td><td data-rate=62.0>152</td><td>2024-10-24&nbsp;09:58</td><td data-tooltip="495&thinsp;793 sec (5d+17h) total, 249 clients">33m&thinsp;11s</td><td data-rate=69.4>250</td><td data-rate=62.1>174</td><td>1.44</td><td class=rate100>8</td><td data-rate=58.1>158</td><td>1.58</td><td class=rate100>13</td><td data-rate=64.7>11</td><td>22.7</td></tr>
+<tr><td colspan=13 class="skip-date sep-top-bottom">350 hours skipped&emsp;⇒&emsp;<a href=/stats/login/ext#hour>List 50 hours &amp; other periods</a>&ensp;<i>or</i>&ensp;<a href=/stats/login/full/hour#hour>List 360 hours</a>&ensp;<i>or</i>&ensp;<a href=/stats/login/dhour#h23>List by hour of day</a>&ensp;<i>or</i>&ensp;<a href=/stats/login/top#hour>Top hours</a></table>
+<table id=tab-day class="table11 tr1-1p1 center"><tr><th colspan=14 class=tc>Logins of recent 10 days</th></tr>
+<tr>
+ <th rowspan=2 style="min-width:5.1em">day<br>(UTC)</th>
+ <th rowspan=2>max<br>online</th>
+ <th rowspan=2 style="min-width:8em">time of<br><i>max online</i><br>(CST/CDT)</th>
+<th rowspan=2 title="average online clients">ave.<br>online</i></th>
+ <th rowspan=2 style="min-width:4em">average<br>online<br>duration</i></th>
+ <th rowspan=2 style="min-width:3em">total<br>logins</th>	 <th colspan=3>distinct<br>profiles</th>
+ <th colspan=3>distinct<br>consoles</th>
+ <th colspan=2>distinct<br>games</th>
+</tr>
+<tr>
+ <th style="min-width:3em">total</th>
+ <th style="min-width:2.5em" title="average logins/profile">rate</th>
+ <th style="min-width:2.5em" title="maximum logins/profile">max</th>
+ <th style="min-width:3em">total</th>
+ <th style="min-width:2.5em" title="average logins/console">rate</th>
+ <th style="min-width:2.5em" title="maximum logins/console">max</th>
+ <th style="min-width:3em">total</th>
+ <th style="min-width:2.5em" title="average logins/game">rate</th>
+</tr>
+<tr id=cur-day><td title="d3">2024-10-24</td><td data-rate=77.3>245</td><td>2024-10-24&nbsp;15:32</td><td data-rate=55.1>110</td><td data-tooltip="9&thinsp;207&thinsp;940 sec (15w+1d) total, 4365 clients">35m&thinsp;09s</td><td data-rate=66.7 data-tooltip="<table class=right><tr><td>4&thinsp;558 =</td><td>66.7%</td></tr><tr><td>4&thinsp;717 =</td><td>69.0%</td><td>estimated</td></tr></table>">4558</td><td data-rate=71.8>2270</td><td>2.01</td><td>23</td><td data-rate=71.9>2074</td><td>2.20</td><td>31</td><td data-rate=74.5>41</td><td>111</td></tr>
+<tr><td title="d2">2024-10-23</td><td data-rate=68.8>218</td><td>2024-10-23&nbsp;15:49</td><td data-rate=61.0>122</td><td data-tooltip="10&thinsp;551&thinsp;806 sec (17w+3d) total, 4427 clients">39m&thinsp;43s</td><td data-rate=65.1>4452</td><td data-rate=70.6>2232</td><td>1.99</td><td>21</td><td data-rate=71.0>2046</td><td>2.18</td><td>36</td><td data-rate=76.4>42</td><td>106</td></tr>
+<tr><td title="d1">2024-10-22</td><td data-rate=77.0>244</td><td>2024-10-22&nbsp;15:24</td><td data-rate=62.1>124</td><td data-tooltip="10&thinsp;738&thinsp;675 sec (17w+5d) total, 4616 clients">38m&thinsp;46s</td><td data-rate=67.9>4640</td><td data-rate=72.4>2289</td><td>2.03</td><td>21</td><td data-rate=73.9>2131</td><td>2.18</td><td>21</td><td data-rate=72.7>40</td><td>116</td></tr>
+<tr><td title="d0">2024-10-21</td><td data-rate=76.3>242</td><td>2024-10-21&nbsp;16:02</td><td data-rate=65.3>130</td><td data-tooltip="11&thinsp;281&thinsp;741 sec (18w+4d) total, 4672 clients">40m&thinsp;14s</td><td data-rate=68.7>4695</td><td data-rate=74.5>2353</td><td>2.00</td><td>19</td><td data-rate=75.7>2182</td><td>2.15</td><td>24</td><td data-rate=92.7>51</td><td>92.1</td></tr>
+<tr><td class=hl-date1 title="d6">2024-10-20</td><td data-rate=91.8>291</td><td>2024-10-20&nbsp;14:40</td><td data-rate=89.3>178</td><td data-tooltip="15&thinsp;443&thinsp;190 sec (25w+3d) total, 6795 clients">37m&thinsp;52s</td><td class=rate100 title=top>6835</td><td class=rate100 title=top>3160</td><td>2.16</td><td>46</td><td class=rate100 title=top>2883</td><td>2.37</td><td>45</td><td data-rate=92.7>51</td><td>134</td></tr>
+<tr><td class=hl-date1 title="d5">2024-10-19</td><td class=rate100 title=top>317</td><td>2024-10-19&nbsp;16:09</td><td class=rate100 title=top>200</td><td class=" rate100" data-tooltip="17&thinsp;285&thinsp;833 sec (28w+4d) total, 6701 clients">42m&thinsp;59s</td><td data-rate=98.6>6738</td><td data-rate=95.5>3017</td><td>2.23</td><td>30</td><td data-rate=94.1>2712</td><td>2.48</td><td>30</td><td class=rate100 title=top>55</td><td>122</td></tr>
+<tr><td title="d4">2024-10-18</td><td data-rate=97.8>310</td><td>2024-10-18&nbsp;15:17</td><td data-rate=78.0>155</td><td data-tooltip="13&thinsp;478&thinsp;186 sec (22w+1d) total, 5438 clients">41m&thinsp;18s</td><td data-rate=80.1>5472</td><td data-rate=83.2>2630</td><td>2.08</td><td>33</td><td data-rate=82.7>2383</td><td>2.30</td><td>35</td><td data-rate=85.5>47</td><td>116</td></tr>
+<tr><td title="d3">2024-10-17</td><td data-rate=61.8>196</td><td>2024-10-17&nbsp;15:49</td><td data-rate=58.1>116</td><td data-tooltip="10&thinsp;047&thinsp;286 sec (16w+4d) total, 4315 clients">38m&thinsp;48s</td><td data-rate=63.4>4333</td><td data-rate=66.9>2115</td><td>2.05</td><td class=rate100>64</td><td data-rate=68.0>1959</td><td>2.21</td><td class=rate100>64</td><td data-rate=76.4>42</td><td>103</td></tr>
+<tr><td title="d2">2024-10-16</td><td data-rate=59.3>188</td><td>2024-10-16&nbsp;17:02</td><td data-rate=60.0>120</td><td data-tooltip="10&thinsp;372&thinsp;438 sec (17w+1d) total, 4501 clients">38m&thinsp;24s</td><td data-rate=66.2>4523</td><td data-rate=70.3>2221</td><td>2.04</td><td>23</td><td data-rate=71.5>2062</td><td>2.19</td><td>26</td><td data-rate=87.3>48</td><td>94.2</td></tr>
+<tr><td title="d1">2024-10-15</td><td data-rate=63.7>202</td><td>2024-10-14&nbsp;19:05</td><td data-rate=59.6>119</td><td data-tooltip="10&thinsp;305&thinsp;003 sec (17w+0d) total, 4563 clients">37m&thinsp;38s</td><td data-rate=67.1>4583</td><td data-rate=73.2>2314</td><td>1.98</td><td>55</td><td data-rate=74.5>2147</td><td>2.13</td><td>55</td><td data-rate=92.7>51</td><td>89.9</td></tr>
+<tr><td colspan=14 class="skip-date sep-top-bottom">390 days skipped&emsp;⇒&emsp;<a href=/stats/login/ext#day>List 50 days &amp; other periods</a>&ensp;<i>or</i>&ensp;<a href=/stats/login/full/day#day>List 400 days</a>&ensp;<i>or</i>&ensp;<a href=/stats/login/wday#d3>List by weekday</a>&ensp;<i>or</i>&ensp;<a href=/stats/login/top#day>Top days</a></table>
+<table id=tab-week class="table11 tr1-1p1 center"><tr><th colspan=14 class=tc>Logins of recent 10 weeks</th></tr>
+<tr>
+ <th rowspan=2 style="min-width:5.1em">week<br>(UTC)</th>
+ <th rowspan=2>max<br>online</th>
+ <th rowspan=2 style="min-width:8em">time of<br><i>max online</i><br>(CST/CDT)</th>
+<th rowspan=2 title="average online clients">ave.<br>online</i></th>
+ <th rowspan=2 style="min-width:4em">average<br>online<br>duration</i></th>
+ <th rowspan=2 style="min-width:3em">total<br>logins</th>	 <th colspan=3>distinct<br>profiles</th>
+ <th colspan=3>distinct<br>consoles</th>
+ <th colspan=2>distinct<br>games</th>
+</tr>
+<tr>
+ <th style="min-width:3em">total</th>
+ <th style="min-width:2.5em" title="average logins/profile">rate</th>
+ <th style="min-width:2.5em" title="maximum logins/profile">max</th>
+ <th style="min-width:3em">total</th>
+ <th style="min-width:2.5em" title="average logins/console">rate</th>
+ <th style="min-width:2.5em" title="maximum logins/console">max</th>
+ <th style="min-width:3em">total</th>
+ <th style="min-width:2.5em" title="average logins/game">rate</th>
+</tr>
+<tr id=cur-week><td>2024w43</td><td data-rate=62.3>245</td><td>2024-10-24&nbsp;15:32</td><td data-rate=72.2>135</td><td data-tooltip="41&thinsp;780&thinsp;162 sec (1y+16w) total, 18080 clients">38m&thinsp;30s</td><td data-rate=40.2 data-tooltip="<table class=right><tr><td>18&thinsp;345 =</td><td>40.2%</td></tr><tr><td>35&thinsp;982 =</td><td>78.9%</td><td>estimated</td></tr></table>">18345</td><td data-rate=50.8>5882</td><td>3.12</td><td>66</td><td data-rate=52.6>5146</td><td>3.56</td><td>70</td><td data-rate=69.7>83</td><td>221</td></tr>
+<tr><td>2024w42</td><td data-rate=80.7>317</td><td>2024-10-19&nbsp;16:09</td><td data-rate=79.0>148</td><td data-tooltip="89&thinsp;680&thinsp;389 sec (2y+43w) total, 37510 clients">39m&thinsp;50s</td><td data-rate=82.7>37712</td><td data-rate=84.5>9788</td><td>3.85</td><td>167</td><td data-rate=84.6>8279</td><td>4.56</td><td>167</td><td data-rate=91.6>109</td><td>345</td></tr>
+<tr><td>2024w41</td><td data-rate=77.1>303</td><td>2024-10-12&nbsp;13:57</td><td data-rate=78.7>147</td><td data-tooltip="89&thinsp;383&thinsp;356 sec (2y+43w) total, 36282 clients">41m&thinsp;03s</td><td data-rate=79.9>36432</td><td data-rate=82.5>9551</td><td>3.81</td><td>196</td><td data-rate=83.7>8192</td><td>4.45</td><td>196</td><td data-rate=79.8>95</td><td>383</td></tr>
+<tr><td>2024w40</td><td data-rate=80.2>315</td><td>2024-10-06&nbsp;14:16</td><td data-rate=78.4>147</td><td data-tooltip="88&thinsp;945&thinsp;719 sec (2y+42w) total, 35971 clients">41m&thinsp;12s</td><td data-rate=79.3>36176</td><td data-rate=81.0>9383</td><td>3.86</td><td>131</td><td data-rate=80.8>7903</td><td>4.58</td><td>138</td><td data-rate=82.4>98</td><td>369</td></tr>
+<tr><td>2024w39</td><td data-rate=86.8>341</td><td>2024-09-28&nbsp;14:47</td><td data-rate=84.4>158</td><td data-tooltip="95&thinsp;847&thinsp;546 sec (3y+2w) total, 39170 clients">40m&thinsp;46s</td><td data-rate=86.3>39375</td><td data-rate=87.3>10108</td><td>3.90</td><td class=rate100>214</td><td data-rate=87.9>8594</td><td>4.58</td><td class=rate100>214</td><td data-rate=97.5>116</td><td>339</td></tr>
+<tr><td>2024w38</td><td class=rate100 title=top>393</td><td>2024-09-21&nbsp;15:17</td><td data-rate=82.3>154</td><td data-tooltip="93&thinsp;416&thinsp;545 sec (2y+50w) total, 38752 clients">40m&thinsp;10s</td><td data-rate=85.4>38950</td><td data-rate=87.6>10144</td><td>3.84</td><td>79</td><td data-rate=87.8>8589</td><td>4.53</td><td>99</td><td data-rate=93.3>111</td><td>350</td></tr>
+<tr><td>2024w37</td><td data-rate=93.1>366</td><td>2024-09-14&nbsp;16:22</td><td data-rate=79.8>149</td><td data-tooltip="90&thinsp;614&thinsp;001 sec (2y+45w) total, 38434 clients">39m&thinsp;17s</td><td data-rate=84.7>38617</td><td data-rate=86.9>10058</td><td>3.84</td><td>89</td><td data-rate=88.4>8644</td><td>4.47</td><td>135</td><td data-rate=89.1>106</td><td>364</td></tr>
+<tr><td>2024w36</td><td data-rate=89.3>351</td><td>2024-09-07&nbsp;15:23</td><td data-rate=89.7>168</td><td data-tooltip="101&thinsp;800&thinsp;133 sec (3y+11w) total, 42005 clients">40m&thinsp;23s</td><td data-rate=92.5>42196</td><td data-rate=93.0>10770</td><td>3.92</td><td>157</td><td data-rate=93.3>9127</td><td>4.62</td><td>198</td><td data-rate=90.8>108</td><td>390</td></tr>
+<tr><td>2024w35</td><td data-rate=89.1>350</td><td>2024-09-01&nbsp;14:39</td><td data-rate=92.4>173</td><td data-tooltip="104&thinsp;924&thinsp;347 sec (3y+17w) total, 43932 clients">39m&thinsp;48s</td><td data-rate=96.8>44175</td><td data-rate=97.2>11256</td><td>3.92</td><td>132</td><td data-rate=97.4>9523</td><td>4.64</td><td>107</td><td data-rate=92.4>110</td><td>401</td></tr>
+<tr><td>2024w34</td><td data-rate=82.4>324</td><td>2024-08-25&nbsp;15:25</td><td class=rate100 title=top>187</td><td class=" rate100" data-tooltip="113&thinsp;510&thinsp;634 sec (3y+31w) total, 45378 clients">41m&thinsp;41s</td><td class=rate100 title=top>45616</td><td class=rate100 title=top>11580</td><td>3.94</td><td>111</td><td class=rate100 title=top>9782</td><td>4.66</td><td>128</td><td class=rate100 title=top>119</td><td>383</td></tr>
+<tr><td colspan=14 class="skip-date sep-top-bottom">265 weeks skipped&emsp;⇒&emsp;<a href=/stats/login/ext#week>List 60 weeks &amp; other periods</a>&ensp;<i>or</i>&ensp;<a href=/stats/login/full/week#week>List 275 weeks</a>&ensp;<i>or</i>&ensp;<a href=/stats/login/yweek#w43>List by week of year</a>&ensp;<i>or</i>&ensp;<a href=/stats/login/top#week>Top weeks</a></table>
+<table id=tab-month class="table11 tr1-1p1 center"><tr><th colspan=14 class=tc>Logins of recent 10 months</th></tr>
+<tr>
+ <th rowspan=2 style="min-width:5.1em">month<br>(UTC)</th>
+ <th rowspan=2>max<br>online</th>
+ <th rowspan=2 style="min-width:8em">time of<br><i>max online</i><br>(CST/CDT)</th>
+<th rowspan=2 title="average online clients">ave.<br>online</i></th>
+ <th rowspan=2 style="min-width:4em">average<br>online<br>duration</i></th>
+ <th rowspan=2 style="min-width:3em">total<br>logins</th>	 <th colspan=3>distinct<br>profiles</th>
+ <th colspan=3>distinct<br>consoles</th>
+ <th colspan=2>distinct<br>games</th>
+</tr>
+<tr>
+ <th style="min-width:3em">total</th>
+ <th style="min-width:2.5em" title="average logins/profile">rate</th>
+ <th style="min-width:2.5em" title="maximum logins/profile">max</th>
+ <th style="min-width:3em">total</th>
+ <th style="min-width:2.5em" title="average logins/console">rate</th>
+ <th style="min-width:2.5em" title="maximum logins/console">max</th>
+ <th style="min-width:3em">total</th>
+ <th style="min-width:2.5em" title="average logins/game">rate</th>
+</tr>
+<tr id=cur-month><td>2024-10</td><td data-rate=51.6>317</td><td>2024-10-19&nbsp;16:09</td><td data-rate=73.0>146</td><td data-tooltip="298&thinsp;446&thinsp;633 sec (9y+24w) total, 123121 clients">40m&thinsp;24s</td><td data-rate=58.2 data-tooltip="<table class=right><tr><td>123&thinsp;927 =</td><td>58.2%</td></tr><tr><td>160&thinsp;298 =</td><td>75.2%</td><td>estimated</td></tr></table>">  124 k</td><td data-rate=65.3>22135</td><td>5.60</td><td>506</td><td data-rate=66.2>17956</td><td>6.90</td><td>508</td><td data-rate=78.5>157</td><td>789</td></tr>
+<tr><td>2024-09</td><td data-rate=64.0>393</td><td>2024-09-21&nbsp;15:17</td><td data-rate=77.6>155</td><td data-tooltip="410&thinsp;224&thinsp;948 sec (13y+0w) total, 170459 clients">40m&thinsp;06s</td><td data-rate=80.4 data-tooltip="171&thinsp;298 = 80.4%">  171 k</td><td data-rate=83.6>28346</td><td>6.04</td><td>306</td><td data-rate=83.8>22737</td><td>7.53</td><td>394</td><td data-rate=91.0>182</td><td>941</td></tr>
+<tr><td>2024-08</td><td data-rate=62.7>385</td><td>2024-08-17&nbsp;15:55</td><td data-rate=95.5>192</td><td data-tooltip="505&thinsp;105&thinsp;852 sec (16y+0w) total, 204360 clients">41m&thinsp;11s</td><td data-rate=96.4 data-tooltip="205&thinsp;356 = 96.4%">  205 k</td><td data-rate=98.1>33236</td><td>6.18</td><td>255</td><td data-rate=98.2>26655</td><td>7.70</td><td>630</td><td data-rate=89.0>178</td><td>1153</td></tr>
+<tr><td>2024-07</td><td data-rate=70.4>432</td><td>2024-07-07&nbsp;14:53</td><td data-rate=98.3>197</td><td data-tooltip="519&thinsp;946&thinsp;844 sec (16y+25w) total, 212011 clients">40m&thinsp;52s</td><td class=rate100 title=top data-tooltip="213&thinsp;057 = 100.0%">  213 k</td><td class=rate100 title=top>33889</td><td>6.29</td><td>392</td><td class=rate100 title=top>27142</td><td>7.85</td><td>659</td><td data-rate=87.0>174</td><td>1224</td></tr>
+<tr><td>2024-06</td><td data-rate=58.5>359</td><td>2024-06-30&nbsp;16:59</td><td data-rate=92.5>185</td><td data-tooltip="489&thinsp;099&thinsp;904 sec (15y+26w) total, 195863 clients">41m&thinsp;37s</td><td data-rate=92.4 data-tooltip="196&thinsp;790 = 92.4%">  197 k</td><td data-rate=92.8>31453</td><td>6.26</td><td class=rate100>614</td><td data-rate=91.6>24857</td><td>7.92</td><td>557</td><td data-rate=92.5,data-rate2>185</td><td>1063</td></tr>
+<tr><td>2024-05</td><td data-rate=67.3>413</td><td>2024-05-05&nbsp;14:12</td><td data-rate=89.3>179</td><td data-tooltip="472&thinsp;160&thinsp;505 sec (14y+50w) total, 192274 clients">40m&thinsp;55s</td><td data-rate=90.7 data-tooltip="193&thinsp;170 = 90.7%">  193 k</td><td data-rate=93.1>31537</td><td>6.13</td><td>359</td><td data-rate=91.9>24954</td><td>7.74</td><td>359</td><td data-rate=90.0>180</td><td>1073</td></tr>
+<tr><td>2024-04</td><td class=rate100 title=top>614</td><td>2024-04-13&nbsp;18:34</td><td data-rate=87.2>175</td><td data-tooltip="461&thinsp;310&thinsp;309 sec (14y+32w) total, 189743 clients">40m&thinsp;31s</td><td data-rate=89.5 data-tooltip="190&thinsp;620 = 89.5%">  191 k</td><td data-rate=96.5>32695</td><td>5.83</td><td>295</td><td data-rate=93.3>25316</td><td>7.53</td><td>595</td><td class=rate100 title=top>200</td><td>953</td></tr>
+<tr><td>2024-03</td><td data-rate=73.0>448</td><td>2024-03-02&nbsp;15:27</td><td data-rate=94.1>189</td><td data-tooltip="497&thinsp;797&thinsp;612 sec (15y+40w) total, 201491 clients">41m&thinsp;10s</td><td data-rate=95.0 data-tooltip="202&thinsp;380 = 95.0%">  202 k</td><td data-rate=93.4>31654</td><td>6.39</td><td>316</td><td data-rate=90.7>24615</td><td>8.22</td><td class=rate100>945</td><td data-rate=91.5>183</td><td>1105</td></tr>
+<tr><td>2024-02</td><td data-rate=74.9>460</td><td>2024-02-10&nbsp;14:53</td><td data-rate=90.5>182</td><td data-tooltip="478&thinsp;652&thinsp;522 sec (15y+9w) total, 191440 clients">41m&thinsp;40s</td><td data-rate=90.2 data-tooltip="192&thinsp;256 = 90.2%">  192 k</td><td data-rate=90.7>30754</td><td>6.25</td><td>357</td><td data-rate=88.1>23899</td><td>8.04</td><td>699</td><td data-rate=90.5>181</td><td>1062</td></tr>
+<tr><td>2024-01</td><td data-rate=75.2>462</td><td>2024-01-20&nbsp;15:26</td><td class=rate100 title=top>201</td><td class=" rate100" data-tooltip="528&thinsp;943&thinsp;204 sec (16y+40w) total, 207651 clients">42m&thinsp;27s</td><td data-rate=97.9 data-tooltip="208&thinsp;558 = 97.9%">  209 k</td><td data-rate=97.0>32858</td><td>6.35</td><td>317</td><td data-rate=92.9>25220</td><td>8.27</td><td>767</td><td data-rate=90.5>181</td><td>1152</td></tr>
+<tr><td colspan=14 class="skip-date sep-top-bottom">58 months skipped&emsp;⇒&emsp;<a href=/stats/login/ext#month>List 50 months &amp; other periods</a>&ensp;<i>or</i>&ensp;<a href=/stats/login/full/month#month>List 68 months</a>&ensp;<i>or</i>&ensp;<a href=/stats/login/ymonth#m09>List by month of year</a>&ensp;<i>or</i>&ensp;<a href=/stats/login/top#month>Top months</a></table>
+<table id=tab-quarter class="table11 tr1-1p1 center"><tr><th colspan=14 class=tc>Logins of recent 10 quarters</th></tr>
+<tr>
+ <th rowspan=2 style="min-width:5.1em">quarter<br>(UTC)</th>
+ <th rowspan=2>max<br>online</th>
+ <th rowspan=2 style="min-width:8em">time of<br><i>max online</i><br>(CST/CDT)</th>
+<th rowspan=2 title="average online clients">ave.<br>online</i></th>
+ <th rowspan=2 style="min-width:4em">average<br>online<br>duration</i></th>
+ <th rowspan=2 style="min-width:3em">total<br>logins</th>	 <th colspan=3>distinct<br>profiles</th>
+ <th colspan=3>distinct<br>consoles</th>
+ <th colspan=2>distinct<br>games</th>
+</tr>
+<tr>
+ <th style="min-width:3em">total</th>
+ <th style="min-width:2.5em" title="average logins/profile">rate</th>
+ <th style="min-width:2.5em" title="maximum logins/profile">max</th>
+ <th style="min-width:3em">total</th>
+ <th style="min-width:2.5em" title="average logins/console">rate</th>
+ <th style="min-width:2.5em" title="maximum logins/console">max</th>
+ <th style="min-width:3em">total</th>
+ <th style="min-width:2.5em" title="average logins/game">rate</th>
+</tr>
+<tr id=cur-quarter><td>2024q4</td><td data-rate=51.6>317</td><td>2024-10-19&nbsp;16:09</td><td data-rate=66.7>145</td><td data-tooltip="298&thinsp;446&thinsp;633 sec (9y+24w) total, 123121 clients">40m&thinsp;24s</td><td data-rate=19.3 data-tooltip="<table class=right><tr><td>123&thinsp;927 =</td><td>19.3%</td></tr><tr><td>475&thinsp;723 =</td><td>74.3%</td><td>estimated</td></tr></table>">  124 k</td><td data-rate=29.6>22135</td><td>5.60</td><td>506</td><td data-rate=31.3>17956</td><td>6.90</td><td>508</td><td data-rate=63.3>157</td><td>789</td></tr>
+<tr><td>2024q3</td><td data-rate=70.4>432</td><td>2024-07-07&nbsp;14:53</td><td data-rate=83.5>181</td><td data-tooltip="1&thinsp;435&thinsp;277&thinsp;644 sec (45y+26w) total, 586830 clients">40m&thinsp;45s</td><td data-rate=92.1 data-tooltip="589&thinsp;711 = 92.1%">  590 k</td><td data-rate=99.7,data-rate2>74479</td><td>7.92</td><td>852</td><td class=rate100 title=top>57373</td><td>10.3</td><td>1396</td><td data-rate=94.4,data-rate2>234</td><td>2520</td></tr>
+<tr><td>2024q2</td><td class=rate100 title=top>614</td><td>2024-04-13&nbsp;18:34</td><td data-rate=82.8>180</td><td data-tooltip="1&thinsp;422&thinsp;570&thinsp;718 sec (45y+5w) total, 577880 clients">41m&thinsp;01s</td><td data-rate=90.6 data-tooltip="580&thinsp;580 = 90.6%">  581 k</td><td class=rate100 title=top>74734</td><td>7.77</td><td>1119</td><td data-rate=97.9,data-rate2>56178</td><td>10.3</td><td>1120</td><td data-rate=99.2,data-rate2>246</td><td>2360</td></tr>
+<tr><td>2024q1</td><td data-rate=75.2>462</td><td>2024-01-20&nbsp;15:26</td><td data-rate=87.6>190</td><td data-tooltip="1&thinsp;505&thinsp;393&thinsp;338 sec (47y+38w) total, 600582 clients">41m&thinsp;46s</td><td data-rate=94.2 data-tooltip="603&thinsp;194 = 94.2%">  603 k</td><td data-rate=98.8,data-rate2>73802</td><td>8.17</td><td>827</td><td data-rate=95.1,data-rate2>54572</td><td>11.1</td><td>2411</td><td data-rate=94.4,data-rate2>234</td><td>2577</td></tr>
+<tr><td>2023q4</td><td data-rate=75.6>464</td><td>2023-10-22&nbsp;14:25</td><td data-rate=73.3>159</td><td data-tooltip="1&thinsp;259&thinsp;540&thinsp;742 sec (39y+49w) total, 497493 clients">42m&thinsp;11s</td><td data-rate=78.1 data-tooltip="500&thinsp;102 = 78.1%">  500 k</td><td data-rate=83.7>62525</td><td>8.00</td><td>763</td><td data-rate=82.0>47073</td><td>10.6</td><td>1688</td><td data-rate=89.9>223</td><td>2242</td></tr>
+<tr><td>2023q3</td><td data-rate=75.4>463</td><td>2023-08-06&nbsp;16:18</td><td data-rate=90.7>197</td><td data-tooltip="1&thinsp;559&thinsp;136&thinsp;475 sec (49y+22w) total, 609744 clients">42m&thinsp;37s</td><td data-rate=95.4 data-tooltip="610&thinsp;857 = 95.4%">  611 k</td><td data-rate=96.0>71773</td><td>8.51</td><td>1120</td><td data-rate=91.4>52425</td><td>11.7</td><td>1816</td><td data-rate=94.0>233</td><td>2621</td></tr>
+<tr><td>2023q2</td><td data-rate=74.8>459</td><td>2023-04-29&nbsp;16:14</td><td data-rate=92.9>202</td><td data-tooltip="1&thinsp;596&thinsp;699&thinsp;147 sec (50y+32w) total, 608815 clients">43m&thinsp;42s</td><td data-rate=95.2 data-tooltip="609&thinsp;676 = 95.2%">  610 k</td><td data-rate=96.7>72253</td><td>8.44</td><td class=rate100>2856</td><td data-rate=92.9>53274</td><td>11.4</td><td class=rate100>2908</td><td class=rate100 title=top>248</td><td>2458</td></tr>
+<tr><td>2023q1</td><td data-rate=86.0,data-rate2>528</td><td>2023-02-19&nbsp;15:46</td><td data-rate=98.2>214</td><td data-tooltip="1&thinsp;688&thinsp;460&thinsp;384 sec (53y+28w) total, 637553 clients">44m&thinsp;08s</td><td data-rate=99.8,data-rate2 data-tooltip="639&thinsp;007 = 99.8%">  639 k</td><td data-rate=99.6,data-rate2>74459</td><td>8.58</td><td>1025</td><td data-rate=95.1,data-rate2>54534</td><td>11.7</td><td>1813</td><td data-rate=96.4,data-rate2>239</td><td>2673</td></tr>
+<tr><td>2022q4</td><td data-rate=71.0>436</td><td>2022-12-23&nbsp;15:21</td><td data-rate=81.6>177</td><td class=" rate100" data-tooltip="1&thinsp;403&thinsp;121&thinsp;450 sec (44y+25w) total, 517037 clients">45m&thinsp;13s</td><td data-rate=80.9 data-tooltip="518&thinsp;082 = 80.9%">  518 k</td><td data-rate=83.2>62206</td><td>8.33</td><td>1396</td><td data-rate=79.6>45694</td><td>11.3</td><td>2271</td><td data-rate=91.5>227</td><td>2282</td></tr>
+<tr><td>2022q3</td><td data-rate=72.5>445</td><td>2022-09-03&nbsp;15:55</td><td class=rate100 title=top>217</td><td data-tooltip="1&thinsp;718&thinsp;903&thinsp;966 sec (54y+26w) total, 639332 clients">44m&thinsp;48s</td><td class=rate100 title=top data-tooltip="640&thinsp;517 = 100.0%">  641 k</td><td data-rate=98.3>73435</td><td>8.72</td><td>1642</td><td data-rate=94.0>53928</td><td>11.9</td><td>2116</td><td data-rate=94.4,data-rate2>234</td><td>2737</td></tr>
+<tr><td colspan=14 class="skip-date sep-top-bottom">13 quarters skipped&emsp;⇒&emsp;<a href=/stats/login/ext#quarter>List 23 quarters &amp; other periods</a>&ensp;<i>or</i>&ensp;<a href=/stats/login/yquarter#q3>List by quarter of year</a>&ensp;<i>or</i>&ensp;<a href=/stats/login/top#quarter>Top quarters</a></table>
+<table id=tab-year class="table11 tr1-1p1 center"><tr><th colspan=14 class=tc>Logins of recent 6 years</th></tr>
+<tr>
+ <th rowspan=2 style="min-width:5.1em">year<br>(UTC)</th>
+ <th rowspan=2>max<br>online</th>
+ <th rowspan=2 style="min-width:8em">time of<br><i>max online</i><br>(CST/CDT)</th>
+<th rowspan=2 title="average online clients">ave.<br>online</i></th>
+ <th rowspan=2 style="min-width:4em">average<br>online<br>duration</i></th>
+ <th rowspan=2 style="min-width:3em">total<br>logins</th>	 <th colspan=3>distinct<br>profiles</th>
+ <th colspan=3>distinct<br>consoles</th>
+ <th colspan=2>distinct<br>games</th>
+</tr>
+<tr>
+ <th style="min-width:3em">total</th>
+ <th style="min-width:2.5em" title="average logins/profile">rate</th>
+ <th style="min-width:2.5em" title="maximum logins/profile">max</th>
+ <th style="min-width:3em">total</th>
+ <th style="min-width:2.5em" title="average logins/console">rate</th>
+ <th style="min-width:2.5em" title="maximum logins/console">max</th>
+ <th style="min-width:3em">total</th>
+ <th style="min-width:2.5em" title="average logins/game">rate</th>
+</tr>
+<tr id=cur-year><td>2024</td><td data-rate=81.4>614</td><td>2024-04-13&nbsp;18:34</td><td data-rate=58.2>181</td><td data-tooltip="4&thinsp;661&thinsp;688&thinsp;333 sec (147y) total, 1888413 clients">41m&thinsp;08s</td><td data-rate=57.5 data-tooltip="<table class=right><tr><td>1&thinsp;897&thinsp;412 =</td><td>57.5%</td></tr><tr><td>2&thinsp;330&thinsp;643 =</td><td>70.6%</td><td>estimated</td></tr></table>"> 1897 k</td><td data-rate=85.5 data-tooltip="193&thinsp;994 = 85.5%">  194 k</td><td>9.78</td><td>2434</td><td data-rate=94.2 data-tooltip="140&thinsp;178 = 94.2%">  140 k</td><td>13.5</td><td>3396</td><td data-rate=92.5>309</td><td>6140</td></tr>
+<tr><td>2023</td><td data-rate=70.0>528</td><td>2023-02-19&nbsp;15:46</td><td data-rate=62.1>193</td><td data-tooltip="6&thinsp;103&thinsp;836&thinsp;748 sec (193y) total, 2353605 clients">43m&thinsp;13s</td><td data-rate=71.4 data-tooltip="2&thinsp;359&thinsp;642 = 71.4%"> 2360 k</td><td data-rate=94.5 data-tooltip="214&thinsp;389 = 94.5%">  214 k</td><td>11.0</td><td>3484</td><td class=rate100 title=top data-tooltip="148&thinsp;867 = 100.0%">  149 k</td><td>15.9</td><td>6615</td><td data-rate=93.4>312</td><td>7562</td></tr>
+<tr><td>2022</td><td data-rate=69.4>523</td><td>2022-01-22&nbsp;15:24</td><td data-rate=68.5>213</td><td data-tooltip="6&thinsp;737&thinsp;314&thinsp;470 sec (213y) total, 2463658 clients">45m&thinsp;34s</td><td data-rate=74.7 data-tooltip="2&thinsp;468&thinsp;173 = 74.7%"> 2468 k</td><td data-rate=94.3 data-tooltip="214&thinsp;006 = 94.3%">  214 k</td><td>11.5</td><td>4347</td><td data-rate=98.3 data-tooltip="146&thinsp;377 = 98.3%">  146 k</td><td>16.9</td><td>7756</td><td data-rate=94.9>317</td><td>7786</td></tr>
+<tr><td>2021</td><td data-rate=92.8>700</td><td>2021-01-23&nbsp;15:13</td><td data-rate=84.4>262</td><td data-tooltip="8&thinsp;299&thinsp;016&thinsp;376 sec (263y) total, 2878943 clients">48m&thinsp;02s</td><td data-rate=87.3 data-tooltip="2&thinsp;883&thinsp;378 = 87.3%"> 2883 k</td><td class=rate100 title=top data-tooltip="226&thinsp;850 = 100.0%">  227 k</td><td>12.7</td><td class=rate100>4473</td><td data-rate=99.7 data-tooltip="148&thinsp;443 = 99.7%">  148 k</td><td>19.4</td><td class=rate100>9860</td><td class=rate100 title=top>334</td><td>8632</td></tr>
+<tr><td>2020</td><td class=rate100 title=top>754</td><td>2020-04-11&nbsp;14:49</td><td class=rate100 title=top>311</td><td class=" rate100" data-tooltip="9&thinsp;830&thinsp;291&thinsp;117 sec (311y) total, 3297422 clients">49m&thinsp;41s</td><td class=rate100 title=top data-tooltip="3&thinsp;302&thinsp;561 = 100.0%"> 3303 k</td><td data-rate=97.5 data-tooltip="221&thinsp;218 = 97.5%">  221 k</td><td>14.9</td><td>3166</td><td data-rate=97.2 data-tooltip="144&thinsp;725 = 97.2%">  145 k</td><td>22.8</td><td>3423</td><td data-rate=78.7>263</td><td>12557</td></tr>
+<tr><td class=hl-date data-tooltip=fy>2019</td><td data-rate=61.8>466</td><td>2019-10-26&nbsp;15:14</td><td data-rate=48.4>150</td><td data-tooltip="4&thinsp;758&thinsp;760&thinsp;736 sec (150y) total, 1637569 clients">48m&thinsp;25s</td><td data-rate=49.8 data-tooltip="1&thinsp;644&thinsp;274 = 49.8%"> 1644 k</td><td data-rate=52.8 data-tooltip="119&thinsp;700 = 52.8%">  120 k</td><td>13.7</td><td>2402</td><td data-rate=57.1>85044</td><td>19.3</td><td>2743</td><td data-rate=53.3>178</td><td>9237</td></tr>
+</table>
+⇒ <a href=/stats/login/top>Top values</a><br>
+⇒ <a href=/stats/login/gamelist#hour>Game specific lists</a></div>
+<script>
+addEventOnLoad(function(){scrollHashToScreenById('navbar',5)});
+dcLib_LocalTooltipAlias = {"top":"Top value (100%)","newday":"First hour of new day (UTC)","d0":"Monday","d1":"Tuesday","d2":"Wednesday","d3":"Thursday","d4":"Friday","d5":"Saturday","d6":"Sunday","fm":"This month only covers the<br>last 21 days of March (68%).","fq":"This quarter only covers the<br>last 21 days of March (23%).","fy":"The analysis of the year 2019 started on March 21st.<br>This is only 296 of 365 days (81%).","corona":"Worldwide emergency from March to July 2020 due to the corona virus.","ddos21":"Wiimmfi was shut down for 10 days due to a DDOS attack."};
+registerDataRate();
+
+registerLocalTooltips(undefined,1);
+</script>
+</body>
+</html>

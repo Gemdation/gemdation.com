@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>MKW specific settings of user »Gemdation«</title>
+<link rel='stylesheet' type='text/css' href='css/dclib/base.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='css/dclib/dclib.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='css/wiimmfi.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='css/mii-font.css?v=8vQgLA'>
+<script src="js/dclib/dclib.js?v=8vQgLA"></script>
+<script src="js/wiimmfi.js?v=8vQgLA"></script>
+</head>
+<body>
+
+<div style="margin-bottom:28px"></div>
+<div id=navbar class=nb-fixed><span class="nb-frame nb-classic">
+<span class="nb-menu-user">»<a href="user/status">Account</a>« <span class="nb-menu-info">⇒</span></span><div class=nb-menu><button class=nb-button>Wiimmfi</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../wiimmfi.de" title="Wiimmfi main page — includes announcements.">Main page</a>
+<a class="nb-menu-link" href="changelog">Change log</a>
+<a class="nb-menu-link" href="game-history">Game history</a>
+<a class="nb-menu-link" href="development">Development</a>
+<a class="nb-menu-link" href="rules">Wiimmfi Rule Booklet</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="fc-converter">Friend-Code converter</a>
+<a class="nb-menu-link" href="patcher">Wiimmfi patcher</a>
+<a class="nb-menu-link" href="error">Error codes</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="login">Login</a>
+<a class="nb-menu-link" href="logout">Logout</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Status</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="stat">Server status</a>
+<a class="nb-menu-link" href="stats/login">Login statistics</a>
+<a class="nb-menu-link" href="stats/game">Game statistics</a>
+<a class="nb-menu-link" href="show-bans">List of bans</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="stats/mkw" title="Mario Kart Wii statistics">MKW statistics</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Manage</button><div class=nb-submenu>
+    <div class="nb-menu-sep"> </div>
+    <a class="nb-menu-link" href="user/settings">Private settings</a>
+    <a class="nb-menu-link active" href="mkw-settings">Private MKW settings</a>
+    <a class="nb-menu-link" href="user/status" title="Rights, consoles, profiles, ...">Private status</a>
+    <a class="nb-menu-link" href="user/messages">Private messages</a>
+    <div class="nb-menu-sep"> </div>
+    <a class="nb-menu-link" href="user/assign-console">Assign a console</a>
+    <a class="nb-menu-link" href="openhost">Manage OPENHOST</a>
+    <span class="nb-menu-sep"> </span>
+    </div></div>
+<div class=nb-menu><button class=nb-button>Regions</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="region/stat" title="MKWii region usage statistics">Region usage</a>
+<a class="nb-menu-link" href="region/list" title="List MKWii regions">List custom regions</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Competitions</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="competitions">Overview</a>
+<a class="nb-menu-link" href="comp-stat">Statistics</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<a class="nb-menu-link" href="privacy">Privacy Policy</a>
+<a class="nb-menu-link" href="donate">Donate</a>
+</span>
+</div>
+<div class=logo><a href=../wiimmfi.de><img src="images/wiimmfi-light.svg" alt="Wiimmfi logo" title="Wiimmfi logo"></a><p><a href=donate>Donate</a></div>
+<h1>MKW specific settings of user »Gemdation«</h1>
+
+<div class=text>
+<h2>Important UDP port notes</h2>
+<ul>
+<li>You can define a specific UDP port for NATNEG, MASTER and peer-to-peer communication.
+<li>When the UPnP request (done by CTGP or an updated Wiimmfi patcher) was successful, the configured UDP port will be ignored.
+<li>To change the port, click the table member and insert:
+    <ul class=narrow1>
+    <li>Value »<b>0</b>« to disable this feature.
+    <li>Value »<b>a</b>« (auto) set the default port based
+	on the serial number of the console.
+    <li>A value between <b>16384 and 65535</b> to define a specific port.
+    </ul>
+</ul>
+For more details, check out <a>this forum thread</a>.
+</div>
+
+<div class=text>
+<h2>Important payload notes</h2>
+<ul>
+<li>Here you can select the payload (game update) version for <i>Mario Kart Wii</i> only.
+<li>When playing CTGP these payload settings are ignored.
+<li>The primary setting is the <b>payload branch</b>:
+Here you decide between following the <i>Public</i> branch (which is the
+normal, non-test version everyone else gets too),
+or the <i>Beta</i> branch which is for the Beta tests.
+<li>Another setting is the <b>payload wish</b>:
+Here you can select a specific payload version.
+If the selected version is not (longer) available,
+the <b>payload branch</b> is used as fallback.
+Usually you can keep this setting as »— none —« unless otherwise instructed
+by the Wiimmfi team.
+<li>The payload is only loaded once after game start at the first login.
+If you want to switch between payloads, you have to <b>restart the game</b>.
+<li>Use both columns of <b>latest download</b> to verify your activities.
+<li>Cookies and JavaScript must be enabled to use this page.
+</ul>
+</div>
+<div class=text><h2>Payload settings &amp; Ports</h2>
+<table id=p0-table class="table11 table-pager">
+<thead id=p0-head><tr><th id=p0-cap class=tc colspan=8>The only found console</th></tr>
+<tr class=pag-head><th title="Internal console id" id=p0-o0 class="pager-order" onclick="Job0('&j=Porder&num=0')" rowspan=2>Console</th><th id=p0-o2 class="pager-order" onclick="Job0('&j=Porder&num=2')" rowspan=2>Wii Friend Code</th><th id=p0-o5 class="pager-order" onclick="Job0('&j=Porder&num=5')" rowspan=2>Identification<br>by user</th><th id=p0-o7 class="pager-order" onclick="Job0('&j=Porder&num=7')" rowspan=2>UDP<br>Port</th><th  colspan=2>Latest Download</th><th id=p0-o10 class="pager-order" onclick="Job0('&j=Porder&num=10')" rowspan=2>Payload<br>Branch</th><th id=p0-o11 class="pager-order" onclick="Job0('&j=Porder&num=11')" rowspan=2>Payload Wish</th></tr>
+<tr class=pag-head><th id=p0-o8 class="pager-order" onclick="Job0('&j=Porder&num=8')">Time</th><th id=p0-o9 class="pager-order" onclick="Job0('&j=Porder&num=9')">Version</th></tr>
+</thead>
+<tbody id=p0-tbody><tr id=p0-0-0 class="tr0 "><td align=center>0000000</td><td>0000-0000-0000-0000</td><td><img src="images/edit-text-19x19.png" class=info-1460849><span id=info-1460849>Wii</span></td><td align=center data-tooltip="Default port: 22894<br>(based on serial number LU365443894)"><img src="images/edit-text-19x19.png" class=port-1460849><span id=port-1460849>22894</span></td><td align=center title="Sat, 12.10.2024 15:03 CDT">12. 15:03</td><td align=center>96/USA</td><td align=center class="pbranch-public anchor" title="Payload enabled for everyone."><span id=pbranch-1460849>Public</span></td><td class=anchor><span id=pwish-1460849>— none —</span></td></tr>
+</tbody></table>
+</div>
+<div class=text><h2>Auto-patch settings</h2>
+<table id=p2-table class="table11 table-pager">
+<thead id=p2-head><tr><th id=p2-cap class=tc colspan=7>The only found console</th></tr>
+<tr class=pag-head><th title="Internal console id" id=p2-o0 class="pager-order" onclick="Job2('&j=Porder&num=0')" rowspan=2>Console</th><th id=p2-o2 class="pager-order" onclick="Job2('&j=Porder&num=2')" rowspan=2>Wii Friend Code</th><th id=p2-o5 class="pager-order" onclick="Job2('&j=Porder&num=5')" rowspan=2>Identification<br>by user</th><th  colspan=2>Latest Download</th><th id=p2-o10 class="pager-order" onclick="Job2('&j=Porder&num=10')" rowspan=2>Auto-patch<br>Branch</th><th id=p2-o11 class="pager-order" onclick="Job2('&j=Porder&num=11')" rowspan=2>Auto-patch Wish</th></tr>
+<tr class=pag-head><th >Time</th><th id=p2-o9 class="pager-order" onclick="Job2('&j=Porder&num=9')">Version</th></tr>
+</thead>
+<tbody id=p2-tbody><tr id=p2-0-0 class="tr0 "><td align=center>0000000</td><td>0000-0000-0000-0000</td><td><img src="images/edit-text-19x19.png" class=info-1460849><span id=info-1460849>Wii</span></td><td align=center title="Mon, 10.06.2024 00:35 CDT">2024-06-10</td><td align=center>28/USA</td><td align=center class="pbranch-public anchor" title="Auto-patch enabled for everyone."><span id=abranch-1460849>Public</span></td><td class=anchor><span id=awish-1460849>— none —</span></td></tr>
+</tbody></table>
+</div>
+<script>
+addEventOnLoad(function(){scrollHashToScreenById('navbar',5)});
+dcLib_AjaxImage = [""];
+dcLib_AjaxURI["eo1"] = "/payload/settings?ajax=eo1&ap1=con_pl0,1682165,cX54M6g3Eskn";
+function Job1(query,seq_name,formdata) { requestAjaxObject({ name:"eo1", query:query, log:"eo1-log", seq_name:seq_name, formdata:formdata }); }
+function Job1s(query,formdata) { requestAjaxObject({ name:"eo1", query:query, log:"eo1-log", seq_name:0, formdata:formdata }); }
+function Job1c(ev,query,formdata) { query+='&checked='+(+ev.target.checked)+'&value='+encodeURIComponent(ev.target.value); requestAjaxObject({ name:"eo1", query:query, log:"eo1-log", seq_name:0, formdata:formdata }); }
+dcLib_EditSelect = [false,{"ch":"edit-head","cv":"edit-value","list":[{"value":3,"text":"Beta"},{"value":4,"text":"Public"}]},{"ch":"edit-head","cv":"edit-value","list":[{"value":0,"text":"\u2014 none \u2014"},{"value":"96","text":"Payload 96 (Public) more changes, fix reconnect with guest"}]},{"ch":"edit-head","cv":"edit-value","list":[{"value":3,"text":"Beta"},{"value":4,"text":"Public"}]},{"ch":"edit-head","cv":"edit-value","list":[{"value":0,"text":"\u2014 none \u2014"},{"value":"28","text":"Payload 28 (Public) Remove NATNEG fuckup"},{"value":"28","text":"Payload 28 (Public) Remove NATNEG fuckup"}]}];
+dcLib_EditGroup = [false,{"eo":"eo1","ena":true,"type":"text","obj":"port","edit":0,"idx":0,"g":1,"maxlen":40,"ccls":"edit-text-bottom"},{"eo":"eo1","ena":true,"type":"text","obj":"info","edit":0,"idx":0,"g":2,"maxlen":40,"ccls":"edit-text-bottom"},{"eo":"eo1","ena":true,"type":"select","obj":"pbranch","edit":0,"idx":0,"g":3,"sel":1,"ccls":"edit-select"},{"eo":"eo1","ena":true,"type":"select","obj":"pwish","edit":0,"idx":0,"g":4,"sel":2,"ccls":"edit-select"},{"eo":"eo3","ena":true,"type":"text","obj":"info","edit":0,"idx":0,"g":5,"maxlen":40,"ccls":"edit-text-bottom"},{"eo":"eo3","ena":true,"type":"select","obj":"abranch","edit":0,"idx":0,"g":6,"sel":3,"ccls":"edit-select"},{"eo":"eo3","ena":true,"type":"select","obj":"awish","edit":0,"idx":0,"g":7,"sel":4,"ccls":"edit-select"}];
+dcLib_EditObj = {"info-1460849":{"id":"info-1460849","idx":1460849,"g":5},"port-1460849":{"id":"port-1460849","idx":1460849,"g":1},"pbranch-1460849":{"id":"pbranch-1460849","idx":1460849,"g":3,"val":"4"},"pwish-1460849":{"id":"pwish-1460849","idx":1460849,"g":4,"val":"0"},"abranch-1460849":{"id":"abranch-1460849","idx":1460849,"g":6,"val":"4"},"awish-1460849":{"id":"awish-1460849","idx":1460849,"g":7,"val":"0"}};
+editObjectInit();
+dcLib_ActiveEdit = undefined;
+dcLib_AjaxURI["con_pl0"] = "/payload/settings?ajax=con_pl0&ai=1682165,cX54M6g3Eskn&pc=1";
+function Job0(query,seq_name,formdata) { requestAjaxObject({ name:"con_pl0", query:query, log:"con_pl0-log", seq_name:seq_name, formdata:formdata }); }
+function Job0s(query,formdata) { requestAjaxObject({ name:"con_pl0", query:query, log:"con_pl0-log", seq_name:1, formdata:formdata }); }
+function Job0c(ev,query,formdata) { query+='&checked='+(+ev.target.checked)+'&value='+encodeURIComponent(ev.target.value); requestAjaxObject({ name:"con_pl0", query:query, log:"con_pl0-log", seq_name:1, formdata:formdata }); }
+processObject({"invisible2":[".p0-remove",".p0-top",".p0-bottom"],"visible":[".p0-add"],"replace":{"#p0-cap":"The only found console"},"remove_class":{"table#p0-table th":["pager-order-0","pager-order-1"]},"add_class":{"th#p0-o0":"pager-order-0"}});
+dcLib_AjaxURI["eo3"] = "/payload/settings?ajax=eo3&ap1=con_ap2,1682166,TZHm7IWbvrEP";
+function Job3(query,seq_name,formdata) { requestAjaxObject({ name:"eo3", query:query, log:"eo3-log", seq_name:seq_name, formdata:formdata }); }
+function Job3s(query,formdata) { requestAjaxObject({ name:"eo3", query:query, log:"eo3-log", seq_name:0, formdata:formdata }); }
+function Job3c(ev,query,formdata) { query+='&checked='+(+ev.target.checked)+'&value='+encodeURIComponent(ev.target.value); requestAjaxObject({ name:"eo3", query:query, log:"eo3-log", seq_name:0, formdata:formdata }); }
+dcLib_AjaxURI["con_ap2"] = "/payload/settings?ajax=con_ap2&ai=1682166,TZHm7IWbvrEP&pc=1";
+function Job2(query,seq_name,formdata) { requestAjaxObject({ name:"con_ap2", query:query, log:"con_ap2-log", seq_name:seq_name, formdata:formdata }); }
+function Job2s(query,formdata) { requestAjaxObject({ name:"con_ap2", query:query, log:"con_ap2-log", seq_name:1, formdata:formdata }); }
+function Job2c(ev,query,formdata) { query+='&checked='+(+ev.target.checked)+'&value='+encodeURIComponent(ev.target.value); requestAjaxObject({ name:"con_ap2", query:query, log:"con_ap2-log", seq_name:1, formdata:formdata }); }
+processObject({"invisible2":[".p2-remove",".p2-top",".p2-bottom"],"visible":[".p2-add"],"replace":{"#p2-cap":"The only found console"},"remove_class":{"table#p2-table th":["pager-order-0","pager-order-1"]},"add_class":{"th#p2-o0":"pager-order-0"}});
+registerLocalTooltips(undefined,1);
+</script>
+</body>
+</html>

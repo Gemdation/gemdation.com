@@ -1,0 +1,222 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge" />
+<title>Automatic DNS patcher</title>
+<link rel='stylesheet' type='text/css' href='../css/dclib/base.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='../css/dclib/dclib.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='../css/wiimmfi.css?v=8vQgLA'>
+<link rel='stylesheet' type='text/css' href='../css/mii-font.css?v=8vQgLA'>
+<script src="../js/dclib/dclib.js?v=8vQgLA"></script>
+<script src="../js/wiimmfi.js?v=8vQgLA"></script>
+<script>
+dcLib_DEVELOP = 0;
+dcLib_AjaxUsePostDef = 1
+
+</script>
+<meta name="keywords" content="Wiimmfi">
+</head>
+<body class="js-disabled" >
+<script>
+if (document.body)
+{
+    document.body.classList.remove('js-disabled');
+    document.body.classList.add('js-enabled');
+}
+</script><noscript><div class=js-warning>Please activate JavaScript.
+JavaScript is used for many interactive elements of this website.</div></noscript>
+<div style="margin-bottom:28px"></div>
+<div id=navbar class=nb-fixed><span class="nb-frame nb-classic">
+<div class=nb-menu><button class=nb-button>Wiimmfi</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../" title="Wiimmfi main page — includes announcements.">Main page</a>
+<a class="nb-menu-link" href="../changelog">Change log</a>
+<a class="nb-menu-link" href="../game-history">Game history</a>
+<a class="nb-menu-link" href="../development">Development</a>
+<a class="nb-menu-link" href="../rules">Wiimmfi Rule Booklet</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../fc-converter">Friend-Code converter</a>
+<a class="nb-menu-link" href="index">Wiimmfi patcher</a>
+<a class="nb-menu-link" href="../error">Error codes</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../login">Login</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Status</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../stat">Server status</a>
+<a class="nb-menu-link" href="../stats/login">Login statistics</a>
+<a class="nb-menu-link" href="../stats/game">Game statistics</a>
+<a class="nb-menu-link" href="../show-bans">List of bans</a>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../stats/mkw" title="Mario Kart Wii statistics">MKW statistics</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Regions</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="../region/stat" title="MKWii region usage statistics">Region usage</a>
+<a class="nb-menu-link" href="../region/list" title="List MKWii regions">List custom regions</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<div class=nb-menu><button class=nb-button>Competitions</button><div class=nb-submenu>
+<div class="nb-menu-sep"> </div>
+<a class="nb-menu-link" href="https://competitions.wiimmfi.de/">Overview</a>
+<a class="nb-menu-link" href="../comp-stat">Statistics</a>
+<span class="nb-menu-sep"> </span>
+</div></div>
+<a class="nb-menu-link" href="../privacy">Privacy Policy</a>
+<a class="nb-menu-link" href="../donate">Donate</a>
+</span>
+</div>
+<div class=logo><a href=..><img src="../images/wiimmfi-light.svg" alt="Wiimmfi logo" title="Wiimmfi logo"></a><p><a href=../donate>Donate</a></div>
+<h1>Easy DNS-based Wiimmfi patcher</h1>
+
+<div class=text>
+<h2>Patcher information</h2>
+
+In the past, all Wiimmfi patchers required the user to either install Homebrew on their Wii
+(Auto Wiimmfi Patcher, ISO patcher, ...) or run the patcher every time before starting a game
+(FlashHax Internet Channel exploit, str2hax EULA exploit, ...). Also, using Wiimmfi on a WiiU
+was somewhat difficult, as the easy, no-homebrew methods don't work on WiiU.
+<p>
+For Mario Kart Wii, SSBB and a couple other Wii games, we are now releasing a new patcher that is even easier than the EULA or
+the Internet Channel exploit, and it does work on both Wii and WiiU. We've had the idea for this 
+patcher in May 2020, started worked on this in June 2020, and now it is finally ready for the public.
+<p>
+You can find a list of compatible games <a href="https://forum.wii-homebrew.com/index.php/Thread/60298-Accessing-Wiimmfi-in-MKWii-with-just-a-custom-DNS/">
+in this forum post</a>. If you're
+receiving errors 20100 or 20110, your game isn't compatible with the new patchers.
+</div>
+
+<div class=text>
+<h2>How to set up this patcher?</h2>
+
+Setting up this new patcher is pretty easy - go into your Wii or WiiU internet settings, and
+set the <b>DNS server</b> to <b>95.217.77.181</b> (watch out, this is one digit different from the usual Wiimmfi DNS),
+and then ... you are done. 
+<p>
+Yes, it's that easy.
+<p>
+All that needs to be done to use this patcher is to set that DNS. Then, just start your game
+over the disc channel and go online. If you get error 20110, your game might not be compatible.</p>
+
+<p>If you're using Mario Kart Wii, there will be a short introduction message the first time you'll go online. 
+That message tells you about Wiimmfi and asks you if you do want
+to connect to Wiimmfi, then for future connections, you won't see anything unusual other than a short
+loading screen after you connected to Wiimmfi.<br/>
+Games other than Mario Kart Wii won't display anything special at all.
+<p>
+Note: This method will not work on Dolphin. For Dolphin you still need a NAND backup and a patched game image.
+<p>If you want to see detailed setup instructions (or you want to know how the patcher looks like when it runs), you can watch the following YouTube video:
+</p>
+<div>
+
+<script>var yt = true;</script>
+
+<div class="text"><br>This YouTube embed is removed as it won't load.</div>
+
+<noscript><span><p>Looks like your browser has Javascript disabled, so this embedded video doesn't work. Click the image above to get directly to the YouTube page.</p><p /></span></noscript>
+
+</div> <!-- block end -->
+
+<div class=text>
+<h2>Troubleshooting</h2>
+
+This exploit is a fairly new method to connect to Wiimmfi, so there might still be some issues.
+<ul>
+<li>You cannot use this patcher if you are using Dolphin, or if you are loading the game through an USB Loader. 
+Patch the game with the Wiimmfi ISO patcher, or (in case of a USB Loader) update it to the newest version
+and enable the Wiimmfi patch in the game settings. </li>
+<li>If you receive error 23400, your console isn't trying to connect to Wiimmfi. Either you didn't
+enter the DNS correctly, or your router might be blocking custom DNS entries. Check the section "My router is blocking custom DNS" below.</li>
+<li>If you receive error 20110 or 20100, you are using a game that's not supported using this method. 
+We will provide a list of compatible games in the near future.</li>
+<li>If you receive any other error code, check the <a href="../error">error page</a> as usual.</li>
+<li>For Mario Kart Wii only: If you can connect to Wiimmfi, but you can't find any players, the exploit might have failed to run.
+Make sure you have at least one friend on your friend list, that makes the exploit more reliable.
+Then turn your console off, and try again. If this continues to happen, please let us (Wiimm & Leseratte) know so we can fix it.</li>
+<li>For Mario Kart Wii only: If you receive error code 60000 when connecting to Wiimmfi on one of your MKWii licenses, 
+create a new license, connect to Wiimmfi with that, play one race online, then go offline and try the previous license again, and the error should be gone.</li>
+</ul>
+
+</div>
+
+<div class=text>
+<h2>Credits</h2>
+<ul>
+<li><b>shutterbug2000</b> for finding the <a>SSL validation bugs</a> that give us a seemingly valid SSL certificate</li>
+<li><b>MrBean35000vr</b> for finding three different bugs in MKWii that can be combined to load Wiimmfi patches</li>
+<li><b>MrBean35000vr</b> and <b>Leseratte</b> for writing the code to load the additional Wiimmfi patches into a stock game</li>
+<li><b>Wiimm</b> for implementing the necessary changes on Wiimmfi to support this patcher</li>
+</ul>
+</div>
+
+<div class=text id="customdns">
+<h2>Help, my router is blocking custom DNS!</h2>
+
+<p>If you receive error 23400 while you are trying to connect to Wiimmfi using this DNS server,
+or if you see the standard Nintendo License Agreement while trying to run a Wiimmfi patcher, 
+your router is probably blocking custom DNS entries. The best solution to that would be to reconfigure your 
+router to no longer do that, but if that isn't possible, there is another solution as well. </p>
+
+<p>Leseratte has created a small tool, the "Automatic Wiimmfi DNS Server" that you can run on your own computer
+and use that as DNS server on your Wii or WiiU, which gets around any blocks in your router or by your ISP.</p>
+
+<p>Download Wiimmfi DNS v0.3:
+<span title="'Modern' Linux distributions, for example: &#10;Debian >= 10, Ubuntu >= 18.04, Mint >= 19, OpenSUSE Tumbleweed, Fedora >= 28&#10;x86_64 (64 bit) only (libc6/glibc >= 2.27)">
+	Linux (<a href="../../download.wiimmfi.de/wiimmfi-dns">DEB</a> / 
+	<a href="../../download.wiimmfi.de/wiimmfi-dns">RPM</a> / 
+	<a href="../../download.wiimmfi.de/wiimmfi-dns">TGZ</a>)</span>, 
+<span title="Windows XP or newer&#10;32 or 64 bit"><a href="../../download.wiimmfi.de/wiimmfi-dns">Windows</a></span>, 
+<span title="MacOS 10.15 or newer"><a href="../../download.wiimmfi.de/wiimmfi-dns">MacOS</a></span><br/>
+(For 32-bit Linux versions or versions for older distributions (older libc6 / glibc) check <a href="../../download.wiimmfi.de/wiimmfi-dns">here</a>).
+
+<p>Download the program, extract it somewhere, and start it. The program should display 
+the local IP address of your computer ("set the first DNS IP to X.X.X.X").</p>
+
+<p>Go into the Wii or WiiU network settings, and change the DNS server from 95.217.77.181 to the IP that your computer displays.</p>
+
+<p>This makes this automatic DNS patcher work, and it also makes the old str2hax EULA patcher for other games work (if you are using a Wii).
+However, you will need to remember to always run this tool to be able to use the internet connection on your console - if the tool isn't running, your console
+won't be able to connect to the internet at all.</p>
+
+</div>
+
+<div class=text>
+<h2>How does this work?</h2>
+
+When you try to connect to the Nintendo WFC using this DNS server, the DNS redirects your login request to Wiimmfi instead.
+Wiimmfi then uses a specially crafted SSL certificate which some games consider valid due to an IOS bug,
+and then lets you go online.
+<p>
+After you are online, Wiimmfi is using a different bug in Mario Kart Wii in order to send and execute the rest
+of the Mario-Kart-specific Wiimmfi patches to your game, which is what happens during the loading screen when you are online.
+<p>
+If you happen to be operating your own DNS server in your network and want to auto-patch all consoles in your network
+(for example for a LAN party), you just need to make sure that all DNS queries for subdomains of <tt>nintendowifi.net</tt>
+are forwarded to the new Wiimmfi name server at 95.217.77.181 (do not make them all <i>resolve</i> to this IP, forward the queries to this IP).
+How you can do that depends on your name server.
+<p>
+For example, if you use dnsmasq, it'd be this config entry:
+<pre class="white">
+server=/nintendowifi.net/95.217.77.181
+</pre>
+In case you are using the BIND DNS server, you could configure it like this:
+<pre class="white">
+zone "nintendowifi.net." {
+  type forward;
+  forward only;
+  forwarders { 95.217.77.181; };
+};
+</pre>
+If you are using another DNS server, just use Google or its documentation to figure out how to set a certain upstream
+DNS server for a specific domain.
+
+</div>
+<a href="..">Back to the overview page</a><script>
+addEventOnLoad(function(){scrollHashToScreenById('navbar',5)});
+registerLocalTooltips(undefined,1);
+</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+
+<svg version="1.0" xmlns="http://www.w3.org/2000/svg" width="32px" height="40px" viewBox="0 0 640 800">
+
+<!-- Hintergrundfarbe: --> 
+<rect x="0" y="0" width="560" height="800" fill="#c6ffc6" /> 
+<rect x="0" y="80" width="640" height="720" fill="#c6ffc6" />
+
+<path stroke="black" stroke-width="30px" fill="none" d="M0, 0 L0,800 L640, 800 L640, 80 M0, 0 L560,0" />	<!-- Rahmen ohne Ecke -->
+<path stroke="black" stroke-width="15px" fill="none" d="M640, 80 L560,80 L560,0" />	<!-- Ecke -->
+
+
+<g transform="translate(0,807) scale(0.1,-0.1)" fill="#000000" stroke="none"> 
+
+	<path d="M800 6940 l0 -300 1900 0 1900 0 0 300 0 300 -1900 0 -1900 0 0 -300z"/> 
+	<path d="M800 5640 l0 -200 2400 0 2400 0 0 200 0 200 -2400 0 -2400 0 0 -200z"/>
+	<path d="M800 4840 l0 -200 2000 0 2000 0 0 200 0 200 -2000 0 -2000 0 0 -200z"/>
+	<path d="M800 4040 l0 -200 2200 0 2200 0 0 200 0 200 -2200 0 -2200 0 0 -200z"/>
+	<path d="M800 2840 l0 -200 1100 0 1100 0 0 200 0 200 -1100 0 -1100 0 0 -200z"/>
+	<path d="M800 2040 l0 -200 800 0 800 0 0 200 0 200 -800 0 -800 0 0 -200z"/>
+	<path d="M800 1240 l0 -200 900 0 900 0 0 200 0 200 -900 0 -900 0 0 -200z"/>
+ </g> 
+
+<!-- Kürzel: --> <text text-anchor="end" x="600" y="680" font-family="sans-serif" font-size="215px" fill="black">en</text>
+
+</svg>
+
+
