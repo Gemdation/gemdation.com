@@ -10,23 +10,23 @@ header a:hover img {filter:drop-shadow(0 0 0.75rem white)}
 header a:active img {filter:blur(5px)}
 
 a {color:#2354DA}
-figure a:hover span.title {text-decoration:underline}
 figure a {display:flex;width:100%;align-items:stretch;text-decoration:none;color:black}
+figure a:hover span.title, figure a:focus-visible span.title {text-decoration:underline}
+figure a:active {box-shadow:inset #00000080 0px 5px 15px}
 figure.draft a {color:white}
+figure.draft a:active {box-shadow:inset #ffffff80 0px 5px 15px}
 h3, blockquote {color:#00000094}
 
-div.block {width:50%;margin:0 auto;background-color:white;box-sizing:border-box;border-spacing:2px;padding:5px;margin-bottom:5px;overflow:auto;}
+div.block {width:50%;margin:0 auto;border:solid 1px white;box-shadow:0 0 0.75rem white;box-sizing:border-box;border-spacing:2px;padding:5px;margin-bottom:5px;overflow:auto;}
 div.gallery {width:95%}
 div.gallery img {width:250px}
 
-figure {width:50%;margin:0 auto;backdrop-filter:blur(20px);display:flex;scrollbar-width:none;clip-path:polygon(0% 0%, calc(100% - 30px) 0%, 100% 30px, 100% 100%, 0% 100%);margin-top:5px;overflow:auto;}
+figure {width:50%;margin:0 auto;display:flex;scrollbar-width:none;clip-path:polygon(0% 0%, calc(100% - 30px) 0%, 100% 30px, 100% 100%, 0% 100%);margin-top:5px;overflow:auto;}
 figure img {height:auto;width:150px;align-self:stretch;object-fit:cover}
 figure div.article-content {display:flex;flex-direction:column;flex-grow:1;flex:1;justify-content:space-between;padding-right:10px;word-wrap: break-word;}
 figure.article {background:#deedff}
 figure.draft {background:#deedff2f;color:white}
 figure.delete {background:#0000006b;color:#25628ba2}
-figure:active {box-shadow:inset #00000080 0px 5px 15px}
-figure.draft:active {box-shadow:inset #ffffff80 0px 5px 15px}
 
 article {background:#deedff;clip-path:polygon(0% 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, 0% 100%);text-align:left;margin:10px auto;padding:1rem;width:50%;box-sizing:border-box;}
 article.draft {background:#deedff2f;color:white;font-family:monospace}
@@ -41,23 +41,19 @@ table.vis {border:1px solid white;border-collapse:collapse}
 table.vis th, table.vis td {border:1px solid}
 ul {list-style-type:circle;margin:0;padding:0;text-align:left}
 dd {color:#0000009d}
-img.btn {border:solid 1px white}
 img.min {width:50%}
-img.wide {width:100%}
+img.max {width:100%}
+img.btn {border:solid 1px white}
+img.icon {width:1.5em;vertical-align:bottom}
 hr {border:solid 1px black}
-pre {overflow-x:auto;white-space:pre-wrap;word-wrap:break-word;font-size:15px;}
+pre {overflow-x:auto;white-space:pre-wrap;word-wrap:break-word;font-size:15px}
 
+.hide {color:#0000009d}
 span.title {font-weight:bold;font-size:larger;text-align:left;padding:10px;padding-bottom:0;}
 span.desc {font-style:italic;font-weight:normal;text-align:left;padding-left:10px;}
 span.date {color:#617183;text-align:right;padding-bottom:10px;text-decoration:none;font-weight:bold;}
 
-.left {float:left;margin-right:20px;}
-.right {float:right;margin-left:20px;}
-.hide {color:#0000009d}
-.buttons {border-width:0px;background:none;}
-.buttons img {border:solid 1px;border-radius:0;}
-
-body.dir {text-align:left;max-width:550px;color:white}
+body.dir {text-align:left;max-width:550px;color:white;padding-left:10px}
 body.dir a {color:white;text-decoration:none;font-weight:bold}
 body.dir li {justify-content:center;vertical-align:middle;border-top:solid 1px white;text-align:left}
 body.dir img {vertical-align:middle;width:30px}

@@ -16,21 +16,29 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Gemdation.com">
     <script src="/meta/site-header.js" defer></script>
+    <script src="/meta/site-mii.js" defer></script>
     <link rel="stylesheet" href="/meta/gem.css">
-    <style>h2, p {color:white;text-align:center}</style>
+    <style>
+        h2, p {color:white;text-align:center}
+        img#mii {border:outset 10px #A4C639;background:#072e0c70}        
+        figure#profile a {display:inline;align-items:normal}
+        figure#profile a#about {display:contents}
+        figure#profile a#about img#mii:active, a img#mii.active {border:inset 10px #617520}
+    </style>
 </head>
 <body>
 
 <header><img src="/meta/header-roboto.png" id="dynamic-header" alt="Gemdation.com"></header>
 
 <div class="row">
-    <div class="block" style="display:flex;background:#00000075;border:inset 10px #ffffffbb;padding:0">
-        <img src="/media/profiles/gems.png" style="width:100px;height:100px;margin:auto">
-        <div>
-            <p>I'm an online fella and I like pop music, tech, <a href="https://bugdroid.org/" style="color:#A4C639">Bugdroid</a>, yeah yeah. This website is for my thoughts, interests, rants.</p>
-            <p style="text-align:right;padding-right:10px"><a href="about" style="color:white;text-shadow:0 0 10px white"><b>About Me</b></a></p>
-        </div>  
-    </div>
+    <figure class="article" id="profile" style="background:none;clip-path:none;color:white">
+        <a href="about" id="about"><img src="media/mii/mii-default.png" id="mii" alt="Mii avatar"></a>
+        <div class="article-content">
+            <span class="title" style="color:#A4C639">Manuel<img src="meta/em-male.svg" class="icon" title="Male" alt=""><img src="meta/em-adhd.svg" class="icon" title="ADHD" alt=""> <img src="meta/em-rainbow.svg" class="icon" title="Gay" alt=""></span>
+            <span class="desc">I'm an online fella and I like pop music, tech, <a href="https://bugdroid.org/" style="color:#A4C639">Bugdroid</a>. This website is for my opinions, interests, and doings.</span>
+            <span class="date" style="padding-left:10px;text-align:left"><img src="meta/em-cake.svg" class="icon" title="Birthday" alt=""> June 19, 2007</span>
+        </div>
+    </figure>
 
     <h2 id="2026">2026</h2>
 
