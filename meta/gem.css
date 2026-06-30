@@ -15,12 +15,14 @@ figure a:hover span.title, figure a:focus-visible span.title {text-decoration:un
 figure a:active {box-shadow:inset #00000080 0px 5px 15px}
 figure.draft a {color:white}
 figure.draft a:active {box-shadow:inset #ffffff80 0px 5px 15px}
-h3, blockquote {color:#00000094}
+h3, h4, blockquote {color:#00000094}
 
 div.block {width:50%;margin:0 auto;border:solid 1px white;box-shadow:0 0 0.75rem white;box-sizing:border-box;border-spacing:2px;padding:5px;margin-bottom:5px;overflow:auto;}
+div#comments {width:50%;padding:10px;border:solid 2px #25628b;box-shadow:0 0 0.75rem #25628b;margin:0 auto;box-sizing:border-box;}
 div.gallery {width:95%}
 div.gallery img {width:250px}
-
+div.img-half {display:flex}
+div.img-half  div.img-half-text {padding:10px}
 figure {width:50%;margin:0 auto;display:flex;scrollbar-width:none;clip-path:polygon(0% 0%, calc(100% - 30px) 0%, 100% 30px, 100% 100%, 0% 100%);margin-top:5px;overflow:auto;}
 figure img {height:auto;width:150px;align-self:stretch;object-fit:cover}
 figure div.article-content {display:flex;flex-direction:column;flex-grow:1;flex:1;justify-content:space-between;padding-right:10px;word-wrap: break-word;}
@@ -30,19 +32,20 @@ figure.delete {background:#0000006b;color:#25628ba2}
 
 article {background:#deedff;clip-path:polygon(0% 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, 0% 100%);text-align:left;margin:10px auto;padding:1rem;width:50%;box-sizing:border-box;}
 article.draft {background:#deedff2f;color:white;font-family:monospace}
-article.alert {background:none;clip-path:none;padding:5px;line-height:30px;color:white;border:solid 2px red;box-shadow:0 0 0.75rem red}
-article.alert a {color:red}
+article.alert {background:none;clip-path:none;padding:5px;line-height:25px;color:white;border:solid 2px red;box-shadow:0 0 0.75rem red}
+article.alert a, article.alert em {color:red}
 article img {width:60%}
 article ul {padding:10px}
 article ul li {text-align:left}
 article ul dd {margin:auto 0}
 
+summary:hover {cursor:pointer}
 table.vis {border:1px solid white;border-collapse:collapse}
 table.vis th, table.vis td {border:1px solid}
 ul {list-style-type:circle;margin:0;padding:0;text-align:left}
 dd {color:#0000009d}
 img.min {width:50%}
-img.max {width:100%}
+img.max, article video {width:100%}
 img.btn {border:solid 1px white}
 img.icon {width:1.5em;vertical-align:bottom}
 hr {border:solid 1px black}
@@ -52,13 +55,14 @@ pre {overflow-x:auto;white-space:pre-wrap;word-wrap:break-word;font-size:15px}
 span.title {font-weight:bold;font-size:larger;text-align:left;padding:10px;padding-bottom:0;}
 span.desc {font-style:italic;font-weight:normal;text-align:left;padding-left:10px;}
 span.date {color:#617183;text-align:right;padding-bottom:10px;text-decoration:none;font-weight:bold;}
+span.caption {color:#617183;margin-top:0px;font-size:small;text-align:center;}
 
 body.dir {text-align:left;max-width:550px;color:white;padding-left:10px}
 body.dir a {color:white;text-decoration:none;font-weight:bold}
 body.dir li {justify-content:center;vertical-align:middle;border-top:solid 1px white;text-align:left}
 body.dir img {vertical-align:middle;width:30px}
 
-@media (max-width:768px) {div.row div.block, div.row figure, div.back, article, header img#dynamic-header {width:95%;}}
-@media (min-width:1500px) {div.row div.block, div.row figure, div.back, article, header img#dynamic-header {width:30%;}}
+@media (max-width:768px) {div.row div.block, div.row figure, div.back, article, div#comments, header img#dynamic-header {width:95%;}}
+@media (min-width:1500px) {div.row div.block, div.row figure, div.back, article, div#comments, header img#dynamic-header {width:30%;}}
 @media (max-width:450px) {figure {font-size:17px}}
 @media (max-width:350px) {figure {font-size:15px}}
