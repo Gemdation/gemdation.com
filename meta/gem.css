@@ -18,7 +18,7 @@ figure.draft a:active {box-shadow:inset #ffffff80 0px 5px 15px}
 h3, h4, blockquote {color:#00000094}
 
 div.block {width:50%;margin:0 auto;border:solid 1px white;box-shadow:0 0 0.75rem white;box-sizing:border-box;border-spacing:2px;padding:5px;margin-bottom:5px;overflow:auto;}
-div#comments {width:50%;padding:10px;border:solid 2px #25628b;box-shadow:0 0 0.75rem #25628b;margin:0 auto;box-sizing:border-box;}
+div#comments {width:50%;padding:10px;border:solid 2px #25628b;box-shadow:0 0 0.75rem #25628b;margin:0 auto;margin-bottom:10px;box-sizing:border-box;}
 div.gallery {width:95%}
 div.gallery img {width:250px}
 div.img-half {display:flex}
