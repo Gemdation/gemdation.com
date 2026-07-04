@@ -24,6 +24,8 @@
         div#links {filter:drop-shadow(0 0 0.30rem #004690);line-height:42px;}
         div#links:hover {filter:drop-shadow(0 0 0.20rem #004690)}
         div#links:active {filter:none}
+        table#projects {text-align:left}
+        table#projects img {width:100px}
         a:hover img.icon {filter:brightness(75%)}
         a {color:#8787e6}
     </style>
@@ -68,7 +70,7 @@
     </div>
 
     <h2>Project History</h2>
-    <table>
+    <table id="projects">
         <tr>
             <td><p>In 2017, my first footprint on the Internet was <a href="https://web.archive.org/web/20170529051417/http://qchr.pw/"><b>qchr.pw</b></a>. It was...a domain. There's not much to say other than I got it when I was 9 years old via Google Domains.</p></td>
             <td><img src="/media/pages/qchr.png" alt="Symbol of a rhombus enclosing three squares in a row"></td>
@@ -127,24 +129,24 @@
     </table>
     <h2>Guest Book</h2>
 
-<div id="comments" style="width:100%">
-    <script src="https://giscus.app/client.js"
-            data-repo="Gemdation/gemdation.com"
-            data-repo-id="R_kgDOM9pOpw"
-            data-category="Comments"
-            data-category-id="DIC_kwDOM9pOp84Ckf-r"
-            data-mapping="og:title"
-            data-strict="0"
-            data-reactions-enabled="1"
-            data-emit-metadata="0"
-            data-input-position="top"
-            data-theme="transparent_dark"
-            data-lang="en"
-            data-loading="lazy"
-            crossorigin="anonymous"
-            async>
-    </script>
-</div>
+    <div id="comments" style="width:100%;border:none;box-shadow:none;padding:0;">
+        <script src="https://giscus.app/client.js"
+                data-repo="Gemdation/gemdation.com"
+                data-repo-id="R_kgDOM9pOpw"
+                data-category="Comments"
+                data-category-id="DIC_kwDOM9pOp84Ckf-r"
+                data-mapping="og:title"
+                data-strict="0"
+                data-reactions-enabled="1"
+                data-emit-metadata="0"
+                data-input-position="bottom"
+                data-theme="transparent_dark"
+                data-lang="en"
+                data-loading="lazy"
+                crossorigin="anonymous"
+                async>
+        </script>
+    </div>
 </article>
 
 </body>
