@@ -16,16 +16,20 @@
     <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Gemdation.com">
     <script src="/meta/site-header.js" defer></script>
-    <script src="/meta/site-mii.js" defer></script>
+    <script src="/meta/site-listings.js" defer></script>
     <link rel="stylesheet" href="/meta/gem.css">
     <style>
-        h2, p {color:white;text-align:center}
+        h2, p, table {color:white;text-align:center}
         img#mii {border:outset 10px #A4C639;background:#072e0c70}
         figure#profile a {display:inline;align-items:normal}
         figure#profile a#about {display:contents}
         figure#profile a#about img#mii:active, a img#mii.active {border:inset 10px #617520}
         figure#profile span.title {color:#A4C639}
         figure#profile span.date {padding-left:10px;text-align:left}
+        p.count {color:white}
+        span.blog {color:#deedff}
+        span.blog-draft {font-family:monospace;color:grey}
+        span.blog-del {font-family:serif;color:#25628ba2;}
     </style>
 </head>
 <body>
@@ -33,7 +37,7 @@
 <header><img src="/meta/header-roboto.png" id="dynamic-header" alt="Gemdation.com"></header>
 
 <div class="row">
-    <figure class="article" id="profile" style="background:none;clip-path:none;color:white">
+    <figure id="profile" style="clip-path:none;color:white">
         <a href="about" id="about"><img src="media/mii/mii-default.png" id="mii" alt="Mii avatar"></a>
         <div class="article-content">
             <span class="title">Manuel<img src="meta/em-male.svg" class="icon" title="Male" alt=""><img src="meta/em-adhd.svg" class="icon" title="ADHD" alt=""> <img src="meta/em-rainbow.svg" class="icon" title="Gay" alt=""></span>
@@ -42,6 +46,7 @@
         </div>
     </figure>
 
+    <p class="count"><span class="blog-draft"><b>0</b> Drafts</span> <span class="blog"><b>0</b> Blogs</span> <span class="blog-del"><b>0</b> Deleted</span></p>
     <h2 id="2026">2026</h2>
 
     <figure class="article"><a href="2026/gadgets-from-amazon">
@@ -157,6 +162,14 @@
         </div>
     </a></figure>
 
+    <figure class="delete">
+        <div class="article-content">
+            <span class="title">Side Effects of SaidIt</span>
+            <span class="desc">Tale about how I found gore websites and alt-right politics.</span>
+            <span class="date">Deleted • February 6</span>
+        </div>
+    </figure>
+
     <figure class="article"><a href="2025/early-days">
         <img src="media/thumbnails/thumb-early-days.png" alt="Some old phones, HTC, ZTE, and iPhone.">
         <div class="article-content">
@@ -175,12 +188,13 @@
         </div>
     </a></figure>
 
-    <div class="article" style="display:none;">
+    <figure class="delete">
         <div class="article-content">
             <span class="title">These Are My People?</span>
-            <span class="date">January 21</span>
+            <span class="desc">Rant about chronically online people.</span>
+            <span class="date">Deleted • January 21</span>
         </div>
-    </div>
+    </figure>
 
     <figure class="article"><a href="2025/my-teachers">
         <img src="media/thumbnails/thumb-none.png" alt="">
@@ -243,6 +257,13 @@
         </div>
     </a></figure>
 
+    <figure class="draft"><a href="2024/thank-you-2014">
+        <div class="article-content">
+            <span class="title">Thank You 2014</span>
+            <span class="date">Draft • December 9</span>
+        </div>
+    </a></figure>
+
     <figure class="article"><a href="2024/wii-roms">
         <img src="media/thumbnails/thumb-wii-shop-cover.png" alt="Wii Shop Channel key art">
         <div class="article-content">
@@ -265,7 +286,7 @@
         <img src="media/thumbnails/thumb-dsc-sh.png" alt="Rainbow-tinted background with an old Discord logo with user avatars.">
         <div class="article-content">
             <span class="title">Discord Shenanigans</span>
-            <span class="desc">"You don't think so? You're right."</span>
+            <span class="desc">"I made Discord bots! You don't think so? You're right."</span>
             <span class="date">November 15</span>
         </div>
     </a></figure>
@@ -274,7 +295,7 @@
         <img src="media/thumbnails/thumb-matsu.png" alt="MatsuEmulator's app icon in a blue wave background.">
         <div class="article-content">
             <span class="title">MatsuMemories</span>
-            <span class="desc">"one time when I was waiting for the school bus I was playing a ROM hack."</span>
+            <span class="desc">"I specifically remember one time when I was waiting for the school bus I was playing a Super Mario Bros. 2 ROM hack."</span>
             <span class="date">November 3</span>
         </div>
     </a></figure>
@@ -349,16 +370,23 @@
         </div>
     </a></figure>
 
-    <h2 id="2021" style="display:none">2021</h2>
+    <h2 id="2021">2021</h2>
 
-    <figure class="article" style="display:none"><a href="2021/yamae-book">
-        <img src="media/thumbnails/thumb-onenote.png" alt="Microsoft OneNote app icon">
+    <figure class="delete">
         <div class="article-content">
             <span class="title">Yamae Book</span>
-            <span class="desc">"Beware, I was whiny."</span>
-            <span class="date">Collection • May 29</span>
+            <span class="desc">Rant collection that I made in Microsoft OneNote.</span>
+            <span class="date">Deleted • May 29</span>
         </div>
-    </a></figure>
+    </figure>
+
+    <figure class="delete">
+        <div class="article-content">
+            <span class="title">Kuristo Journal</span>
+            <span class="desc">Original character setting that I made for my 8th-grade theater class.</span>
+            <span class="date">Deleted • February 9</span>
+        </div>
+    </figure>
 
     <h2 id="2020">2020</h2>
 
@@ -384,7 +412,7 @@
         <img src="media/thumbnails/thumb-gpm-shutdown.png" alt="Promotional image during the Google Play Music to YouTube Music transition">
         <div class="article-content">
             <span class="title">Google Play Music Store shutdown</span>
-            <span class="desc">"This doesn't <b>e</b>ffect me"</span>
+            <span class="desc">"This doesn't effect me"</span>
             <span class="date">October 6</span>
         </div>
     </a></figure>
@@ -393,7 +421,6 @@
         <div class="article-content">
             <span class="title">Me and the Internet</span>
             <span class="desc">This was an essay documenting how I got into YouTube.</span>
-            <br>
             <span class="date">Lost • Early 2020</span>
         </div>
     </figure>

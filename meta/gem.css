@@ -12,9 +12,9 @@ header a:active img {filter:blur(5px)}
 a {color:#2354DA}
 figure a {display:flex;width:100%;align-items:stretch;text-decoration:none;color:black}
 figure a:hover span.title, figure a:focus-visible span.title {text-decoration:underline}
-figure a:active {box-shadow:inset #00000080 0px 5px 15px}
+figure a:active {filter:brightness(30%);background:darkgray}
 figure.draft a {color:white}
-figure.draft a:active {box-shadow:inset #ffffff80 0px 5px 15px}
+figure.draft a:active {filter:brightness(40%);background:#00000070}
 h3, h4, blockquote {color:#00000094}
 
 div.block {width:50%;margin:0 auto;border:solid 1px white;box-shadow:0 0 0.75rem white;box-sizing:border-box;border-spacing:2px;padding:5px;margin-bottom:5px;overflow:auto;}
@@ -23,17 +23,18 @@ div.gallery {width:95%}
 div.gallery img {width:250px}
 div.img-half {display:flex}
 div.img-half  div.img-half-text {padding:10px}
-figure {width:50%;margin:0 auto;display:flex;scrollbar-width:none;clip-path:polygon(0% 0%, calc(100% - 30px) 0%, 100% 30px, 100% 100%, 0% 100%);margin-top:5px;overflow:auto;}
+figure {width:50%;margin:0 auto;display:flex;scrollbar-width:none;user-select:none;clip-path:polygon(0% 0%, calc(100% - 30px) 0%, 100% 30px, 100% 100%, 0% 100%);margin-top:5px;overflow:auto;}
 figure img {height:auto;width:150px;align-self:stretch;object-fit:cover}
 figure div.article-content {display:flex;flex-direction:column;flex-grow:1;flex:1;justify-content:space-between;padding-right:10px;word-wrap: break-word;}
 figure.article {background:#deedff}
-figure.draft {background:#deedff2f;color:white}
-figure.delete {background:#0000006b;color:#25628ba2}
+figure.draft {background:#deedff2f;color:white;font-family:monospace}
+figure.delete {background:#0000006b;color:#25628ba2;font-family:serif}
 
 article {background:#deedff;clip-path:polygon(0% 0%, calc(100% - 50px) 0%, 100% 50px, 100% 100%, 0% 100%);text-align:left;margin:10px auto;padding:1rem;width:50%;box-sizing:border-box;}
 article.draft {background:#deedff2f;color:white;font-family:monospace}
+article.draft h4 {color:#97a7b9}
 article.alert {background:none;clip-path:none;padding:5px;line-height:25px;color:white;border:solid 2px red;box-shadow:0 0 0.75rem red}
-article.alert a, article.alert em {color:red}
+article.alert a, article.alert details summary:hover, article.alert em {color:red}
 article img {width:60%}
 article ul {padding:10px}
 article ul li {text-align:left}

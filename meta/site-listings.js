@@ -44,3 +44,19 @@ document.addEventListener("DOMContentLoaded", () => {
         }, 150); 
     });
 });
+
+    document.addEventListener("DOMContentLoaded", () => {
+        // 1. Target the actual classes used in your <figure> elements
+        const articlesCount = document.querySelectorAll('figure.article').length;
+        const draftsCount = document.querySelectorAll('figure.draft').length;
+        const deletesCount = document.querySelectorAll('figure.delete').length;
+
+        // 2. Safely check and update the <b> tags inside your counter layout
+        const articleBadge = document.querySelector('.blog b');
+        const draftBadge = document.querySelector('.blog-draft b');
+        const delBadge = document.querySelector('.blog-del b');
+
+        if (articleBadge) articleBadge.textContent = articlesCount;
+        if (draftBadge) draftBadge.textContent = draftsCount;
+        if (delBadge) delBadge.textContent = deletesCount;
+    });
