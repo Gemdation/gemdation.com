@@ -23,7 +23,7 @@ div.gallery {width:95%}
 div.gallery img {width:250px}
 div.img-half {display:flex}
 div.img-half  div.img-half-text {padding:10px}
-figure {width:50%;margin:0 auto;display:flex;scrollbar-width:none;user-select:none;clip-path:polygon(0% 0%, calc(100% - 30px) 0%, 100% 30px, 100% 100%, 0% 100%);margin-top:5px;overflow:auto;}
+figure {width:50%;margin:0 auto;display:flex;scrollbar-width:none;clip-path:polygon(0% 0%, calc(100% - 30px) 0%, 100% 30px, 100% 100%, 0% 100%);margin-top:5px;overflow:auto;}
 figure img {height:auto;width:150px;align-self:stretch;object-fit:cover}
 figure div.article-content {display:flex;flex-direction:column;flex-grow:1;flex:1;justify-content:space-between;padding-right:10px;word-wrap: break-word;}
 figure.article {background:#deedff}
